@@ -40,11 +40,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-zD-JLq">
+                                <rect key="frame" x="239" y="428.5" width="151" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ZKE-h0-vOn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Esqueci minha senha">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Zd-pP1">
+                                <rect key="frame" x="24" y="482.5" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.60888078479999996" green="0.6029113653" blue="0.6029113653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="r99-nN-Oi1"/>
+                                </constraints>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="A0y-Zd-pP1" firstAttribute="trailing" secondItem="Yds-zD-JLq" secondAttribute="trailing" id="2Cf-IL-fu7"/>
                             <constraint firstItem="W39-qi-jya" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="CvC-yG-eK2"/>
+                            <constraint firstItem="Yds-zD-JLq" firstAttribute="trailing" secondItem="diR-Wx-UcD" secondAttribute="trailing" id="G0v-iu-emZ"/>
                             <constraint firstItem="W39-qi-jya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KHZ-Fa-MFu"/>
                             <constraint firstItem="diR-Wx-UcD" firstAttribute="trailing" secondItem="shk-w8-mtL" secondAttribute="trailing" id="Mkl-Io-P1k"/>
                             <constraint firstItem="wVG-oc-LzO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NJH-uU-sZs"/>
@@ -54,7 +76,10 @@
                             <constraint firstItem="wVG-oc-LzO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="bBo-H8-tsR"/>
                             <constraint firstItem="diR-Wx-UcD" firstAttribute="leading" secondItem="shk-w8-mtL" secondAttribute="leading" id="c6X-de-rSO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W39-qi-jya" secondAttribute="trailing" id="dwu-q6-m07"/>
+                            <constraint firstItem="A0y-Zd-pP1" firstAttribute="leading" secondItem="diR-Wx-UcD" secondAttribute="leading" id="ggy-zZ-K7a"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="shk-w8-mtL" secondAttribute="trailing" constant="24" id="iIT-Fs-CF3"/>
+                            <constraint firstItem="A0y-Zd-pP1" firstAttribute="top" secondItem="Yds-zD-JLq" secondAttribute="bottom" constant="32" id="mEV-gT-OHB"/>
+                            <constraint firstItem="Yds-zD-JLq" firstAttribute="top" secondItem="diR-Wx-UcD" secondAttribute="bottom" constant="12" id="oFv-In-odQ"/>
                             <constraint firstAttribute="bottom" secondItem="wVG-oc-LzO" secondAttribute="bottom" id="ogN-aC-1ak"/>
                             <constraint firstItem="diR-Wx-UcD" firstAttribute="top" secondItem="shk-w8-mtL" secondAttribute="bottom" constant="24" id="poR-V2-VVn"/>
                         </constraints>
