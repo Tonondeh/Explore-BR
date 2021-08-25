@@ -7,28 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		62237C1826D6771600178529 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62237C1726D6771600178529 /* UIButton+Gradient.swift */; };
-		62237C1A26D6779800178529 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62237C1926D6779800178529 /* ColorsGradient.swift */; };
-		62237C2F26D67E0500178529 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C1D26D67E0200178529 /* SF-Pro-Text-Medium.otf */; };
-		62237C3026D67E0500178529 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C1E26D67E0200178529 /* SF-Pro-Text-BoldItalic.otf */; };
-		62237C3126D67E0500178529 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C1F26D67E0200178529 /* SF-Pro-Text-SemiboldItalic.otf */; };
-		62237C3226D67E0500178529 /* SF-Pro-Text-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2026D67E0200178529 /* SF-Pro-Text-Ultralight.otf */; };
-		62237C3326D67E0500178529 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2126D67E0200178529 /* SF-Pro-Text-LightItalic.otf */; };
-		62237C3426D67E0500178529 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2226D67E0300178529 /* SF-Pro-Text-UltralightItalic.otf */; };
-		62237C3526D67E0500178529 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2326D67E0300178529 /* SF-Pro-Text-Regular.otf */; };
-		62237C3626D67E0500178529 /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2426D67E0300178529 /* SF-Pro-Text-Thin.otf */; };
-		62237C3726D67E0500178529 /* SF-Pro-Text-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2526D67E0300178529 /* SF-Pro-Text-ThinItalic.otf */; };
-		62237C3826D67E0500178529 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2626D67E0300178529 /* SF-Pro-Text-Bold.otf */; };
-		62237C3926D67E0500178529 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2726D67E0400178529 /* SF-Pro-Text-MediumItalic.otf */; };
-		62237C3A26D67E0500178529 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2826D67E0400178529 /* SF-Pro-Text-BlackItalic.otf */; };
-		62237C3B26D67E0500178529 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2926D67E0400178529 /* SF-Pro-Text-Heavy.otf */; };
-		62237C3C26D67E0500178529 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2A26D67E0400178529 /* SF-Pro-Text-Semibold.otf */; };
-		62237C3D26D67E0500178529 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2B26D67E0400178529 /* SF-Pro-Text-RegularItalic.otf */; };
-		62237C3E26D67E0500178529 /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2C26D67E0400178529 /* SF-Pro-Text-Black.otf */; };
-		62237C3F26D67E0500178529 /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2D26D67E0500178529 /* SF-Pro-Text-HeavyItalic.otf */; };
-		62237C4026D67E0500178529 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62237C2E26D67E0500178529 /* SF-Pro-Text-Light.otf */; };
-		627EF20D26D6BF8A0053B7F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627EF20C26D6BF8A0053B7F1 /* Login.storyboard */; };
-		627EF20F26D6BFA10053B7F1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF20E26D6BFA10053B7F1 /* LoginVC.swift */; };
+		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
+		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
 		65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */; };
 		65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C226D5B63B00A9F670 /* ViewController.swift */; };
@@ -38,28 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		62237C1726D6771600178529 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
-		62237C1926D6779800178529 /* ColorsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
-		62237C1D26D67E0200178529 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
-		62237C1E26D67E0200178529 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
-		62237C1F26D67E0200178529 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		62237C2026D67E0200178529 /* SF-Pro-Text-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Ultralight.otf"; sourceTree = "<group>"; };
-		62237C2126D67E0200178529 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
-		62237C2226D67E0300178529 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
-		62237C2326D67E0300178529 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
-		62237C2426D67E0300178529 /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
-		62237C2526D67E0300178529 /* SF-Pro-Text-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-ThinItalic.otf"; sourceTree = "<group>"; };
-		62237C2626D67E0300178529 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
-		62237C2726D67E0400178529 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
-		62237C2826D67E0400178529 /* SF-Pro-Text-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BlackItalic.otf"; sourceTree = "<group>"; };
-		62237C2926D67E0400178529 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
-		62237C2A26D67E0400178529 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
-		62237C2B26D67E0400178529 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
-		62237C2C26D67E0400178529 /* SF-Pro-Text-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Black.otf"; sourceTree = "<group>"; };
-		62237C2D26D67E0500178529 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
-		62237C2E26D67E0500178529 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
-		627EF20C26D6BF8A0053B7F1 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		627EF20E26D6BFA10053B7F1 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
+		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,47 +41,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62237C1626D676FD00178529 /* Utils */ = {
+		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
-				62237C1726D6771600178529 /* UIButton+Gradient.swift */,
-				62237C1926D6779800178529 /* ColorsGradient.swift */,
+				65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */,
+				65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */,
 			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		62237C1C26D67DAE00178529 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				62237C2C26D67E0400178529 /* SF-Pro-Text-Black.otf */,
-				62237C2826D67E0400178529 /* SF-Pro-Text-BlackItalic.otf */,
-				62237C2626D67E0300178529 /* SF-Pro-Text-Bold.otf */,
-				62237C1E26D67E0200178529 /* SF-Pro-Text-BoldItalic.otf */,
-				62237C2926D67E0400178529 /* SF-Pro-Text-Heavy.otf */,
-				62237C2D26D67E0500178529 /* SF-Pro-Text-HeavyItalic.otf */,
-				62237C2E26D67E0500178529 /* SF-Pro-Text-Light.otf */,
-				62237C2126D67E0200178529 /* SF-Pro-Text-LightItalic.otf */,
-				62237C1D26D67E0200178529 /* SF-Pro-Text-Medium.otf */,
-				62237C2726D67E0400178529 /* SF-Pro-Text-MediumItalic.otf */,
-				62237C2326D67E0300178529 /* SF-Pro-Text-Regular.otf */,
-				62237C2B26D67E0400178529 /* SF-Pro-Text-RegularItalic.otf */,
-				62237C2A26D67E0400178529 /* SF-Pro-Text-Semibold.otf */,
-				62237C1F26D67E0200178529 /* SF-Pro-Text-SemiboldItalic.otf */,
-				62237C2426D67E0300178529 /* SF-Pro-Text-Thin.otf */,
-				62237C2526D67E0300178529 /* SF-Pro-Text-ThinItalic.otf */,
-				62237C2026D67E0200178529 /* SF-Pro-Text-Ultralight.otf */,
-				62237C2226D67E0300178529 /* SF-Pro-Text-UltralightItalic.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		627EF20B26D6BF4F0053B7F1 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				627EF20C26D6BF8A0053B7F1 /* Login.storyboard */,
-				627EF20E26D6BFA10053B7F1 /* LoginVC.swift */,
-			);
-			path = Login;
+			path = ResetPassword;
 			sourceTree = "<group>";
 		};
 		65FB99B226D5B63B00A9F670 = {
@@ -143,9 +69,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
-				627EF20B26D6BF4F0053B7F1 /* Login */,
-				62237C1C26D67DAE00178529 /* Fonts */,
-				62237C1626D676FD00178529 /* Utils */,
+				65B6E09726D6C29000A54D6C /* ResetPassword */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
 				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
@@ -214,28 +138,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62237C2F26D67E0500178529 /* SF-Pro-Text-Medium.otf in Resources */,
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
+				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
-				62237C3F26D67E0500178529 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
-				62237C3426D67E0500178529 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
-				62237C4026D67E0500178529 /* SF-Pro-Text-Light.otf in Resources */,
-				62237C3726D67E0500178529 /* SF-Pro-Text-ThinItalic.otf in Resources */,
-				62237C3026D67E0500178529 /* SF-Pro-Text-BoldItalic.otf in Resources */,
-				62237C3126D67E0500178529 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
-				62237C3826D67E0500178529 /* SF-Pro-Text-Bold.otf in Resources */,
-				627EF20D26D6BF8A0053B7F1 /* Login.storyboard in Resources */,
-				62237C3C26D67E0500178529 /* SF-Pro-Text-Semibold.otf in Resources */,
-				62237C3926D67E0500178529 /* SF-Pro-Text-MediumItalic.otf in Resources */,
-				62237C3A26D67E0500178529 /* SF-Pro-Text-BlackItalic.otf in Resources */,
-				62237C3526D67E0500178529 /* SF-Pro-Text-Regular.otf in Resources */,
-				62237C3226D67E0500178529 /* SF-Pro-Text-Ultralight.otf in Resources */,
-				62237C3326D67E0500178529 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
-				62237C3626D67E0500178529 /* SF-Pro-Text-Thin.otf in Resources */,
-				62237C3D26D67E0500178529 /* SF-Pro-Text-RegularItalic.otf in Resources */,
-				62237C3B26D67E0500178529 /* SF-Pro-Text-Heavy.otf in Resources */,
-				62237C3E26D67E0500178529 /* SF-Pro-Text-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,11 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
-				62237C1A26D6779800178529 /* ColorsGradient.swift in Sources */,
-				627EF20F26D6BFA10053B7F1 /* LoginVC.swift in Sources */,
-				62237C1826D6771600178529 /* UIButton+Gradient.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
+				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +303,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QGQ6W4JWGM;
 				INFOPLIST_FILE = "Explore-BR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -419,7 +322,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QGQ6W4JWGM;
 				INFOPLIST_FILE = "Explore-BR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
