@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
+		627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */; };
+		627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */; };
+		627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21426D6FCA30053B7F1 /* SF-Pro-Text-Light.otf */; };
+		627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21526D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf */; };
+		627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21626D6FCA30053B7F1 /* SF-Pro-Text-Black.otf */; };
+		627EF22926D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21726D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf */; };
+		627EF22A26D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21826D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf */; };
+		627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21926D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf */; };
+		627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21A26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf */; };
+		627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21B26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf */; };
+		627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21C26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf */; };
+		627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21D26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf */; };
+		627EF23026D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21E26D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf */; };
+		627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21F26D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf */; };
+		627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF22026D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf */; };
+		627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF22126D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf */; };
+		627EF23426D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF22226D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf */; };
+		627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF23626D6FCF50053B7F1 /* LoginVC.swift */; };
+		627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627EF23726D6FCF50053B7F1 /* Login.storyboard */; };
+		627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627EF23B26D6FD080053B7F1 /* Profile.storyboard */; };
+		627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF23C26D6FD080053B7F1 /* ProfileViewController.swift */; };
+		627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627EF24026D6FD210053B7F1 /* SignIn.storyboard */; };
+		627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24126D6FD210053B7F1 /* SignInViewController.swift */; };
+		627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */; };
+		627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24626D6FD380053B7F1 /* ColorsGradient.swift */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
@@ -18,6 +44,32 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
+		627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
+		627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
+		627EF21426D6FCA30053B7F1 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		627EF21526D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BlackItalic.otf"; sourceTree = "<group>"; };
+		627EF21626D6FCA30053B7F1 /* SF-Pro-Text-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Black.otf"; sourceTree = "<group>"; };
+		627EF21726D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		627EF21826D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Ultralight.otf"; sourceTree = "<group>"; };
+		627EF21926D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Bold.otf"; sourceTree = "<group>"; };
+		627EF21A26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Thin.otf"; sourceTree = "<group>"; };
+		627EF21B26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-ThinItalic.otf"; sourceTree = "<group>"; };
+		627EF21C26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-BoldItalic.otf"; sourceTree = "<group>"; };
+		627EF21D26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-RegularItalic.otf"; sourceTree = "<group>"; };
+		627EF21E26D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		627EF21F26D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-HeavyItalic.otf"; sourceTree = "<group>"; };
+		627EF22026D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-LightItalic.otf"; sourceTree = "<group>"; };
+		627EF22126D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Medium.otf"; sourceTree = "<group>"; };
+		627EF22226D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		627EF23626D6FCF50053B7F1 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		627EF23726D6FCF50053B7F1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		627EF23B26D6FD080053B7F1 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		627EF23C26D6FD080053B7F1 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		627EF24026D6FD210053B7F1 /* SignIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		627EF24126D6FD210053B7F1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
+		627EF24626D6FD380053B7F1 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +93,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		627EF21026D6FCA30053B7F1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */,
+				627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */,
+				627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */,
+				627EF21426D6FCA30053B7F1 /* SF-Pro-Text-Light.otf */,
+				627EF21526D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf */,
+				627EF21626D6FCA30053B7F1 /* SF-Pro-Text-Black.otf */,
+				627EF21726D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf */,
+				627EF21826D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf */,
+				627EF21926D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf */,
+				627EF21A26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf */,
+				627EF21B26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf */,
+				627EF21C26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf */,
+				627EF21D26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf */,
+				627EF21E26D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf */,
+				627EF21F26D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf */,
+				627EF22026D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf */,
+				627EF22126D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf */,
+				627EF22226D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		627EF23526D6FCF50053B7F1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				627EF23626D6FCF50053B7F1 /* LoginVC.swift */,
+				627EF23726D6FCF50053B7F1 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		627EF23A26D6FD080053B7F1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				627EF23B26D6FD080053B7F1 /* Profile.storyboard */,
+				627EF23C26D6FD080053B7F1 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		627EF23F26D6FD210053B7F1 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				627EF24026D6FD210053B7F1 /* SignIn.storyboard */,
+				627EF24126D6FD210053B7F1 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		627EF24426D6FD380053B7F1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
+				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,14 +182,19 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
-				65B6E09726D6C29000A54D6C /* ResetPassword */,
+				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
 				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
-				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
 				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
+				627EF21026D6FCA30053B7F1 /* Fonts */,
 				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
-				65FB99CC26D5B63E00A9F670 /* Info.plist */,
+				627EF23526D6FCF50053B7F1 /* Login */,
+				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
+				627EF23A26D6FD080053B7F1 /* Profile */,
+				65B6E09726D6C29000A54D6C /* ResetPassword */,
+				627EF23F26D6FD210053B7F1 /* SignIn */,
+				627EF24426D6FD380053B7F1 /* Utils */,
 			);
 			path = "Explore-BR";
 			sourceTree = "<group>";
@@ -138,10 +256,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627EF22926D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf in Resources */,
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
+				627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
+				627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */,
+				627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */,
+				627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
+				627EF23026D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf in Resources */,
+				627EF23426D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
+				627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */,
 				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
+				627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
+				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
+				627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */,
+				627EF22A26D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf in Resources */,
+				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
+				627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
+				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
+				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
+				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
+				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +291,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
+				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
+				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
+				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
+				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
