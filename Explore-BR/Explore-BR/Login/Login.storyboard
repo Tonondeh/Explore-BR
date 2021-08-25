@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -18,11 +23,19 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="YGx-AI-ncR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore BR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7m-Ub-nwe">
+                                <rect key="frame" x="76.666666666666686" y="164" width="261" height="58"/>
+                                <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3LN-Nx-SLI"/>
+                            <constraint firstItem="K7m-Ub-nwe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="Sug-4u-TaL"/>
+                            <constraint firstItem="K7m-Ub-nwe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ipA-Ob-D7u"/>
                             <constraint firstAttribute="bottom" secondItem="YGx-AI-ncR" secondAttribute="bottom" id="iuI-Uv-8zU"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="j9z-Bb-7w4"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zx9-Co-BWZ"/>
