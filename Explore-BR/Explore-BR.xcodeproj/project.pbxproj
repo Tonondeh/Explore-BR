@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62237C1826D6771600178529 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62237C1726D6771600178529 /* UIButton+Gradient.swift */; };
+		62237C1A26D6779800178529 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62237C1926D6779800178529 /* ColorsGradient.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
 		65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */; };
 		65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C226D5B63B00A9F670 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		62237C1726D6771600178529 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
+		62237C1926D6779800178529 /* ColorsGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				62237C1726D6771600178529 /* UIButton+Gradient.swift */,
+				62237C1926D6779800178529 /* ColorsGradient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
+				62237C1A26D6779800178529 /* ColorsGradient.swift in Sources */,
 				62237C1826D6771600178529 /* UIButton+Gradient.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
