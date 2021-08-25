@@ -3,6 +3,7 @@
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,12 +30,34 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-rb-0LH">
+                                <rect key="frame" x="24" y="342" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="UTw-Hh-5fr"/>
+                                </constraints>
+                                <color key="tintColor" red="0.98431372549019602" green="0.99607843137254903" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="-64" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue com Apple">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="SFProText-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3LN-Nx-SLI"/>
+                            <constraint firstItem="zJf-rb-0LH" firstAttribute="top" secondItem="K7m-Ub-nwe" secondAttribute="bottom" constant="120" id="F3N-JW-Ocs"/>
+                            <constraint firstItem="zJf-rb-0LH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Qzm-FF-QYZ"/>
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="Sug-4u-TaL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zJf-rb-0LH" secondAttribute="trailing" constant="24" id="czN-3c-VZo"/>
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ipA-Ob-D7u"/>
                             <constraint firstAttribute="bottom" secondItem="YGx-AI-ncR" secondAttribute="bottom" id="iuI-Uv-8zU"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="j9z-Bb-7w4"/>
@@ -48,6 +71,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="background" width="414" height="896"/>
     </resources>
 </document>
