@@ -20,13 +20,16 @@
                                 <rect key="frame" x="126" y="136" width="176" height="178"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juliana da Silva" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6q-ZM-IAV">
-                                <rect key="frame" x="24" y="338" width="380" height="23"/>
+                                <rect key="frame" x="24" y="338" width="380" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="awK-46-G7W"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJl-fJ-fkA">
-                                <rect key="frame" x="24" y="403" width="380" height="48"/>
+                                <rect key="frame" x="24" y="408" width="380" height="48"/>
                                 <color key="backgroundColor" red="0.054901960784313725" green="0.23137254901960785" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qV6-Ne-5eF"/>
@@ -40,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV6-Si-jDg">
-                                <rect key="frame" x="24" y="475" width="380" height="48"/>
+                                <rect key="frame" x="24" y="480" width="380" height="48"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.11372549019607843" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="fLT-ja-rvK"/>
