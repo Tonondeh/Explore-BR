@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A61455F26D5E77A00759E9B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61455E26D5E77A00759E9B /* ProfileViewController.swift */; };
+		3A61456126D5E78500759E9B /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A61456026D5E78400759E9B /* Profile.storyboard */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
 		65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */; };
 		65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C226D5B63B00A9F670 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A61455E26D5E77A00759E9B /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3A61456026D5E78400759E9B /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A61455D26D5E73C00759E9B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3A61455E26D5E77A00759E9B /* ProfileViewController.swift */,
+				3A61456026D5E78400759E9B /* Profile.storyboard */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		65FB99B226D5B63B00A9F670 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +69,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				3A61455D26D5E73C00759E9B /* Profile */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
 				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
@@ -126,6 +140,7 @@
 			files = (
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
+				3A61456126D5E78500759E9B /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +154,7 @@
 			files = (
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
+				3A61455F26D5E77A00759E9B /* ProfileViewController.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
