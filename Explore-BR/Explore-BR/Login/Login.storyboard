@@ -47,7 +47,7 @@
                                         </fragment>
                                     </attributedString>
                                     <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-S5-bJ3">
@@ -57,16 +57,37 @@
                                     <constraint firstAttribute="height" constant="48" id="PzF-Wf-6eC"/>
                                 </constraints>
                                 <color key="tintColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="-64" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="-51" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Continue com Apple">
+                                        <fragment content="Continue com Google">
                                             <attributes>
                                                 <font key="NSFont" size="21" name="SFProText-Medium"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <imageReference key="image" image="logo-google" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gif-wE-fnD">
+                                <rect key="frame" x="24" y="502" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="xhS-f6-lY4"/>
+                                </constraints>
+                                <color key="tintColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="-56" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="mail-white">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Continue com e-mail">
+                                            <attributes>
+                                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                <font key="NSFont" size="21" name="SFProText-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                             </button>
                         </subviews>
@@ -75,7 +96,9 @@
                         <constraints>
                             <constraint firstItem="ea3-S5-bJ3" firstAttribute="leading" secondItem="zJf-rb-0LH" secondAttribute="leading" id="01y-8z-seg"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3LN-Nx-SLI"/>
+                            <constraint firstItem="gif-wE-fnD" firstAttribute="top" secondItem="ea3-S5-bJ3" secondAttribute="bottom" constant="32" id="5M8-cT-XPu"/>
                             <constraint firstItem="zJf-rb-0LH" firstAttribute="top" secondItem="K7m-Ub-nwe" secondAttribute="bottom" constant="120" id="F3N-JW-Ocs"/>
+                            <constraint firstItem="gif-wE-fnD" firstAttribute="trailing" secondItem="ea3-S5-bJ3" secondAttribute="trailing" id="GSR-Ah-zJ5"/>
                             <constraint firstItem="zJf-rb-0LH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Qzm-FF-QYZ"/>
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="Sug-4u-TaL"/>
                             <constraint firstItem="ea3-S5-bJ3" firstAttribute="trailing" secondItem="zJf-rb-0LH" secondAttribute="trailing" id="ayw-IL-ZGJ"/>
@@ -84,6 +107,7 @@
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ipA-Ob-D7u"/>
                             <constraint firstAttribute="bottom" secondItem="YGx-AI-ncR" secondAttribute="bottom" id="iuI-Uv-8zU"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="j9z-Bb-7w4"/>
+                            <constraint firstItem="gif-wE-fnD" firstAttribute="leading" secondItem="ea3-S5-bJ3" secondAttribute="leading" id="n1h-HE-zkF"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zx9-Co-BWZ"/>
                         </constraints>
                     </view>
@@ -97,5 +121,6 @@
         <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="background" width="414" height="896"/>
         <image name="logo-google" width="33" height="33"/>
+        <image name="mail-white" width="29.666666030883789" height="23"/>
     </resources>
 </document>
