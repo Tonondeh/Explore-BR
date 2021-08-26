@@ -58,12 +58,30 @@
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cataratas do Iguaçú" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GI-p7-gnj">
+                                        <rect key="frame" x="24" y="51" width="164" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-4M-T9a">
+                                        <rect key="frame" x="24" y="81" width="312" height="101.5"/>
+                                        <string key="text">Visite a Maravilha Mundial da Natureza e viva as mais raras experiências de contato com a natureza, no maior conjunto de quedas d’água do mundo, na cidade de Foz do Iguaçu, Paraná.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
+                                    <constraint firstItem="8GI-p7-gnj" firstAttribute="top" secondItem="OJm-OC-tJY" secondAttribute="bottom" constant="6" id="2Dn-Ud-gpC"/>
                                     <constraint firstItem="OJm-OC-tJY" firstAttribute="top" secondItem="mAb-dL-l7M" secondAttribute="top" constant="24" id="E4i-IE-LWB"/>
                                     <constraint firstItem="OJm-OC-tJY" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="KhG-yu-i2N"/>
+                                    <constraint firstAttribute="trailing" secondItem="GdT-4M-T9a" secondAttribute="trailing" constant="42" id="UVz-4v-teD"/>
+                                    <constraint firstItem="GdT-4M-T9a" firstAttribute="top" secondItem="8GI-p7-gnj" secondAttribute="bottom" constant="9" id="Y16-7I-Pkm"/>
                                     <constraint firstAttribute="height" constant="216" id="bE3-zF-t3p"/>
+                                    <constraint firstItem="8GI-p7-gnj" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="eiJ-P2-pd8"/>
+                                    <constraint firstItem="GdT-4M-T9a" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="nGP-MB-qO4"/>
                                 </constraints>
                             </view>
                         </subviews>
