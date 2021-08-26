@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="102" id="svr-N9-FsR"/>
                                 </constraints>
                                 <state key="normal" title="Parques">
-                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC3-IP-705">
@@ -142,6 +142,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Kh-7D-UnC"/>
                     <connections>
+                        <outlet property="buttonHoteis" destination="4E9-Fb-mIf" id="3np-U3-QBa"/>
+                        <outlet property="buttonParques" destination="TBb-LH-QMA" id="qcc-ez-cvU"/>
+                        <outlet property="buttonRestaurantes" destination="PC3-IP-705" id="5sq-oy-CRN"/>
                         <outlet property="cardView" destination="mAb-dL-l7M" id="ysN-8B-KfQ"/>
                         <outlet property="searchBar" destination="WiZ-md-a8R" id="4d0-Gi-K1u"/>
                     </connections>

@@ -13,15 +13,30 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var cardView: UIView!
     
+    @IBOutlet weak var buttonHoteis: UIButton!
+    
+    @IBOutlet weak var buttonParques: UIButton!
+    
+    @IBOutlet weak var buttonRestaurantes: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configSearchBar()
         self.configCardView()
+        self.configUI()
         navigationItem.titleView = searchBar
         
         
         
+    }
+    
+    func configUI(){
+       self.buttonParques.layer.cornerRadius = 3.0
+        self.buttonParques.applyGradient(colors: [blueDarkButton,blueLightButton])
+        
+    
+ 
     }
     func configCardView(){
         self.cardView.layer.cornerRadius = 20.0
