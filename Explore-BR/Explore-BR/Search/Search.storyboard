@@ -142,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="3Kh-7D-UnC"/>
                     <connections>
+                        <outlet property="cardView" destination="mAb-dL-l7M" id="ysN-8B-KfQ"/>
                         <outlet property="searchBar" destination="WiZ-md-a8R" id="4d0-Gi-K1u"/>
                     </connections>
                 </viewController>

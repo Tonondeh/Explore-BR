@@ -11,15 +11,20 @@ class SearchVC: UIViewController {
     
     @IBOutlet var searchBar: UISearchBar!
     
+    @IBOutlet weak var cardView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configSearchBar()
+        self.configCardView()
         navigationItem.titleView = searchBar
         
         
         
+    }
+    func configCardView(){
+        self.cardView.layer.cornerRadius = 20.0
     }
     
     func configSearchBar(){
