@@ -26,21 +26,46 @@
                                     <constraint firstAttribute="height" constant="44" id="3H5-IU-Wed"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-fL-CAG">
+                                <rect key="frame" x="18" y="62" width="378" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pesquise seus locais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="COh-gO-22n">
+                                        <rect key="frame" x="24" y="0.0" width="309" height="48"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="COh-gO-22n" firstAttribute="top" secondItem="Jcy-fL-CAG" secondAttribute="top" id="38J-0W-7Dp"/>
+                                    <constraint firstItem="COh-gO-22n" firstAttribute="leading" secondItem="Jcy-fL-CAG" secondAttribute="leading" constant="24" id="FC4-OY-dC8"/>
+                                    <constraint firstAttribute="trailing" secondItem="COh-gO-22n" secondAttribute="trailing" constant="45" id="FPz-ZU-Z12"/>
+                                    <constraint firstAttribute="height" constant="48" id="jvX-yR-uLi"/>
+                                    <constraint firstAttribute="bottom" secondItem="COh-gO-22n" secondAttribute="bottom" id="kzg-s3-tgQ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="z53-K0-sh3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Jcy-fL-CAG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="2BR-ao-WGZ"/>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="58e-YC-I7c"/>
                             <constraint firstItem="qLh-cP-pfn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AOn-yp-5K4"/>
                             <constraint firstItem="qLh-cP-pfn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Hay-5T-RGh"/>
                             <constraint firstItem="qLh-cP-pfn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b51-9x-ZsU"/>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIl-Ti-ioi"/>
                             <constraint firstAttribute="bottom" secondItem="Mk8-g4-hQe" secondAttribute="bottom" id="e7r-81-G5Z"/>
+                            <constraint firstItem="Jcy-fL-CAG" firstAttribute="top" secondItem="qLh-cP-pfn" secondAttribute="bottom" constant="18" id="hiV-YT-uX3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jcy-fL-CAG" secondAttribute="trailing" constant="18" id="jYr-no-rcC"/>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xzE-OE-cXJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchTextField" destination="COh-gO-22n" id="S9X-OO-2Yv"/>
                         <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
+                        <outlet property="wrapSearchBarView" destination="Jcy-fL-CAG" id="kuW-Lp-Wog"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
