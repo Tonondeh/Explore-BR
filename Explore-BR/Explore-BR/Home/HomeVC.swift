@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var statusBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
@@ -16,6 +16,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
+        self.searchTextField.delegate = self
     }
     
     func configureUI() {
@@ -28,7 +29,10 @@ class HomeVC: UIViewController {
         self.wrapSearchBarView.layer.shadowOpacity = 1
         self.wrapSearchBarView.layer.shadowRadius = 30
         self.wrapSearchBarView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
-        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
     }
 
 }
