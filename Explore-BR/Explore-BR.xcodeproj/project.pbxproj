@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
+		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
+		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
 		627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */; };
 		627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */; };
@@ -41,13 +44,16 @@
 		65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C426D5B63B00A9F670 /* Main.storyboard */; };
 		65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C726D5B63E00A9F670 /* Assets.xcassets */; };
 		65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */; };
-		8907F1A926D73B5200B3E43C /* EventOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8907F1A826D73B5100B3E43C /* EventOverlayView.swift */; };
-		8907F1AB26D73C1B00B3E43C /* EventOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8907F1AA26D73C1A00B3E43C /* EventOverlayView.xib */; };
-		892EBD3B26D737B800247E6E /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892EBD3A26D737B800247E6E /* EventsVC.swift */; };
-		892EBD3D26D737F000247E6E /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 892EBD3C26D737F000247E6E /* Events.storyboard */; };
+		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
+		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
+		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
+		FE6980AB26D804D10011272E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
 		627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -84,10 +90,10 @@
 		65FB99C726D5B63E00A9F670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FB99CA26D5B63E00A9F670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8907F1A826D73B5100B3E43C /* EventOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOverlayView.swift; sourceTree = "<group>"; };
-		8907F1AA26D73C1A00B3E43C /* EventOverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventOverlayView.xib; sourceTree = "<group>"; };
-		892EBD3A26D737B800247E6E /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
-		892EBD3C26D737F000247E6E /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
+		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
+		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		FE6980AA26D804D10011272E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1357495B26D733E6009E6233 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1357495C26D73415009E6233 /* Search.storyboard */,
+				1357495E26D73444009E6233 /* SearchVC.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		627EF21026D6FCA30053B7F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +173,7 @@
 			children = (
 				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
+				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -190,7 +206,9 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
-				892EBD3726D736CD00247E6E /* MapsEvent */,
+				FE6980A726D804A70011272E /* Register */,
+				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
+				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
@@ -208,15 +226,22 @@
 			path = "Explore-BR";
 			sourceTree = "<group>";
 		};
-		892EBD3726D736CD00247E6E /* MapsEvent */ = {
+		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
 			isa = PBXGroup;
 			children = (
-				892EBD3A26D737B800247E6E /* EventsVC.swift */,
-				892EBD3C26D737F000247E6E /* Events.storyboard */,
-				8907F1A826D73B5100B3E43C /* EventOverlayView.swift */,
-				8907F1AA26D73C1A00B3E43C /* EventOverlayView.xib */,
+				82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */,
+				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
 			);
-			path = MapsEvent;
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		FE6980A726D804A70011272E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FE6980A826D804BB0011272E /* Register.storyboard */,
+				FE6980AA26D804D10011272E /* Register.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +305,7 @@
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
 				627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */,
+				82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */,
 				627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */,
 				627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
@@ -288,6 +314,7 @@
 				627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */,
 				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
 				627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */,
@@ -297,12 +324,11 @@
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
-				8907F1AB26D73C1B00B3E43C /* EventOverlayView.xib in Resources */,
+				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
 				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
-				892EBD3D26D737F000247E6E /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
-				892EBD3B26D737B800247E6E /* EventsVC.swift in Sources */,
+				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
+				FE6980AB26D804D10011272E /* Register.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
+				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
-				8907F1A926D73B5200B3E43C /* EventOverlayView.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
