@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A00C26D8534A005CA626 /* UIView+Gradient.swift */; };
+		0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0496A00F26D85379005CA626 /* FrameModalMenu.xib */; };
+		0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01026D85379005CA626 /* FrameModalMenu.swift */; };
+		0496A01626D85379005CA626 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496A01126D85379005CA626 /* Home.storyboard */; };
+		0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01226D85379005CA626 /* ModalPresentationController.swift */; };
+		0496A01826D85379005CA626 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01326D85379005CA626 /* HomeVC.swift */; };
 		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
 		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
@@ -46,21 +52,21 @@
 		65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */; };
 		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
 		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
-		894F807726D8430C00D3D3C5 /* EventModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894F807326D8430A00D3D3C5 /* EventModalMenu.xib */; };
-		894F807926D8430C00D3D3C5 /* EventModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F807526D8430B00D3D3C5 /* EventModalMenu.swift */; };
-		894F807A26D8430C00D3D3C5 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F807626D8430C00D3D3C5 /* EventsVC.swift */; };
-		894F808126D8436800D3D3C5 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F807C26D8436600D3D3C5 /* HomeVC.swift */; };
-		894F808226D8436800D3D3C5 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894F807D26D8436700D3D3C5 /* Home.storyboard */; };
-		894F808326D8436800D3D3C5 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F807E26D8436700D3D3C5 /* ModalPresentationController.swift */; };
-		894F808426D8436800D3D3C5 /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894F807F26D8436700D3D3C5 /* FrameModalMenu.xib */; };
-		894F808526D8436800D3D3C5 /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F808026D8436800D3D3C5 /* FrameModalMenu.swift */; };
-		894F808826D8438D00D3D3C5 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894F808726D8438D00D3D3C5 /* UIView+Gradient.swift */; };
-		894F808D26D84F9F00D3D3C5 /* EventMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894F808C26D84F9E00D3D3C5 /* EventMap.storyboard */; };
+		896ED56B26D859BE00D7AB91 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ED56726D859BC00D7AB91 /* EventsVC.swift */; };
+		896ED56C26D859BE00D7AB91 /* EventModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896ED56826D859BD00D7AB91 /* EventModalMenu.swift */; };
+		896ED56D26D859BE00D7AB91 /* EventMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 896ED56926D859BD00D7AB91 /* EventMap.storyboard */; };
+		896ED56E26D859BE00D7AB91 /* EventModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896ED56A26D859BD00D7AB91 /* EventModalMenu.xib */; };
 		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
 		FE6980AB26D804D10011272E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0496A00C26D8534A005CA626 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		0496A00F26D85379005CA626 /* FrameModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameModalMenu.xib; sourceTree = "<group>"; };
+		0496A01026D85379005CA626 /* FrameModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameModalMenu.swift; sourceTree = "<group>"; };
+		0496A01126D85379005CA626 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0496A01226D85379005CA626 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		0496A01326D85379005CA626 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
@@ -102,16 +108,10 @@
 		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
-		894F807326D8430A00D3D3C5 /* EventModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventModalMenu.xib; sourceTree = "<group>"; };
-		894F807526D8430B00D3D3C5 /* EventModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModalMenu.swift; sourceTree = "<group>"; };
-		894F807626D8430C00D3D3C5 /* EventsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
-		894F807C26D8436600D3D3C5 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeVC.swift; path = Home/HomeVC.swift; sourceTree = "<group>"; };
-		894F807D26D8436700D3D3C5 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Home/Home.storyboard; sourceTree = "<group>"; };
-		894F807E26D8436700D3D3C5 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalPresentationController.swift; path = Home/ModalPresentationController.swift; sourceTree = "<group>"; };
-		894F807F26D8436700D3D3C5 /* FrameModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FrameModalMenu.xib; path = Home/FrameModalMenu.xib; sourceTree = "<group>"; };
-		894F808026D8436800D3D3C5 /* FrameModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FrameModalMenu.swift; path = Home/FrameModalMenu.swift; sourceTree = "<group>"; };
-		894F808726D8438D00D3D3C5 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
-		894F808C26D84F9E00D3D3C5 /* EventMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventMap.storyboard; sourceTree = "<group>"; };
+		896ED56726D859BC00D7AB91 /* EventsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
+		896ED56826D859BD00D7AB91 /* EventModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModalMenu.swift; sourceTree = "<group>"; };
+		896ED56926D859BD00D7AB91 /* EventMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventMap.storyboard; sourceTree = "<group>"; };
+		896ED56A26D859BD00D7AB91 /* EventModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventModalMenu.xib; sourceTree = "<group>"; };
 		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		FE6980AA26D804D10011272E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +127,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0496A00E26D85379005CA626 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0496A00F26D85379005CA626 /* FrameModalMenu.xib */,
+				0496A01026D85379005CA626 /* FrameModalMenu.swift */,
+				0496A01126D85379005CA626 /* Home.storyboard */,
+				0496A01226D85379005CA626 /* ModalPresentationController.swift */,
+				0496A01326D85379005CA626 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		1357495B26D733E6009E6233 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,7 +203,7 @@
 		627EF24426D6FD380053B7F1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				894F808726D8438D00D3D3C5 /* UIView+Gradient.swift */,
+				0496A00C26D8534A005CA626 /* UIView+Gradient.swift */,
 				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
@@ -227,12 +239,8 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
-				894F808026D8436800D3D3C5 /* FrameModalMenu.swift */,
-				894F807F26D8436700D3D3C5 /* FrameModalMenu.xib */,
-				894F807D26D8436700D3D3C5 /* Home.storyboard */,
-				894F807C26D8436600D3D3C5 /* HomeVC.swift */,
-				894F807E26D8436700D3D3C5 /* ModalPresentationController.swift */,
-				894F807B26D8431200D3D3C5 /* EventMaps */,
+				896ED56626D859BC00D7AB91 /* EventMaps */,
+				0496A00E26D85379005CA626 /* Home */,
 				FE6980A726D804A70011272E /* Register */,
 				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
 				1357495B26D733E6009E6233 /* Search */,
@@ -262,13 +270,13 @@
 			path = LocationDetails;
 			sourceTree = "<group>";
 		};
-		894F807B26D8431200D3D3C5 /* EventMaps */ = {
+		896ED56626D859BC00D7AB91 /* EventMaps */ = {
 			isa = PBXGroup;
 			children = (
-				894F807526D8430B00D3D3C5 /* EventModalMenu.swift */,
-				894F807326D8430A00D3D3C5 /* EventModalMenu.xib */,
-				894F807626D8430C00D3D3C5 /* EventsVC.swift */,
-				894F808C26D84F9E00D3D3C5 /* EventMap.storyboard */,
+				896ED56726D859BC00D7AB91 /* EventsVC.swift */,
+				896ED56826D859BD00D7AB91 /* EventModalMenu.swift */,
+				896ED56926D859BD00D7AB91 /* EventMap.storyboard */,
+				896ED56A26D859BD00D7AB91 /* EventModalMenu.xib */,
 			);
 			path = EventMaps;
 			sourceTree = "<group>";
@@ -341,21 +349,19 @@
 			files = (
 				627EF22926D6FCA30053B7F1 /* SF-Pro-Text-Regular.otf in Resources */,
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
+				896ED56D26D859BE00D7AB91 /* EventMap.storyboard in Resources */,
 				627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */,
-				894F808226D8436800D3D3C5 /* Home.storyboard in Resources */,
 				82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */,
 				627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
+				896ED56E26D859BE00D7AB91 /* EventModalMenu.xib in Resources */,
 				627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */,
 				627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
 				627EF23026D6FCA30053B7F1 /* SF-Pro-Text-Semibold.otf in Resources */,
 				627EF23426D6FCA30053B7F1 /* SF-Pro-Text-SemiboldItalic.otf in Resources */,
 				627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */,
 				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
-				894F807726D8430C00D3D3C5 /* EventModalMenu.xib in Resources */,
-				894F808D26D84F9F00D3D3C5 /* EventMap.storyboard in Resources */,
 				627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
-				894F808426D8436800D3D3C5 /* FrameModalMenu.xib in Resources */,
 				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
@@ -364,12 +370,14 @@
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
 				627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
+				0496A01626D85379005CA626 /* Home.storyboard in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
 				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
+				0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */,
 				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,22 +389,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				894F807926D8430C00D3D3C5 /* EventModalMenu.swift in Sources */,
+				0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */,
 				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
-				894F808326D8436800D3D3C5 /* ModalPresentationController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
+				0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
-				894F808826D8438D00D3D3C5 /* UIView+Gradient.swift in Sources */,
+				896ED56B26D859BE00D7AB91 /* EventsVC.swift in Sources */,
+				896ED56C26D859BE00D7AB91 /* EventModalMenu.swift in Sources */,
+				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				FE6980AB26D804D10011272E /* Register.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
-				894F808126D8436800D3D3C5 /* HomeVC.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
-				894F808526D8436800D3D3C5 /* FrameModalMenu.swift in Sources */,
+				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
-				894F807A26D8430C00D3D3C5 /* EventsVC.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
