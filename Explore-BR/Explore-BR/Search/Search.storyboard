@@ -71,17 +71,48 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starImage" translatesAutoresizingMaskIntoConstraints="NO" id="UP2-nn-NkU">
+                                        <rect key="frame" x="24" y="191.5" width="14" height="16"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starImage" translatesAutoresizingMaskIntoConstraints="NO" id="asb-Pa-oBt">
+                                        <rect key="frame" x="54" y="191.5" width="14" height="16"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starImage" translatesAutoresizingMaskIntoConstraints="NO" id="KCN-h0-lJp">
+                                        <rect key="frame" x="84" y="191.5" width="14" height="16"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starImage" translatesAutoresizingMaskIntoConstraints="NO" id="gLR-hG-36P">
+                                        <rect key="frame" x="114" y="191.5" width="14" height="16"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StarImageCinza" translatesAutoresizingMaskIntoConstraints="NO" id="fi3-Om-Qof">
+                                        <rect key="frame" x="144" y="191.5" width="14" height="16"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeartImage" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-1p-824">
+                                        <rect key="frame" x="292" y="16" width="44" height="44"/>
+                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstItem="8GI-p7-gnj" firstAttribute="top" secondItem="OJm-OC-tJY" secondAttribute="bottom" constant="6" id="2Dn-Ud-gpC"/>
+                                    <constraint firstItem="gLR-hG-36P" firstAttribute="top" secondItem="GdT-4M-T9a" secondAttribute="bottom" constant="9" id="7gw-Xr-ca3"/>
                                     <constraint firstItem="OJm-OC-tJY" firstAttribute="top" secondItem="mAb-dL-l7M" secondAttribute="top" constant="24" id="E4i-IE-LWB"/>
                                     <constraint firstItem="OJm-OC-tJY" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="KhG-yu-i2N"/>
+                                    <constraint firstItem="KCN-h0-lJp" firstAttribute="leading" secondItem="asb-Pa-oBt" secondAttribute="trailing" constant="16" id="OcS-Of-5w7"/>
+                                    <constraint firstItem="KCN-h0-lJp" firstAttribute="top" secondItem="GdT-4M-T9a" secondAttribute="bottom" constant="9" id="Qmq-hn-Dzp"/>
                                     <constraint firstAttribute="trailing" secondItem="GdT-4M-T9a" secondAttribute="trailing" constant="42" id="UVz-4v-teD"/>
+                                    <constraint firstItem="UP2-nn-NkU" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="VgN-dG-kVZ"/>
                                     <constraint firstItem="GdT-4M-T9a" firstAttribute="top" secondItem="8GI-p7-gnj" secondAttribute="bottom" constant="9" id="Y16-7I-Pkm"/>
                                     <constraint firstAttribute="height" constant="216" id="bE3-zF-t3p"/>
+                                    <constraint firstItem="gLR-hG-36P" firstAttribute="leading" secondItem="KCN-h0-lJp" secondAttribute="trailing" constant="16" id="dKH-DQ-2Zc"/>
                                     <constraint firstItem="8GI-p7-gnj" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="eiJ-P2-pd8"/>
+                                    <constraint firstItem="asb-Pa-oBt" firstAttribute="leading" secondItem="UP2-nn-NkU" secondAttribute="trailing" constant="16" id="fti-Rc-aNU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Q1s-1p-824" secondAttribute="trailing" constant="42" id="ju5-M4-D1o"/>
+                                    <constraint firstItem="fi3-Om-Qof" firstAttribute="leading" secondItem="gLR-hG-36P" secondAttribute="trailing" constant="16" id="kkS-bV-qFw"/>
                                     <constraint firstItem="GdT-4M-T9a" firstAttribute="leading" secondItem="mAb-dL-l7M" secondAttribute="leading" constant="24" id="nGP-MB-qO4"/>
+                                    <constraint firstItem="Q1s-1p-824" firstAttribute="top" secondItem="mAb-dL-l7M" secondAttribute="top" constant="16" id="ska-gg-LiE"/>
+                                    <constraint firstItem="UP2-nn-NkU" firstAttribute="top" secondItem="GdT-4M-T9a" secondAttribute="bottom" constant="9" id="vRb-gj-7jW"/>
+                                    <constraint firstItem="asb-Pa-oBt" firstAttribute="top" secondItem="GdT-4M-T9a" secondAttribute="bottom" constant="9" id="xwb-dO-fAj"/>
+                                    <constraint firstItem="fi3-Om-Qof" firstAttribute="top" secondItem="GdT-4M-T9a" secondAttribute="bottom" constant="9" id="zKy-Qv-qYO"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -128,12 +159,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="HeartImage" width="44" height="44"/>
         <image name="SearchImage" width="414" height="220"/>
+        <image name="StarImageCinza" width="14" height="16"/>
+        <image name="starImage" width="14" height="16"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
