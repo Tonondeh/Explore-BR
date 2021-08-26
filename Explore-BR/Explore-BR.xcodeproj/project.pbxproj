@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A00C26D8534A005CA626 /* UIView+Gradient.swift */; };
+		0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0496A00F26D85379005CA626 /* FrameModalMenu.xib */; };
+		0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01026D85379005CA626 /* FrameModalMenu.swift */; };
+		0496A01626D85379005CA626 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496A01126D85379005CA626 /* Home.storyboard */; };
+		0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01226D85379005CA626 /* ModalPresentationController.swift */; };
+		0496A01826D85379005CA626 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01326D85379005CA626 /* HomeVC.swift */; };
 		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
 		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
@@ -44,9 +50,19 @@
 		65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C426D5B63B00A9F670 /* Main.storyboard */; };
 		65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C726D5B63E00A9F670 /* Assets.xcassets */; };
 		65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */; };
+		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
+		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
+		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
+		FE6980AB26D804D10011272E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0496A00C26D8534A005CA626 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		0496A00F26D85379005CA626 /* FrameModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameModalMenu.xib; sourceTree = "<group>"; };
+		0496A01026D85379005CA626 /* FrameModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameModalMenu.swift; sourceTree = "<group>"; };
+		0496A01126D85379005CA626 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		0496A01226D85379005CA626 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		0496A01326D85379005CA626 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
@@ -86,6 +102,10 @@
 		65FB99C726D5B63E00A9F670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FB99CA26D5B63E00A9F670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
+		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		FE6980AA26D804D10011272E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0496A00E26D85379005CA626 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0496A00F26D85379005CA626 /* FrameModalMenu.xib */,
+				0496A01026D85379005CA626 /* FrameModalMenu.swift */,
+				0496A01126D85379005CA626 /* Home.storyboard */,
+				0496A01226D85379005CA626 /* ModalPresentationController.swift */,
+				0496A01326D85379005CA626 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		1357495B26D733E6009E6233 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +195,7 @@
 		627EF24426D6FD380053B7F1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0496A00C26D8534A005CA626 /* UIView+Gradient.swift */,
 				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
@@ -198,6 +231,9 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				0496A00E26D85379005CA626 /* Home */,
+				FE6980A726D804A70011272E /* Register */,
+				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
 				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
@@ -214,6 +250,24 @@
 				627EF24426D6FD380053B7F1 /* Utils */,
 			);
 			path = "Explore-BR";
+			sourceTree = "<group>";
+		};
+		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */,
+				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
+			);
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		FE6980A726D804A70011272E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FE6980A826D804BB0011272E /* Register.storyboard */,
+				FE6980AA26D804D10011272E /* Register.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +331,7 @@
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
 				627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */,
+				82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */,
 				627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */,
 				627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
@@ -293,11 +348,14 @@
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
 				627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
+				0496A01626D85379005CA626 /* Home.storyboard in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
+				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
+				0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */,
 				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,13 +367,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */,
+				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
+				0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
+				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
+				FE6980AB26D804D10011272E /* Register.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
+				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
