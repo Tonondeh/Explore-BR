@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FrameModalMenu" customModule="Explore_BR" customModuleProvider="target">
             <connections>
+                <outlet property="backgroundMenuView" destination="hpt-ku-w4M" id="3lt-2n-yaM"/>
                 <outlet property="view" destination="Sop-6M-XSM" id="HJo-6c-I13"/>
             </connections>
         </placeholder>
@@ -21,13 +22,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sop-6M-XSM">
                     <rect key="frame" x="0.0" y="0.0" width="518" height="544"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCE-cn-5Uu">
-                            <rect key="frame" x="238" y="235" width="39" height="21"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hpt-ku-w4M">
+                            <rect key="frame" x="0.0" y="0.0" width="518" height="544"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>

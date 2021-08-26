@@ -18,7 +18,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.configureUI()
         self.searchTextField.delegate = self
-        showMenu()
+        
     }
     
     @objc func showMenu() {
@@ -33,6 +33,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     }
     
     func configureUI() {
+        showMenu()
         self.statusBackgroundView.applyGradientInView(colors: [blueDarkButton,blueLightButton])
         
         self.wrapSearchBarView.layer.cornerRadius = self.wrapSearchBarView.frame.size.height/2
@@ -47,6 +48,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.avatarProfileButton.layer.shadowOpacity = 1
         self.avatarProfileButton.layer.shadowRadius = 30
         self.avatarProfileButton.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        showMenu()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

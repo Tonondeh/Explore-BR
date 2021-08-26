@@ -4,17 +4,20 @@ import UIKit
 
 class FrameModalMenu: UIViewController {
     
+    @IBOutlet weak var backgroundMenuView: UIView!
+    
     var hasSetPointOrigin = false
     var pointOrigin: CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configureUI()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
     }
     
     func configureUI() {
-    //        self.backgroundView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
+            self.backgroundMenuView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
         }
     
     override func viewDidLayoutSubviews() {
