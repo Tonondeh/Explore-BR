@@ -24,6 +24,9 @@ class SearchVC: UIViewController {
     
     func configSearchBar(){
         searchBar.searchTextField.backgroundColor = .white
+        searchBar.searchTextField.layer.cornerRadius = 100.0
+        
+        
         }
     
     func configNavigationBar(){
