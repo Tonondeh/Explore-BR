@@ -9,13 +9,22 @@ import UIKit
 
 class SearchVC: UIViewController {
     
+    @IBOutlet var searchBar: UISearchBar!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
+        self.configSearchBar()
+        navigationItem.titleView = searchBar
+        
         
         
     }
     
+    func configSearchBar(){
+        searchBar.searchTextField.backgroundColor = .white
+        }
     
     func configNavigationBar(){
         let layer0 = CAGradientLayer()

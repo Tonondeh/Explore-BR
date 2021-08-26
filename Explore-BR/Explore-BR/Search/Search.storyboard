@@ -140,8 +140,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Kh-7D-UnC"/>
+                    <connections>
+                        <outlet property="searchBar" destination="WiZ-md-a8R" id="4d0-Gi-K1u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <searchBar contentMode="redraw" placeholder="Faça sua busca" id="WiZ-md-a8R">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="93.75"/>
         </scene>
