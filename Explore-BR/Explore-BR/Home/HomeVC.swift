@@ -12,6 +12,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var statusBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var wrapSearchBarView: UIView!
+    @IBOutlet weak var avatarImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,11 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.wrapSearchBarView.layer.shadowOpacity = 1
         self.wrapSearchBarView.layer.shadowRadius = 30
         self.wrapSearchBarView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        
+        self.avatarImage.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.avatarImage.layer.shadowOpacity = 1
+        self.avatarImage.layer.shadowRadius = 30
+        self.avatarImage.layer.shadowOffset = CGSize(width: 0, height: 4.0)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
