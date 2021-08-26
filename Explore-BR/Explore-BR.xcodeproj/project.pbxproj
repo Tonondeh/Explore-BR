@@ -10,6 +10,8 @@
 		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
 		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
+		620E492E26D7E0F000ABE03C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620E492D26D7E0F000ABE03C /* Home.storyboard */; };
+		620E493026D7E10C00ABE03C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E492F26D7E10C00ABE03C /* HomeVC.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
 		627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */; };
 		627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */; };
@@ -50,6 +52,8 @@
 		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
+		620E492D26D7E0F000ABE03C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		620E492F26D7E10C00ABE03C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
 		627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 				1357495E26D73444009E6233 /* SearchVC.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		620E492C26D7E0D800ABE03C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				620E492D26D7E0F000ABE03C /* Home.storyboard */,
+				620E492F26D7E10C00ABE03C /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		627EF21026D6FCA30053B7F1 /* Fonts */ = {
@@ -198,6 +211,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				620E492C26D7E0D800ABE03C /* Home */,
 				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
@@ -285,6 +299,7 @@
 				627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */,
 				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
 				627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
+				620E492E26D7E0F000ABE03C /* Home.storyboard in Resources */,
 				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
@@ -318,6 +333,7 @@
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
+				620E493026D7E10C00ABE03C /* HomeVC.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
 			);
