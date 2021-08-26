@@ -46,6 +46,8 @@
 		65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */; };
 		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
 		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
+		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
+		FE6980AB26D804D10011272E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
+		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		FE6980AA26D804D10011272E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				FE6980A726D804A70011272E /* Register */,
 				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
 				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
@@ -228,6 +233,15 @@
 				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
 			);
 			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		FE6980A726D804A70011272E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				FE6980A826D804BB0011272E /* Register.storyboard */,
+				FE6980AA26D804D10011272E /* Register.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +324,7 @@
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
+				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
@@ -328,6 +343,7 @@
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
+				FE6980AB26D804D10011272E /* Register.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
