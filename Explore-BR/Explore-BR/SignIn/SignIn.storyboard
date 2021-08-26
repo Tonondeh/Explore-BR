@@ -32,6 +32,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-0k-MQL">
+                                <rect key="frame" x="48" y="309" width="29.666666666666671" height="23"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diR-Wx-UcD">
                                 <rect key="frame" x="24" y="368.33333333333331" width="380" height="48"/>
                                 <constraints>
@@ -96,12 +99,17 @@
                                     </attributedString>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vBg-a1-GOO">
+                                <rect key="frame" x="43" y="375" width="39" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="A0y-Zd-pP1" firstAttribute="trailing" secondItem="Yds-zD-JLq" secondAttribute="trailing" id="2Cf-IL-fu7"/>
                             <constraint firstItem="bG9-AC-7Z4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="9vq-5V-rKA"/>
+                            <constraint firstItem="IoQ-0k-MQL" firstAttribute="leading" secondItem="shk-w8-mtL" secondAttribute="leading" constant="24" id="CT4-Zi-ArZ"/>
                             <constraint firstItem="W39-qi-jya" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="130" id="CvC-yG-eK2"/>
                             <constraint firstItem="Yds-zD-JLq" firstAttribute="trailing" secondItem="diR-Wx-UcD" secondAttribute="trailing" id="G0v-iu-emZ"/>
                             <constraint firstItem="W39-qi-jya" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KHZ-Fa-MFu"/>
@@ -120,6 +128,7 @@
                             <constraint firstItem="A0y-Zd-pP1" firstAttribute="top" secondItem="Yds-zD-JLq" secondAttribute="bottom" constant="32" id="mEV-gT-OHB"/>
                             <constraint firstItem="Yds-zD-JLq" firstAttribute="top" secondItem="diR-Wx-UcD" secondAttribute="bottom" constant="12" id="oFv-In-odQ"/>
                             <constraint firstAttribute="bottom" secondItem="wVG-oc-LzO" secondAttribute="bottom" id="ogN-aC-1ak"/>
+                            <constraint firstItem="IoQ-0k-MQL" firstAttribute="centerY" secondItem="shk-w8-mtL" secondAttribute="centerY" id="pF9-bU-DSu"/>
                             <constraint firstItem="diR-Wx-UcD" firstAttribute="top" secondItem="shk-w8-mtL" secondAttribute="bottom" constant="24" id="poR-V2-VVn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7cM-6k-NmT" secondAttribute="bottom" constant="30" id="w1i-s8-hKm"/>
                         </constraints>
@@ -130,10 +139,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15.942028985507248" y="77.678571428571431"/>
+            <point key="canvasLocation" x="15.420560747663551" y="77.105831533477328"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="414" height="896"/>
+        <image name="mail" width="29.666666030883789" height="23"/>
     </resources>
 </document>
