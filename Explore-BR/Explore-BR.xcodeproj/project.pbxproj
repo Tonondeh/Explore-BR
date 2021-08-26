@@ -198,20 +198,20 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				627EF23F26D6FD210053B7F1 /* SignIn */,
+				65B6E09726D6C29000A54D6C /* ResetPassword */,
 				1357495B26D733E6009E6233 /* Search */,
+				627EF23526D6FCF50053B7F1 /* Login */,
+				627EF23A26D6FD080053B7F1 /* Profile */,
+				627EF21026D6FCA30053B7F1 /* Fonts */,
+				627EF24426D6FD380053B7F1 /* Utils */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
 				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
-				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
-				627EF21026D6FCA30053B7F1 /* Fonts */,
-				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
-				627EF23526D6FCF50053B7F1 /* Login */,
 				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
-				627EF23A26D6FD080053B7F1 /* Profile */,
-				65B6E09726D6C29000A54D6C /* ResetPassword */,
-				627EF23F26D6FD210053B7F1 /* SignIn */,
-				627EF24426D6FD380053B7F1 /* Utils */,
+				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
+				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
 			);
 			path = "Explore-BR";
 			sourceTree = "<group>";
