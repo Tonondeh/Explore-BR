@@ -10,6 +10,9 @@
 		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
 		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
+		3AF18F3426D7E89400555A06 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF18F3226D7E89400555A06 /* ChangePasswordViewController.swift */; };
+		3AF18F3526D7E89400555A06 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF18F3326D7E89400555A06 /* ChangePassword.storyboard */; };
+		3AF18F3726D7F12F00555A06 /* TextFieldIconAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF18F3626D7F12F00555A06 /* TextFieldIconAndImage.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
 		627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */; };
 		627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */; };
@@ -50,6 +53,9 @@
 		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
+		3AF18F3226D7E89400555A06 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		3AF18F3326D7E89400555A06 /* ChangePassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
+		3AF18F3626D7F12F00555A06 /* TextFieldIconAndImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldIconAndImage.swift; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
 		627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -106,6 +112,15 @@
 				1357495E26D73444009E6233 /* SearchVC.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		3AF18F3126D7E89400555A06 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				3AF18F3226D7E89400555A06 /* ChangePasswordViewController.swift */,
+				3AF18F3326D7E89400555A06 /* ChangePassword.storyboard */,
+			);
+			path = ChangePassword;
 			sourceTree = "<group>";
 		};
 		627EF21026D6FCA30053B7F1 /* Fonts */ = {
@@ -166,6 +181,7 @@
 				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
+				3AF18F3626D7F12F00555A06 /* TextFieldIconAndImage.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -198,6 +214,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				3AF18F3126D7E89400555A06 /* ChangePassword */,
 				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
@@ -292,6 +309,7 @@
 				627EF22A26D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf in Resources */,
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
 				627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
+				3AF18F3526D7E89400555A06 /* ChangePassword.storyboard in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
@@ -313,11 +331,13 @@
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
+				3AF18F3726D7F12F00555A06 /* TextFieldIconAndImage.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
+				3AF18F3426D7E89400555A06 /* ChangePasswordViewController.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
 			);
