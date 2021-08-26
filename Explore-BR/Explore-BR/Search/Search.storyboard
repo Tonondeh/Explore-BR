@@ -8,17 +8,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Qualquer coisa-->
+        <!--SearchVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SearchVC" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4E9-Fb-mIf">
+                                <rect key="frame" x="35" y="112" width="81" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="81" id="yac-xW-NBb"/>
+                                </constraints>
+                                <state key="normal" title="Hotéis">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-LH-QMA">
+                                <rect key="frame" x="128" y="112" width="102" height="30"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="svr-N9-FsR"/>
+                                </constraints>
+                                <state key="normal" title="Parques">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PC3-IP-705">
+                                <rect key="frame" x="242" y="112" width="127" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="8vd-Cd-SMD"/>
+                                </constraints>
+                                <state key="normal" title="Restaurantes">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SearchImage" translatesAutoresizingMaskIntoConstraints="NO" id="kzK-zn-7Ds">
+                                <rect key="frame" x="0.0" y="155" width="414" height="220"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="PC3-IP-705" firstAttribute="leading" secondItem="TBb-LH-QMA" secondAttribute="trailing" constant="12" id="1OR-BZ-1Kc"/>
+                            <constraint firstItem="4E9-Fb-mIf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="3Qv-5b-fka"/>
+                            <constraint firstItem="kzK-zn-7Ds" firstAttribute="top" secondItem="4E9-Fb-mIf" secondAttribute="bottom" constant="13" id="89m-T8-iSt"/>
+                            <constraint firstItem="PC3-IP-705" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="9mE-3r-7eL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kzK-zn-7Ds" secondAttribute="trailing" id="Ij6-D8-nXK"/>
+                            <constraint firstItem="TBb-LH-QMA" firstAttribute="leading" secondItem="4E9-Fb-mIf" secondAttribute="trailing" constant="12" id="U7d-LM-6vP"/>
+                            <constraint firstItem="4E9-Fb-mIf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="wCo-WP-MNc"/>
+                            <constraint firstItem="kzK-zn-7Ds" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xjD-TR-brC"/>
+                            <constraint firstItem="TBb-LH-QMA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="yen-N2-mys"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Qualquer coisa" id="3Kh-7D-UnC"/>
+                    <navigationItem key="navigationItem" id="3Kh-7D-UnC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,8 +90,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SearchImage" width="414" height="220"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
