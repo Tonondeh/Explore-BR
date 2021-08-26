@@ -36,6 +36,13 @@
 		627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24126D6FD210053B7F1 /* SignInViewController.swift */; };
 		627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */; };
 		627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24626D6FD380053B7F1 /* ColorsGradient.swift */; };
+		6591898326D845670082289B /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6591897E26D845670082289B /* FrameModalMenu.xib */; };
+		6591898426D845670082289B /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591897F26D845670082289B /* FrameModalMenu.swift */; };
+		6591898526D845670082289B /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6591898026D845670082289B /* Home.storyboard */; };
+		6591898626D845670082289B /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591898126D845670082289B /* ModalPresentationController.swift */; };
+		6591898726D845670082289B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591898226D845670082289B /* HomeVC.swift */; };
+		6591898926D84D730082289B /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6591898826D84D730082289B /* UIView+Gradient.swift */; };
+		6591898B26D84F110082289B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6591898A26D84F110082289B /* Info.plist */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
@@ -80,6 +87,13 @@
 		627EF24126D6FD210053B7F1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
 		627EF24626D6FD380053B7F1 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
+		6591897E26D845670082289B /* FrameModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameModalMenu.xib; sourceTree = "<group>"; };
+		6591897F26D845670082289B /* FrameModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameModalMenu.swift; sourceTree = "<group>"; };
+		6591898026D845670082289B /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		6591898126D845670082289B /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
+		6591898226D845670082289B /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		6591898826D84D730082289B /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		6591898A26D84F110082289B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +103,6 @@
 		65FB99C526D5B63B00A9F670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65FB99C726D5B63E00A9F670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FB99CA26D5B63E00A9F670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -174,8 +187,21 @@
 				627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */,
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
+				6591898826D84D730082289B /* UIView+Gradient.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		6591897D26D845670082289B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6591897E26D845670082289B /* FrameModalMenu.xib */,
+				6591897F26D845670082289B /* FrameModalMenu.swift */,
+				6591898026D845670082289B /* Home.storyboard */,
+				6591898126D845670082289B /* ModalPresentationController.swift */,
+				6591898226D845670082289B /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
@@ -206,22 +232,23 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				6591898A26D84F110082289B /* Info.plist */,
+				6591897D26D845670082289B /* Home */,
 				FE6980A726D804A70011272E /* Register */,
 				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
 				1357495B26D733E6009E6233 /* Search */,
-				65FB99CC26D5B63E00A9F670 /* Info.plist */,
-				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
-				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
-				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
-				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
-				627EF21026D6FCA30053B7F1 /* Fonts */,
-				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
 				627EF23526D6FCF50053B7F1 /* Login */,
-				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
 				627EF23A26D6FD080053B7F1 /* Profile */,
 				65B6E09726D6C29000A54D6C /* ResetPassword */,
 				627EF23F26D6FD210053B7F1 /* SignIn */,
 				627EF24426D6FD380053B7F1 /* Utils */,
+				627EF21026D6FCA30053B7F1 /* Fonts */,
+				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
+				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
+				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
+				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
+				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
+				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
 			);
 			path = "Explore-BR";
 			sourceTree = "<group>";
@@ -322,13 +349,16 @@
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
 				627EF22726D6FCA30053B7F1 /* SF-Pro-Text-BlackItalic.otf in Resources */,
 				65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */,
+				6591898526D845670082289B /* Home.storyboard in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
 				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
+				6591898326D845670082289B /* FrameModalMenu.xib in Resources */,
 				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
+				6591898B26D84F110082289B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
+				6591898626D845670082289B /* ModalPresentationController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
@@ -347,8 +378,11 @@
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
+				6591898726D845670082289B /* HomeVC.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
+				6591898926D84D730082289B /* UIView+Gradient.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
+				6591898426D845670082289B /* FrameModalMenu.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
