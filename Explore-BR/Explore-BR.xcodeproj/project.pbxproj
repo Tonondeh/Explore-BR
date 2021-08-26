@@ -13,7 +13,7 @@
 		620E492E26D7E0F000ABE03C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 620E492D26D7E0F000ABE03C /* Home.storyboard */; };
 		620E493026D7E10C00ABE03C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E492F26D7E10C00ABE03C /* HomeVC.swift */; };
 		620E493226D7E1B300ABE03C /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 620E493126D7E1B300ABE03C /* FrameModalMenu.xib */; };
-		620E493426D7E1EE00ABE03C /* FrameModalMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E493326D7E1EE00ABE03C /* FrameModalMenuVC.swift */; };
+		620E493426D7E1EE00ABE03C /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E493326D7E1EE00ABE03C /* FrameModalMenu.swift */; };
 		620E493626D7E21000ABE03C /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E493526D7E21000ABE03C /* ModalPresentationController.swift */; };
 		620E493826D7E4C400ABE03C /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620E493726D7E4C400ABE03C /* UIView+Gradient.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
@@ -59,7 +59,7 @@
 		620E492D26D7E0F000ABE03C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		620E492F26D7E10C00ABE03C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		620E493126D7E1B300ABE03C /* FrameModalMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FrameModalMenu.xib; sourceTree = "<group>"; };
-		620E493326D7E1EE00ABE03C /* FrameModalMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameModalMenuVC.swift; sourceTree = "<group>"; };
+		620E493326D7E1EE00ABE03C /* FrameModalMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameModalMenu.swift; sourceTree = "<group>"; };
 		620E493526D7E21000ABE03C /* ModalPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
 		620E493726D7E4C400ABE03C /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				620E492D26D7E0F000ABE03C /* Home.storyboard */,
 				620E492F26D7E10C00ABE03C /* HomeVC.swift */,
 				620E493126D7E1B300ABE03C /* FrameModalMenu.xib */,
-				620E493326D7E1EE00ABE03C /* FrameModalMenuVC.swift */,
+				620E493326D7E1EE00ABE03C /* FrameModalMenu.swift */,
 				620E493526D7E21000ABE03C /* ModalPresentationController.swift */,
 			);
 			path = Home;
@@ -339,7 +339,7 @@
 			files = (
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
-				620E493426D7E1EE00ABE03C /* FrameModalMenuVC.swift in Sources */,
+				620E493426D7E1EE00ABE03C /* FrameModalMenu.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,

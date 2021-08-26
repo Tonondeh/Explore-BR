@@ -12,12 +12,24 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var statusBackgroundView: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var wrapSearchBarView: UIView!
-    @IBOutlet weak var avatarImage: UIImageView!
+    @IBOutlet weak var avatarProfileButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
         self.searchTextField.delegate = self
+        showMenu()
+    }
+    
+    @objc func showMenu() {
+        let slideVC = FrameModalMenu()
+        slideVC.modalPresentationStyle = .custom
+        slideVC.transitioningDelegate = self
+        self.present(slideVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func tappedAvatarProfile(_ sender: UIButton) {
+        showMenu()
     }
     
     func configureUI() {
@@ -31,14 +43,20 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.wrapSearchBarView.layer.shadowRadius = 30
         self.wrapSearchBarView.layer.shadowOffset = CGSize(width: 0, height: 4.0)
         
-        self.avatarImage.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        self.avatarImage.layer.shadowOpacity = 1
-        self.avatarImage.layer.shadowRadius = 30
-        self.avatarImage.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+        self.avatarProfileButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.avatarProfileButton.layer.shadowOpacity = 1
+        self.avatarProfileButton.layer.shadowRadius = 30
+        self.avatarProfileButton.layer.shadowOffset = CGSize(width: 0, height: 4.0)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
 
+}
+
+extension HomeVC: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        ModalPresentationController(presentedViewController: presented, presenting: presenting)
+    }
 }

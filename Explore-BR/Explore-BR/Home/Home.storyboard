@@ -35,21 +35,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="J5m-hI-ztr">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-wQ-wNF">
                                         <rect key="frame" x="327" y="7.5" width="33" height="33"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="33" id="0Dx-tQ-dzL"/>
-                                            <constraint firstAttribute="height" constant="33" id="rO0-VD-7NP"/>
+                                            <constraint firstAttribute="height" constant="33" id="kD9-na-RRZ"/>
+                                            <constraint firstAttribute="width" constant="33" id="mph-cw-G53"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="profile"/>
+                                        <connections>
+                                            <action selector="tappedAvatarProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3qA-H0-aHk"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="COh-gO-22n" firstAttribute="top" secondItem="Jcy-fL-CAG" secondAttribute="top" id="38J-0W-7Dp"/>
                                     <constraint firstItem="COh-gO-22n" firstAttribute="leading" secondItem="Jcy-fL-CAG" secondAttribute="leading" constant="24" id="FC4-OY-dC8"/>
-                                    <constraint firstItem="J5m-hI-ztr" firstAttribute="leading" secondItem="COh-gO-22n" secondAttribute="trailing" constant="12" id="Lpt-zS-taz"/>
-                                    <constraint firstItem="J5m-hI-ztr" firstAttribute="centerY" secondItem="Jcy-fL-CAG" secondAttribute="centerY" id="TPq-5S-uPH"/>
-                                    <constraint firstAttribute="trailing" secondItem="J5m-hI-ztr" secondAttribute="trailing" constant="18" id="gKH-8D-R4T"/>
+                                    <constraint firstAttribute="trailing" secondItem="MDx-wQ-wNF" secondAttribute="trailing" constant="18" id="NgA-i2-ye1"/>
+                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="leading" secondItem="COh-gO-22n" secondAttribute="trailing" constant="12" id="XUV-mz-K27"/>
+                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="centerY" secondItem="Jcy-fL-CAG" secondAttribute="centerY" id="bq5-05-Zjv"/>
                                     <constraint firstAttribute="height" constant="48" id="jvX-yR-uLi"/>
                                     <constraint firstAttribute="bottom" secondItem="COh-gO-22n" secondAttribute="bottom" id="kzg-s3-tgQ"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="z53-K0-sh3"/>
@@ -72,7 +76,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="avatarImage" destination="J5m-hI-ztr" id="JVQ-AZ-cAF"/>
+                        <outlet property="avatarProfileButton" destination="MDx-wQ-wNF" id="1Sl-KS-g6n"/>
                         <outlet property="searchTextField" destination="COh-gO-22n" id="S9X-OO-2Yv"/>
                         <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
                         <outlet property="wrapSearchBarView" destination="Jcy-fL-CAG" id="kuW-Lp-Wog"/>
