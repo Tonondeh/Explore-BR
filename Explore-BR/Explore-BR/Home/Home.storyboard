@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="HomeVC" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,16 +19,29 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mk8-g4-hQe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
+                            <view opaque="NO" clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLh-cP-pfn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3H5-IU-Wed"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="58e-YC-I7c"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AOn-yp-5K4"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Hay-5T-RGh"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b51-9x-ZsU"/>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIl-Ti-ioi"/>
                             <constraint firstAttribute="bottom" secondItem="Mk8-g4-hQe" secondAttribute="bottom" id="e7r-81-G5Z"/>
                             <constraint firstItem="Mk8-g4-hQe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xzE-OE-cXJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

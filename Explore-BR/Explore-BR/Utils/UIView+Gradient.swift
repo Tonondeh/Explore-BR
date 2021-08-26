@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIView {
-    func applyGradient(colors: [CGColor]) {
+    func applyGradientInView(colors: [CGColor]) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = colors
         gradientLayer.startPoint = CGPoint(x: 0.3, y: 0)
