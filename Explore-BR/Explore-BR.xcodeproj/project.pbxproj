@@ -44,6 +44,8 @@
 		65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C426D5B63B00A9F670 /* Main.storyboard */; };
 		65FB99C826D5B63E00A9F670 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C726D5B63E00A9F670 /* Assets.xcassets */; };
 		65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */; };
+		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
+		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		65FB99C726D5B63E00A9F670 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65FB99CA26D5B63E00A9F670 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65FB99CC26D5B63E00A9F670 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
+		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +202,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
 				1357495B26D733E6009E6233 /* Search */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
@@ -214,6 +219,15 @@
 				627EF24426D6FD380053B7F1 /* Utils */,
 			);
 			path = "Explore-BR";
+			sourceTree = "<group>";
+		};
+		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */,
+				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
+			);
+			path = LocationDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +291,7 @@
 				65FB99CB26D5B63E00A9F670 /* LaunchScreen.storyboard in Resources */,
 				627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */,
 				627EF22626D6FCA30053B7F1 /* SF-Pro-Text-Light.otf in Resources */,
+				82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */,
 				627EF22F26D6FCA30053B7F1 /* SF-Pro-Text-RegularItalic.otf in Resources */,
 				627EF23326D6FCA30053B7F1 /* SF-Pro-Text-Medium.otf in Resources */,
 				627EF22D26D6FCA30053B7F1 /* SF-Pro-Text-ThinItalic.otf in Resources */,
@@ -309,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
