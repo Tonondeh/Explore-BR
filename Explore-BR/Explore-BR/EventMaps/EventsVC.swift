@@ -28,7 +28,7 @@ class EventsVC: UIViewController, UITextFieldDelegate{
     }
     
     func configureUI() {
-        self.statusBackgroundView.applyGradientInView(colors: [blueDarkButton,blueLightButton])
+//        self.statusBackgroundView.applyGradientInView(colors: [blueLightButton,blueLightButton])
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
