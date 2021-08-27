@@ -17,7 +17,7 @@ class EventsVC: UIViewController, UITextFieldDelegate{
     }
     
     @objc func showMenu() {
-        let slideVC = FrameModalMenu()
+        let slideVC = EventModalMenu()
         slideVC.modalPresentationStyle = .custom
         slideVC.transitioningDelegate = self
         self.present(slideVC, animated: true, completion: nil)
