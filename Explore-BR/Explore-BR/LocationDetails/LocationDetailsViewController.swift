@@ -15,19 +15,42 @@ class LocationDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.configNavigationBar()
+        self.configButton()
+        self.configView()
+    }    
+    
+    private func configNavigationBar() {
+        
+        let layer0 = CAGradientLayer()
+        
+        layer0.colors = [
+            
+            UIColor(red: 0.204, green: 0.58, blue: 0.902, alpha: 1).cgColor,
+            
+            UIColor(red: 0.925, green: 0.431, blue: 0.678, alpha: 1).cgColor
+            
+        ]
+        
+        if let colors = layer0.colors {
+            self.navigationController?.navigationBar.setGradientBackground(colors: colors)
+        }
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configButton() {
+        self.evalueteButton.applyGradient(colors: [blueLightButton, blueDarkButton])
+        self.loadPhotoButton.applyGradient(colors: [blueLightButton, blueDarkButton])
+        
+        self.evalueteButton.layer.cornerRadius = 6.0
+        self.loadPhotoButton.layer.cornerRadius = 6.0
     }
-    */
+    
+    private func configView() {
+        self.detailsView.layer.cornerRadius = 20.0
+    }
 
 }
