@@ -38,11 +38,11 @@ class ChangePasswordViewController: UIViewController {
         
         if let imageIcon: UIImage = UIImage(named: "locked.png") {
             
-            self.currentPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Digite sua senha atual")
+            self.currentPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Digite sua senha atual:")
             
-            self.newPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Entre com a nova senha")
+            self.newPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Entre com a nova senha:")
             
-            self.confirmPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Digite sua senha atual")
+            self.confirmPasswordTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Confirme a senha:")
         }
         
         
