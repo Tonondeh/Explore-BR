@@ -24,6 +24,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "goToChangePassword", sender: self)
     }
     
     @IBAction func tappedSignOutButton(_ sender: UIButton) {
@@ -57,6 +58,9 @@ class ProfileViewController: UIViewController {
         
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
+        
+        navigationController?.navigationBar.tintColor = UIColor.white
+        
         
     }
     

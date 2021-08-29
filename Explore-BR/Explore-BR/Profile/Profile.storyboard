@@ -75,18 +75,29 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Perfil" id="U3Q-Q9-f1x">
-                        <barButtonItem key="backBarButtonItem" title="  " id="nJf-6p-Vol"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="nJf-6p-Vol"/>
                     </navigationItem>
                     <connections>
                         <outlet property="changePasswordButton" destination="VJl-fJ-fkA" id="oQC-Vg-s8f"/>
                         <outlet property="nameLabel" destination="g6q-ZM-IAV" id="wea-lP-pZI"/>
                         <outlet property="profileImageView" destination="XY7-g1-32Y" id="l7U-hn-2t8"/>
                         <outlet property="signOutButton" destination="oV6-Si-jDg" id="6s9-5f-cQf"/>
+                        <segue destination="kWo-8x-J0B" kind="show" identifier="goToChangePassword" id="gwb-Wm-9KV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="77.678571428571431"/>
+        </scene>
+        <!--ChangePassword-->
+        <scene sceneID="hZp-jc-Ld9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ChangePassword" storyboardName="ChangePassword" referencedIdentifier="ChangePassword" id="kWo-8x-J0B" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qFc-A2-0QE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xH2-Jq-uTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1683" y="64"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QtN-lv-X7B">
