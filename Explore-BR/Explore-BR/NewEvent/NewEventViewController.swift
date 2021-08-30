@@ -43,6 +43,7 @@ class NewEventViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
+        self.configTextField()
 
        
     }
@@ -68,5 +69,40 @@ class NewEventViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
+    
+    private func configTextField() {
+        self.eventNameTextField.layer.borderWidth = 1
+        self.eventNameTextField.layer.borderColor = UIColor.systemGray.cgColor
+        
+        self.inicialDateTextField.layer.borderWidth = 1
+        self.inicialDateTextField.layer.borderColor = UIColor.systemGray.cgColor
+        
+        self.endDateTextField.layer.borderWidth = 1
+        self.endDateTextField.layer.borderColor = UIColor.systemGray.cgColor
+        
+        self.descriptionTextField.layer.borderWidth = 1
+        self.descriptionTextField.layer.borderColor = UIColor.systemGray.cgColor
+        
+        if let imageIcon: UIImage = UIImage(named: "nameEventImage.png") {
+            
+            self.eventNameTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Qual o nome do evento")
+            
+           }
+       
+        if let imageCalendar: UIImage = UIImage(named: "calendarImage.png"){
+            
+            self.inicialDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de inicio")
+            
+            self.endDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de fim")
+            
+        }
+        
+        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png"){
+            
+            self.descriptionTextField.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
+        }
+    }
 
 }
+
+
