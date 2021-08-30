@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9mE-0O-iUW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -120,6 +120,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Novo Evento" id="T6k-UQ-p7T"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="Sz3-iP-hLA" id="G5O-QH-GMe"/>
+                        <outlet property="askLabel" destination="55k-XQ-0Gy" id="eML-UJ-f9M"/>
+                        <outlet property="descriptionTextField" destination="KCx-6F-In5" id="Wqn-Ws-ewD"/>
+                        <outlet property="endDateTextField" destination="VZL-W2-Vs5" id="90k-ux-d3i"/>
+                        <outlet property="eventLocalLabel" destination="kdx-Ca-P6Z" id="SSB-PW-Ba6"/>
+                        <outlet property="eventNameTextField" destination="gef-uD-fim" id="dRh-j1-pO2"/>
+                        <outlet property="inicialDateTextField" destination="Cfd-OF-8k8" id="ylh-d0-LO4"/>
+                        <outlet property="mapKitView" destination="QZ1-gE-gEO" id="Oyv-zT-U6z"/>
+                        <outlet property="updateLocationButton" destination="iOO-MP-C85" id="zgF-ya-bwc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,7 +156,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image-location" width="21" height="21"/>
+        <image name="image-location" width="20" height="20.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
