@@ -39,7 +39,7 @@ class PlacesCollectionViewCell: UICollectionViewCell {
         
         
         
-    }
+}
     
     
 }
