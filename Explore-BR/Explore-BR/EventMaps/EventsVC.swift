@@ -13,6 +13,9 @@ class EventsVC: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.showMenu()
     }
     

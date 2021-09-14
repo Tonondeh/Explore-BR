@@ -18,6 +18,9 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.configureUI()
         self.searchTextField.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.showMenu()
     }
     
