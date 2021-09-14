@@ -14,6 +14,9 @@ class SearchVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     
+    var placesArray: [Place] = [Place(name: "Parques"),Place(name: "Restaurantes"), Place(name: "Shopping"), Place(name: "Cinema"), Place(name: "zoologico"), Place(name: "Horti-Fruti"), Place(name: "Mercado"), Place(name: "Padaria")]
+    
+    
     
 //    @IBOutlet weak var cardView: UIView!
     
@@ -100,11 +103,17 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.placesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+       
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
+
+        cell.setUpCell(data: self.placesArray[indexPath.row])
+        
+        
+        return cell
         
     }
     
