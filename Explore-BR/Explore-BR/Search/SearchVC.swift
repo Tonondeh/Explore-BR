@@ -18,21 +18,21 @@ class SearchVC: UIViewController {
     
     
     
-//    @IBOutlet weak var cardView: UIView!
+    //    @IBOutlet weak var cardView: UIView!
     
-//    @IBOutlet weak var buttonHoteis: UIButton!
-//
-//    @IBOutlet weak var buttonParques: UIButton!
-//
-//    @IBOutlet weak var buttonRestaurantes: UIButton!
+    //    @IBOutlet weak var buttonHoteis: UIButton!
+    //
+    //    @IBOutlet weak var buttonParques: UIButton!
+    //
+    //    @IBOutlet weak var buttonRestaurantes: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configSearchBar()
         self.configCollectionView()
-//        self.configCardView()
-//        self.configUI()
+        //        self.configCardView()
+        //        self.configUI()
         navigationItem.titleView = searchBar
         
     }
@@ -45,30 +45,30 @@ class SearchVC: UIViewController {
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             
-        self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
-}
+            self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
+        }
         
         
         
     }
     
-//    func configUI(){
-//       self.buttonParques.layer.cornerRadius = 3.0
-//        self.buttonParques.applyGradient(colors: [blueDarkButton,blueLightButton])
-//
-//
-//
-//    }
-//    func configCardView(){
-//        self.cardView.layer.cornerRadius = 20.0
-//    }
+    //    func configUI(){
+    //       self.buttonParques.layer.cornerRadius = 3.0
+    //        self.buttonParques.applyGradient(colors: [blueDarkButton,blueLightButton])
+    //
+    //
+    //
+    //    }
+    //    func configCardView(){
+    //        self.cardView.layer.cornerRadius = 20.0
+    //    }
     
     func configSearchBar(){
         searchBar.searchTextField.backgroundColor = .white
         searchBar.searchTextField.layer.cornerRadius = 100.0
         
         
-        }
+    }
     
     func configNavigationBar(){
         let layer0 = CAGradientLayer()
@@ -107,9 +107,9 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
-
+        
         cell.setUpCell(data: self.placesArray[indexPath.row])
         
         

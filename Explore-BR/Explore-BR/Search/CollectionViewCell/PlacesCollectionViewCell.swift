@@ -29,9 +29,7 @@ class PlacesCollectionViewCell: UICollectionViewCell {
         
         
     }
-        
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,7 +38,8 @@ class PlacesCollectionViewCell: UICollectionViewCell {
     @IBAction func tappedPlacesButton(_ sender: UIButton) {
         
         
+        
     }
     
-
+    
 }

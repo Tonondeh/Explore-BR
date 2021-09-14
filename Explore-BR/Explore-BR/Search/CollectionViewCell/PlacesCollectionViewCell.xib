@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,7 +18,8 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-KT-f7E">
-                        <rect key="frame" x="0.0" y="0.0" width="102" height="36"/>
+                        <rect key="frame" x="10" y="0.0" width="92" height="36"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <state key="normal" title="Button"/>
                         <connections>
                             <action selector="tappedPlacesButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cGU-tq-Llr"/>
@@ -29,7 +31,7 @@
             <constraints>
                 <constraint firstItem="nNZ-KT-f7E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0LO-WE-CcZ"/>
                 <constraint firstAttribute="bottom" secondItem="nNZ-KT-f7E" secondAttribute="bottom" id="NJx-ha-Aw7"/>
-                <constraint firstItem="nNZ-KT-f7E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dVD-ru-LbB"/>
+                <constraint firstItem="nNZ-KT-f7E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dVD-ru-LbB"/>
                 <constraint firstAttribute="trailing" secondItem="nNZ-KT-f7E" secondAttribute="trailing" id="egs-ue-zg6"/>
             </constraints>
             <size key="customSize" width="261" height="124"/>
@@ -39,4 +41,9 @@
             <point key="canvasLocation" x="85.507246376811594" y="91.741071428571431"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
