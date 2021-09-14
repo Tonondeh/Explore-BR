@@ -27,9 +27,23 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configSearchBar()
+        self.configCollectionView()
 //        self.configCardView()
 //        self.configUI()
         navigationItem.titleView = searchBar
+        
+    }
+    
+    func configCollectionView(){
+        
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            
+        self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
+}
         
         
         
@@ -75,6 +89,25 @@ class SearchVC: UIViewController {
             self.navigationController?.navigationBar.setGradientBackground(colors: colors)
         }
     }
+    
+    
+    
+}
+
+
+extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+        
+    }
+    
     
     
     

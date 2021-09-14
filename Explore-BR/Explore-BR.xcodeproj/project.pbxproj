@@ -18,6 +18,8 @@
 		0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01E26D863F8005CA626 /* TextFieldIconAndImage.swift */; };
 		1357495D26D73415009E6233 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1357495C26D73415009E6233 /* Search.storyboard */; };
 		1357495F26D73444009E6233 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1357495E26D73444009E6233 /* SearchVC.swift */; };
+		135C898326F03FA7000AF75E /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135C898126F03FA7000AF75E /* PlacesCollectionViewCell.swift */; };
+		135C898426F03FA7000AF75E /* PlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 135C898226F03FA7000AF75E /* PlacesCollectionViewCell.xib */; };
 		137C7A4526DC502D001B3CE1 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C7A4426DC502D001B3CE1 /* NewEventViewController.swift */; };
 		137C7A4826DC5069001B3CE1 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C7A4726DC5069001B3CE1 /* NewEvent.storyboard */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
@@ -77,6 +79,8 @@
 		0496A01E26D863F8005CA626 /* TextFieldIconAndImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldIconAndImage.swift; sourceTree = "<group>"; };
 		1357495C26D73415009E6233 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		1357495E26D73444009E6233 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		135C898126F03FA7000AF75E /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
+		135C898226F03FA7000AF75E /* PlacesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesCollectionViewCell.xib; sourceTree = "<group>"; };
 		137C7A4426DC502D001B3CE1 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		137C7A4726DC5069001B3CE1 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
@@ -161,10 +165,20 @@
 		1357495B26D733E6009E6233 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				135C898026F03F41000AF75E /* CollectionViewCell */,
 				1357495C26D73415009E6233 /* Search.storyboard */,
 				1357495E26D73444009E6233 /* SearchVC.swift */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		135C898026F03F41000AF75E /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				135C898126F03FA7000AF75E /* PlacesCollectionViewCell.swift */,
+				135C898226F03FA7000AF75E /* PlacesCollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		137C7A4326DC4FF5001B3CE1 /* NewEvent */ = {
@@ -405,6 +419,7 @@
 				0496A01626D85379005CA626 /* Home.storyboard in Resources */,
 				627EF23D26D6FD080053B7F1 /* Profile.storyboard in Resources */,
 				65FB99C626D5B63B00A9F670 /* Main.storyboard in Resources */,
+				135C898426F03FA7000AF75E /* PlacesCollectionViewCell.xib in Resources */,
 				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
@@ -434,6 +449,7 @@
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
 				89B90C0626D888080078F617 /* EventModalMenu.swift in Sources */,
 				FE6980AB26D804D10011272E /* Register.swift in Sources */,
+				135C898326F03FA7000AF75E /* PlacesCollectionViewCell.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
