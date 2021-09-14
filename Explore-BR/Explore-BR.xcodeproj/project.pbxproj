@@ -270,7 +270,6 @@
 			children = (
 				137C7A4326DC4FF5001B3CE1 /* NewEvent */,
 				89B90C0026D888070078F617 /* EventMaps */,
-				89B90BFF26D887530078F617 /* MapsEvent */,
 				0496A01926D863E4005CA626 /* ChangePassword */,
 				0496A00E26D85379005CA626 /* Home */,
 				FE6980A726D804A70011272E /* Register */,
@@ -300,13 +299,6 @@
 				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
 			);
 			path = LocationDetails;
-			sourceTree = "<group>";
-		};
-		89B90BFF26D887530078F617 /* MapsEvent */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MapsEvent;
 			sourceTree = "<group>";
 		};
 		89B90C0026D888070078F617 /* EventMaps */ = {
