@@ -55,6 +55,10 @@
                                 <state key="normal" title="Esqueci minha senha">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedForgetPassword:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="C0b-Ij-y8H"/>
+                                    <action selector="tappedForgetPasswordButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6ZR-nT-28h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Zd-pP1">
                                 <rect key="frame" x="24" y="482.33333333333331" width="380" height="47.999999999999943"/>
@@ -65,6 +69,9 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedSignInButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KF4-UP-BeJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cM-6k-NmT">
                                 <rect key="frame" x="104.66666666666669" y="832" width="219" height="30"/>
@@ -84,6 +91,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tzd-Gy-tGN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bG9-AC-7Z4">
                                 <rect key="frame" x="136" y="545.33333333333337" width="156" height="30"/>
@@ -101,6 +111,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="tappedSocialSignInButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="doy-54-mO7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

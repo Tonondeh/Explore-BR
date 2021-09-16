@@ -26,5 +26,18 @@ class SignInViewController: UIViewController {
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
 
-   
+    @IBAction func tappedSignInButton(_ sender: UIButton) {
+    }
+ 
+    @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func tappedSocialSignInButton(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+    }
+    
+    
 }
