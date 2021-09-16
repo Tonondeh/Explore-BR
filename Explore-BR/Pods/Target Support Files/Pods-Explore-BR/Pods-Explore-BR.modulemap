@@ -1,0 +1,6 @@
+framework module Pods_Explore_BR {
+  umbrella header "Pods-Explore-BR-umbrella.h"
+
+  export *
+  module * { export * }
+}
