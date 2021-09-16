@@ -135,6 +135,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="shk-w8-mtL" id="zlV-DE-bJH"/>
                         <outlet property="signInButton" destination="A0y-Zd-pP1" id="4EY-wc-Jjz"/>
                     </connections>
                 </viewController>

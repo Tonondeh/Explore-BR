@@ -10,6 +10,7 @@ import UIKit
 class SignInViewController: UIViewController {
 
     
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
