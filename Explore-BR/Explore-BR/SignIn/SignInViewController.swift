@@ -21,10 +21,21 @@ class SignInViewController: UIViewController {
         
     }
     
+    func configTextField(){
+        self.emailTextField.delegate = self
+        self.emailTextField.keyboardType = .emailAddress
+        self.passwordTextField.delegate = self
+        
+    }
+    
+    
     func configUI(){
         self.signInButton.layer.cornerRadius = 3.0
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
+    
+    
+    
 
     @IBAction func tappedSignInButton(_ sender: UIButton) {
     }
@@ -39,5 +50,14 @@ class SignInViewController: UIViewController {
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
     }
     
+    
+}
+
+extension SignInViewController:UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }
