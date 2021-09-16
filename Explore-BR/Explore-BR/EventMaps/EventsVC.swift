@@ -26,10 +26,6 @@ class EventsVC: UIViewController, UITextFieldDelegate{
         self.present(slideVC, animated: true, completion: nil)
     }
     
-    @IBAction func tappedAvatarProfile(_ sender: UIButton) {
-        showMenu()
-    }
-    
     func configureUI() {
 //        self.statusBackgroundView.applyGradientInView(colors: [blueLightButton,blueLightButton])
     }
