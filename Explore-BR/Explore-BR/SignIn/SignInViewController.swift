@@ -41,6 +41,7 @@ class SignInViewController: UIViewController {
     }
  
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "ResetPassword", sender: nil)
     }
     
     @IBAction func tappedSocialSignInButton(_ sender: UIButton) {
