@@ -1,22 +1,36 @@
 //
-//  EventsVC.swift
+//  EventsMapVC.swift
 //  Explore-BR
 //
-//  Created by mac1  on 25/08/21.
+//  Created by Eduardo Mizael on 15/09/21.
 //
 
 import UIKit
+import FloatingPanel
 
-class EventsVC: UIViewController, UITextFieldDelegate{
+class EventsMapVC: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet weak var statusBackgroundView: UIView!
+    var fpc: FloatingPanelController!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureUI()
+        self.configFloatingPanel()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.showMenu()
+    private func configFloatingPanel() {
+        fpc = FloatingPanelController()
+        
+        //                fpc.delegate = self // Optional
+        
+        // Set a content view controller.
+        //                let contentVC = LoginVC()
+        fpc.set(contentViewController: UIViewController())
+        
+        fpc.track(scrollView: UITableView())
+        
+        // Add and show the views managed by the `FloatingPanelController` object to self.view.
+        fpc.addPanel(toParent: self)
     }
     
     @objc func showMenu() {
@@ -26,9 +40,9 @@ class EventsVC: UIViewController, UITextFieldDelegate{
         self.present(slideVC, animated: true, completion: nil)
     }
     
-    func configureUI() {
+//    func configureUI() {
 //        self.statusBackgroundView.applyGradientInView(colors: [blueLightButton,blueLightButton])
-    }
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
@@ -36,7 +50,7 @@ class EventsVC: UIViewController, UITextFieldDelegate{
     
 }
 
-extension EventsVC: UIViewControllerTransitioningDelegate {
+extension EventsMapVC: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         ModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
