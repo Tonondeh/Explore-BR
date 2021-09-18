@@ -46,6 +46,9 @@
                                     <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ycp-Pt-R9H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-S5-bJ3">
                                 <rect key="frame" x="24" y="422" width="366" height="48"/>
@@ -60,6 +63,9 @@
                                     <imageReference key="image" image="logo-google" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="udV-4Z-IfP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gif-wE-fnD">
                                 <rect key="frame" x="24" y="502" width="366" height="48"/>
@@ -73,6 +79,10 @@
                                 <state key="normal" title="Continue com e-mail" image="mail-white">
                                     <color key="titleColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginEmailButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Y5u-A6-qLK"/>
+                                    <segue destination="qtv-P5-rPe" kind="show" identifier="SignIn" id="E1t-7O-xrR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -104,6 +114,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="zsD-XS-Aoh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SignIn" storyboardName="SignIn" id="qtv-P5-rPe" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jDG-Lg-WVa"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCO-iL-60V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="122"/>
         </scene>
     </scenes>
     <resources>

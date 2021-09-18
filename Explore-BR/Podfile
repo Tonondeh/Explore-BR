@@ -9,4 +9,10 @@ target 'Explore-BR' do
 
 pod 'FloatingPanel', '~> 2.4'
 
+pod 'Firebase/Core'
+
+pod 'Firebase/Auth'
+
+pod 'GoogleSignIn'
+
 end
