@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class HomeVC: UIViewController, UITextFieldDelegate {
     
@@ -14,16 +15,15 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var wrapSearchBarView: UIView!
     @IBOutlet weak var avatarProfileButton: UIButton!
     
+    var fpc: FloatingPanelController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
         self.searchTextField.delegate = self
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.tabBarController?.tabBar.layer.zPosition = 0
-        self.showMenu()
+        self.configFloatingPanel()
+        self.configFloatingPanelUI()
     }
     
     @objc func showMenu() {
@@ -35,6 +35,37 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func tappedAvatarProfile(_ sender: UIButton) {
         showMenu()
+    }
+    
+    private func configFloatingPanel() {
+        fpc = FloatingPanelController()
+        
+//                        fpc.delegate = self // Optional
+        
+        // Set a content view controller.
+        let bestReviewsViewController = BestReviewsViewController()
+        
+        fpc?.set(contentViewController: bestReviewsViewController)
+        
+        fpc?.track(scrollView: bestReviewsViewController.bestReviewsTableView ?? UITableView())
+        
+        // Add and show the views managed by the `FloatingPanelController` object to self.view.
+        fpc?.addPanel(toParent: self)
+    }
+    
+    
+    private func configFloatingPanelUI() {
+        let appearance = SurfaceAppearance()
+        
+        // Define corner radius and background color
+        appearance.cornerRadius = 18.0
+        
+        // Set the new appearance
+        fpc?.surfaceView.appearance = appearance
+        
+        fpc?.surfaceView.grabberHandlePadding = 10.0
+        fpc?.surfaceView.grabberHandleSize = .init(width: 56.0, height: 2.0)
+        
     }
     
     func configureUI() {
@@ -57,7 +88,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
-
+    
 }
 
 extension HomeVC: UIViewControllerTransitioningDelegate {
