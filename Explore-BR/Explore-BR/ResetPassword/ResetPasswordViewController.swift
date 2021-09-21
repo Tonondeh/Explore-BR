@@ -36,4 +36,8 @@ class ResetPasswordViewController: UIViewController {
     }
     
     
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+    }
+    
+    
 }
