@@ -243,6 +243,13 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		65A8508426FA63FF00B9A093 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +278,7 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
+				65A8508426FA63FF00B9A093 /* Model */,
 				137C7A4326DC4FF5001B3CE1 /* NewEvent */,
 				89B90C0026D888070078F617 /* EventMaps */,
 				0496A01926D863E4005CA626 /* ChangePassword */,
