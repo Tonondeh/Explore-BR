@@ -7,13 +7,11 @@
 
 import UIKit
 
-class ViewTable: UIView {
-
-    lazy var tableView: UITableView = {
+class MenuView: UIView {
+    
+    lazy var bestReviewsTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-//        tableView.backgroundColor = .white
         
         tableView.register(BestReviewsTableViewCell.nib(), forCellReuseIdentifier: BestReviewsTableViewCell.identifier)
         
@@ -32,23 +30,23 @@ class ViewTable: UIView {
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
-        self.tableView.delegate = delegate
-        self.tableView.dataSource = dataSource
+        self.bestReviewsTableView.delegate = delegate
+        self.bestReviewsTableView.dataSource = dataSource
     }
     
     func addSubview() {
-        self.addSubview(self.tableView)
+        self.addSubview(self.bestReviewsTableView)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             
-            self.tableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-            self.tableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 30),
-            self.tableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -30),
-            self.tableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
+            self.bestReviewsTableView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+            self.bestReviewsTableView.leftAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leftAnchor, constant: 30),
+            self.bestReviewsTableView.rightAnchor.constraint(equalTo: self.safeAreaLayoutGuide.rightAnchor, constant: -30),
+            self.bestReviewsTableView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
             
         ])
     }
-
+    
 }

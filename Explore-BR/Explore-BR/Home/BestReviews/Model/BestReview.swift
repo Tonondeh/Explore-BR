@@ -8,5 +8,8 @@
 import UIKit
 
 struct BestReview {
-    var testImage: UIImage
+    let image: UIImage
+    let title: String
+    let type: String
+    let region: String
 }

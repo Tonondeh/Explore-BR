@@ -25,7 +25,9 @@
 		137C7A4526DC502D001B3CE1 /* NewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C7A4426DC502D001B3CE1 /* NewEventViewController.swift */; };
 		137C7A4826DC5069001B3CE1 /* NewEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C7A4726DC5069001B3CE1 /* NewEvent.storyboard */; };
 		13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E16C3726D739D60054C017 /* NavigationBarGradient.swift */; };
-		3A7350CD26F684E3006E272B /* BestReviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A7350CC26F684E3006E272B /* BestReviews.storyboard */; };
+		3A511E8D26F7D0CD00F7D506 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A511E8B26F7D0CD00F7D506 /* CardCollectionViewCell.swift */; };
+		3A511E8E26F7D0CD00F7D506 /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A511E8C26F7D0CD00F7D506 /* CardCollectionViewCell.xib */; };
+		3A60837026F6D7A90052F8BB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A60836F26F6D7A90052F8BB /* MenuView.swift */; };
 		3AA19A1026F666B4005A1ACA /* BestReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA19A0F26F666B4005A1ACA /* BestReviewsViewController.swift */; };
 		3AA19A1526F667FD005A1ACA /* BestReviewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA19A1326F667FD005A1ACA /* BestReviewsTableViewCell.swift */; };
 		3AA19A1626F667FD005A1ACA /* BestReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AA19A1426F667FD005A1ACA /* BestReviewsTableViewCell.xib */; };
@@ -93,7 +95,9 @@
 		137C7A4426DC502D001B3CE1 /* NewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEventViewController.swift; sourceTree = "<group>"; };
 		137C7A4726DC5069001B3CE1 /* NewEvent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewEvent.storyboard; sourceTree = "<group>"; };
 		13E16C3726D739D60054C017 /* NavigationBarGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarGradient.swift; sourceTree = "<group>"; };
-		3A7350CC26F684E3006E272B /* BestReviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BestReviews.storyboard; sourceTree = "<group>"; };
+		3A511E8B26F7D0CD00F7D506 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A511E8C26F7D0CD00F7D506 /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A60836F26F6D7A90052F8BB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		3AA19A0F26F666B4005A1ACA /* BestReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestReviewsViewController.swift; sourceTree = "<group>"; };
 		3AA19A1326F667FD005A1ACA /* BestReviewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestReviewsTableViewCell.swift; sourceTree = "<group>"; };
 		3AA19A1426F667FD005A1ACA /* BestReviewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestReviewsTableViewCell.xib; sourceTree = "<group>"; };
@@ -236,12 +240,23 @@
 			path = NewEvent;
 			sourceTree = "<group>";
 		};
+		3A511E8F26F7D0D900F7D506 /* CardCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				3A511E8B26F7D0CD00F7D506 /* CardCollectionViewCell.swift */,
+				3A511E8C26F7D0CD00F7D506 /* CardCollectionViewCell.xib */,
+			);
+			path = CardCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		3AA19A1126F667B7005A1ACA /* BestReviews */ = {
 			isa = PBXGroup;
 			children = (
 				3AA19A1726F672C7005A1ACA /* Model */,
+				3A511E8F26F7D0D900F7D506 /* CardCollectionViewCell */,
 				3AA19A1226F667D8005A1ACA /* BestReviewsTableViewCell */,
 				3AA19A0F26F666B4005A1ACA /* BestReviewsViewController.swift */,
+				3A60836F26F6D7A90052F8BB /* MenuView.swift */,
 			);
 			path = BestReviews;
 			sourceTree = "<group>";
@@ -251,7 +266,6 @@
 			children = (
 				3AA19A1326F667FD005A1ACA /* BestReviewsTableViewCell.swift */,
 				3AA19A1426F667FD005A1ACA /* BestReviewsTableViewCell.xib */,
-				3A7350CC26F684E3006E272B /* BestReviews.storyboard */,
 			);
 			path = BestReviewsTableViewCell;
 			sourceTree = "<group>";
@@ -484,6 +498,7 @@
 				89B90C0726D888080078F617 /* EventMap.storyboard in Resources */,
 				3AA19A1626F667FD005A1ACA /* BestReviewsTableViewCell.xib in Resources */,
 				627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */,
+				3A511E8E26F7D0CD00F7D506 /* CardCollectionViewCell.xib in Resources */,
 				65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */,
 				627EF23126D6FCA30053B7F1 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				137C7A4826DC5069001B3CE1 /* NewEvent.storyboard in Resources */,
@@ -491,7 +506,6 @@
 				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
-				3A7350CD26F684E3006E272B /* BestReviews.storyboard in Resources */,
 				627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */,
 				627EF22A26D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf in Resources */,
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
@@ -571,6 +585,7 @@
 				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
+				3A60837026F6D7A90052F8BB /* MenuView.swift in Sources */,
 				89B90C0626D888080078F617 /* EventModalMenu.swift in Sources */,
 				135C898326F03FA7000AF75E /* PlacesCollectionViewCell.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
@@ -587,6 +602,7 @@
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
 				3AA19A1526F667FD005A1ACA /* BestReviewsTableViewCell.swift in Sources */,
+				3A511E8D26F7D0CD00F7D506 /* CardCollectionViewCell.swift in Sources */,
 				135C898726F045F9000AF75E /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,6 +752,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Explore-BR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -756,6 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Explore-BR/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (

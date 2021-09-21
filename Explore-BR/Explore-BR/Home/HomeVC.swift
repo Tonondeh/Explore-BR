@@ -40,14 +40,12 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
         
-//                        fpc.delegate = self // Optional
+        // fpc.delegate = self // Optional
         
         // Set a content view controller.
         let bestReviewsViewController = BestReviewsViewController()
         
         fpc?.set(contentViewController: bestReviewsViewController)
-        
-        fpc?.track(scrollView: bestReviewsViewController.bestReviewsTableView ?? UITableView())
         
         // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc?.addPanel(toParent: self)
@@ -57,15 +55,12 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     private func configFloatingPanelUI() {
         let appearance = SurfaceAppearance()
         
-        // Define corner radius and background color
         appearance.cornerRadius = 18.0
         
-        // Set the new appearance
         fpc?.surfaceView.appearance = appearance
         
         fpc?.surfaceView.grabberHandlePadding = 10.0
         fpc?.surfaceView.grabberHandleSize = .init(width: 56.0, height: 2.0)
-        
     }
     
     func configureUI() {

@@ -9,24 +9,21 @@ import UIKit
 
 class BestReviewsViewController: UIViewController {
     
+    var menuView: MenuView?
     
-    @IBOutlet weak var bestReviewsTableView: UITableView!
+    var list: [BestReview] = [BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Pernambuco", type: "Cidade", region: "Região 1"), BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Guarujá", type: "Praia", region: "Regiao 2"), BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Recife", type: "Cidade1", region: "Não sei")]
     
-    var list: [BestReview] = [BestReview(testImage: UIImage(systemName: "person.fill") ?? UIImage())]
+    override func loadView() {
+        self.menuView = MenuView()
+
+        self.view = self.menuView
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.configTableView()
-    }
-    
-    private func configTableView() {
-        self.bestReviewsTableView?.delegate = self
-        self.bestReviewsTableView?.dataSource = self
-        self.bestReviewsTableView?.backgroundColor = .red
-        
-        self.bestReviewsTableView?.register(BestReviewsTableViewCell.nib(), forCellReuseIdentifier: BestReviewsTableViewCell.identifier)
+        self.menuView?.configTableViewProtocols(delegate: self, dataSource: self)
     }
 
 }
@@ -40,9 +37,8 @@ extension BestReviewsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BestReviewsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: BestReviewsTableViewCell.identifier, for: indexPath) as? BestReviewsTableViewCell
         
-        cell?.setupCell(data: self.list[indexPath.row])
-        
-        cell?.textLabel?.text = "blablabla"
+//        cell?.setupCell(data: self.list[indexPath.row])
+        cell?.setupCell(cardList: self.list)
         
         return cell ?? UITableViewCell()
     }
