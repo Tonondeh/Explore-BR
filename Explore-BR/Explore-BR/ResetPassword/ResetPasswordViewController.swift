@@ -25,6 +25,12 @@ class ResetPasswordViewController: UIViewController {
     
     }
 
+    //fazer logica com o firebase e alert para confirmacao e volta p/SingIn
+    @IBAction func tappedChangePassword(_ sender: UIButton) {
+    }
+    
+    
+    
     @IBAction func tappedCancelButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
