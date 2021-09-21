@@ -22,7 +22,12 @@ class ResetPasswordViewController: UIViewController {
     func configUI(){
         self.resetPasswordButton.layer.cornerRadius = 3.0
         self.resetPasswordButton.applyGradient(colors: [blueLightButton,blueDarkButton])
-        
+    
     }
 
+    @IBAction func tappedCancelButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 }
