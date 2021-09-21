@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svp-MW-bNE">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -73,6 +73,9 @@
                                 <state key="normal" title="Continue com e-mail" image="mail-white">
                                     <color key="titleColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedContinueWithEmailButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l0K-Do-qss"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -95,15 +98,42 @@
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zx9-Co-BWZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="yiI-nG-e4J"/>
                     <connections>
                         <outlet property="loginAppleButton" destination="zJf-rb-0LH" id="YJv-0h-MJV"/>
                         <outlet property="loginEmailButton" destination="gif-wE-fnD" id="44h-ZR-EW9"/>
                         <outlet property="loginGoogleButton" destination="ea3-S5-bJ3" id="4qY-wL-O8q"/>
+                        <segue destination="97O-DY-Rsz" kind="show" identifier="SignIn" id="wDE-mN-AlW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="Gxa-wf-qCN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" referencedIdentifier="SignIn" id="97O-DY-Rsz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fw8-DA-9PL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeT-ha-lRb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934" y="-166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5JW-tz-H9W">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="svp-MW-bNE" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Isu-iE-tXY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="YZa-qN-2fj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bez-Mp-fHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674" y="116"/>
         </scene>
     </scenes>
     <resources>
