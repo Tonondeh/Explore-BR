@@ -58,6 +58,7 @@
 		627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24126D6FD210053B7F1 /* SignInViewController.swift */; };
 		627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */; };
 		627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24626D6FD380053B7F1 /* ColorsGradient.swift */; };
+		629334FC26FBB2BB00E12B50 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629334FB26FBB2BB00E12B50 /* Alert.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
@@ -130,6 +131,7 @@
 		627EF24126D6FD210053B7F1 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		627EF24526D6FD380053B7F1 /* UIButton+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Gradient.swift"; sourceTree = "<group>"; };
 		627EF24626D6FD380053B7F1 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
+		629334FB26FBB2BB00E12B50 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 				627EF24626D6FD380053B7F1 /* ColorsGradient.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
 				650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */,
+				629334FB26FBB2BB00E12B50 /* Alert.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */,
+				629334FC26FBB2BB00E12B50 /* Alert.swift in Sources */,
 				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,

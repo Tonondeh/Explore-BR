@@ -27,6 +27,15 @@ class ResetPasswordViewController: UIViewController {
 
     //fazer logica com o firebase e alert para confirmacao e volta p/SingIn
     @IBAction func tappedChangePassword(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { action in
+            let storyboard =  UIStoryboard(name: "SignIn", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SignIn") as? SignInViewController
+            self.navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        }
+        
+        alertController.addAction(action)
+        self.present(alertController, animated: true)
     }
     
     
