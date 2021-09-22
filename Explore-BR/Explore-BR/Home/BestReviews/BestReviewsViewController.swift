@@ -38,6 +38,7 @@ extension BestReviewsViewController: UITableViewDelegate, UITableViewDataSource 
         let cell: BestReviewsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: BestReviewsTableViewCell.identifier, for: indexPath) as? BestReviewsTableViewCell
         
         cell?.setupCell(cardList: self.list)
+        cell?.setCurrentNavigationController(navigation: self.navigationController)
         
         return cell ?? UITableViewCell()
     }

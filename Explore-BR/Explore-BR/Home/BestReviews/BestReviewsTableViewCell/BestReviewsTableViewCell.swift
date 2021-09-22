@@ -8,12 +8,11 @@
 import UIKit
 
 class BestReviewsTableViewCell: UITableViewCell {
-    
-    
     @IBOutlet weak var cardHeaderLabel: UILabel!
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var cardList: [BestReview] = []
+    private var currentNavigation: UINavigationController?
     
     static let identifier: String = "BestReviewsTableViewCell"
     
@@ -23,7 +22,6 @@ class BestReviewsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.configCollectionView()
     }
     
@@ -68,8 +66,18 @@ extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: 149, height: 309)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard =  UIStoryboard(name: "LocationDetails", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LocationDetails") as? LocationDetailsViewController
+        self.currentNavigation?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
     public func setupCell(cardList: [BestReview]) {
         self.cardList = cardList
+    }
+    
+    public func setCurrentNavigationController(navigation: UINavigationController?) {
+        self.currentNavigation = navigation
     }
 
 }
