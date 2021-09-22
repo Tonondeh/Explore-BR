@@ -347,6 +347,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6293350526FBE6D900E12B50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0496A01926D863E4005CA626 /* ChangePassword */,
+				89B90C0026D888070078F617 /* EventMaps */,
+				0496A00E26D85379005CA626 /* Home */,
+				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
+				627EF23526D6FCF50053B7F1 /* Login */,
+				137C7A4326DC4FF5001B3CE1 /* NewEvent */,
+				627EF23A26D6FD080053B7F1 /* Profile */,
+				FE6980A726D804A70011272E /* Register */,
+				65B6E09726D6C29000A54D6C /* ResetPassword */,
+				1357495B26D733E6009E6233 /* Search */,
+				627EF23F26D6FD210053B7F1 /* SignIn */,
+				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
+				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
+				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,27 +398,14 @@
 		65FB99BD26D5B63B00A9F670 /* Explore-BR */ = {
 			isa = PBXGroup;
 			children = (
-				6293350226FBE64E00E12B50 /* Model */,
-				137C7A4326DC4FF5001B3CE1 /* NewEvent */,
-				89B90C0026D888070078F617 /* EventMaps */,
-				0496A01926D863E4005CA626 /* ChangePassword */,
-				0496A00E26D85379005CA626 /* Home */,
-				FE6980A726D804A70011272E /* Register */,
-				82DAFA8026D7F81000D40CF8 /* LocationDetails */,
-				1357495B26D733E6009E6233 /* Search */,
-				65FB99CC26D5B63E00A9F670 /* Info.plist */,
+				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
 				65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */,
 				65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */,
-				65FB99C226D5B63B00A9F670 /* ViewController.swift */,
-				65FB99C726D5B63E00A9F670 /* Assets.xcassets */,
 				627EF21026D6FCA30053B7F1 /* Fonts */,
-				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
-				627EF23526D6FCF50053B7F1 /* Login */,
-				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
-				627EF23A26D6FD080053B7F1 /* Profile */,
-				65B6E09726D6C29000A54D6C /* ResetPassword */,
-				627EF23F26D6FD210053B7F1 /* SignIn */,
 				627EF24426D6FD380053B7F1 /* Utils */,
+				6293350526FBE6D900E12B50 /* Views */,
+				6293350226FBE64E00E12B50 /* Model */,
+				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 			);
 			path = "Explore-BR";
 			sourceTree = "<group>";
