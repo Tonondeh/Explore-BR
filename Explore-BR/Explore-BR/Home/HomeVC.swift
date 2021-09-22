@@ -30,6 +30,13 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
+    
+    @IBAction func tappedSearchTextField(_ sender: UITextField) {
+        let storyboard =  UIStoryboard(name: "Search", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Search") as? SearchVC
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
     @IBAction func tappedAvatarProfile(_ sender: UIButton) {
         let storyboard =  UIStoryboard(name: "Profile", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
