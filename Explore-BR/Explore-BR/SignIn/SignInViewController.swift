@@ -47,8 +47,13 @@ class SignInViewController: UIViewController {
         performSegue(withIdentifier: "ResetPassword", sender: nil)
     }
     
-    @IBAction func tappedSocialSignInButton(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func tappedSocialSignInButton(_ sender: UIButton) {     
+        for controller in self.navigationController!.viewControllers as Array {
+            if controller.isKind(of: LoginVC.self) {
+                self.navigationController!.popToViewController(controller, animated: true)
+                break
+            }
+        }
     }
     
     
