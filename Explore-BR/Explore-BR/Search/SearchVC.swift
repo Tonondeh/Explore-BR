@@ -33,8 +33,12 @@ class SearchVC: UIViewController {
         self.configCollectionView()
         //        self.configCardView()
         //        self.configUI()
-        navigationItem.titleView = searchBar
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.title = "Search"
     }
     
     func configCollectionView(){
