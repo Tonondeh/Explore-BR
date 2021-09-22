@@ -18,7 +18,13 @@ class LocationDetailsViewController: UIViewController {
         self.configNavigationBar()
         self.configButton()
         self.configView()
-    }    
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.title = "Mais Informações"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+    }
     
     private func configNavigationBar() {
         
