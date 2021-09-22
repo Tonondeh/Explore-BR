@@ -74,7 +74,7 @@
 		89B90C0726D888080078F617 /* EventMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B90C0326D888070078F617 /* EventMap.storyboard */; };
 		89B90C0826D888080078F617 /* EventModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89B90C0426D888070078F617 /* EventModalMenu.xib */; };
 		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
-		FE6980AB26D804D10011272E /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* Register.swift */; };
+		FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,7 +149,7 @@
 		89B90C0326D888070078F617 /* EventMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventMap.storyboard; sourceTree = "<group>"; };
 		89B90C0426D888070078F617 /* EventModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventModalMenu.xib; sourceTree = "<group>"; };
 		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
-		FE6980AA26D804D10011272E /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		FE6980AA26D804D10011272E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,7 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				FE6980A826D804BB0011272E /* Register.storyboard */,
-				FE6980AA26D804D10011272E /* Register.swift */,
+				FE6980AA26D804D10011272E /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -589,7 +589,7 @@
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
 				89B90C0626D888080078F617 /* EventModalMenu.swift in Sources */,
-				FE6980AB26D804D10011272E /* Register.swift in Sources */,
+				FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */,
 				3A58727E26FB6F4100ECED4A /* CardCollectionViewCell.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,

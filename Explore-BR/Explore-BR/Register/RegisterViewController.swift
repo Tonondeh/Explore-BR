@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Register: UIViewController {
+class RegisterViewController: UIViewController {
 
     @IBOutlet weak var registerButton: UIButton!
     
