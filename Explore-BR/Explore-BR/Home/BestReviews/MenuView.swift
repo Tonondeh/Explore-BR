@@ -13,6 +13,8 @@ class MenuView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         
+        tableView.separatorStyle = .none
+        
         tableView.register(BestReviewsTableViewCell.nib(), forCellReuseIdentifier: BestReviewsTableViewCell.identifier)
         
         return tableView

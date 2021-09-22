@@ -23,6 +23,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.cardImage.layer.cornerRadius = 10.0
     }
     
     public func setupCell(data: BestReview) {

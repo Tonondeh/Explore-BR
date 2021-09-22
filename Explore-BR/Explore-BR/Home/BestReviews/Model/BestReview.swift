@@ -12,4 +12,5 @@ struct BestReview {
     let title: String
     let type: String
     let region: String
+    let stars: [Double]
 }

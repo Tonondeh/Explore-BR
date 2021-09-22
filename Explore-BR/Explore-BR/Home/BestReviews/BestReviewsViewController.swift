@@ -11,7 +11,7 @@ class BestReviewsViewController: UIViewController {
     
     var menuView: MenuView?
     
-    var list: [BestReview] = [BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Pernambuco", type: "Cidade", region: "Região 1"), BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Guarujá", type: "Praia", region: "Regiao 2"), BestReview(image: UIImage(systemName: "person.fill") ?? UIImage(), title: "Recife", type: "Cidade1", region: "Não sei")]
+    var list: [BestReview] = [BestReview(image: UIImage(named: "location-detail") ?? UIImage(), title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2.2, 5, 2, 4, 1]), BestReview(image: UIImage(named: "location-detail") ?? UIImage(), title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2.2, 5, 2, 4, 1]), BestReview(image: UIImage(named: "location-detail") ?? UIImage(), title: "Recife", type: "Cidade1", region: "Não sei", stars: [2.2, 5, 2, 4, 1])]
     
     override func loadView() {
         self.menuView = MenuView()
@@ -37,7 +37,6 @@ extension BestReviewsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: BestReviewsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: BestReviewsTableViewCell.identifier, for: indexPath) as? BestReviewsTableViewCell
         
-//        cell?.setupCell(data: self.list[indexPath.row])
         cell?.setupCell(cardList: self.list)
         
         return cell ?? UITableViewCell()

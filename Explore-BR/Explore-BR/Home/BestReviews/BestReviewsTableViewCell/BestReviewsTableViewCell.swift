@@ -59,12 +59,13 @@ extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell
         
         cell?.setupCell(data: self.cardList[indexPath.row])
+//        cell?.roundCorners(.allCorners, radius: 30.0)
         
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 149, height: 209)
+        return CGSize(width: 149, height: 309)
     }
     
     public func setupCell(cardList: [BestReview]) {

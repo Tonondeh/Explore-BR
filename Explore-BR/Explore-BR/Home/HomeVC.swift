@@ -40,7 +40,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
         
-        // fpc.delegate = self // Optional
+//        fpc?.delegate = self // Optional
         
         // Set a content view controller.
         let bestReviewsViewController = BestReviewsViewController()
