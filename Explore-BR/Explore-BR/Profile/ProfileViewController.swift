@@ -19,8 +19,13 @@ class ProfileViewController: UIViewController {
         
         self.configButton()
         self.configImageView()
-        self.configNavigationBar()
+//        self.configNavigationBar()
         self.configBackgroundGradient()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationController?.title = "Perfil"
     }
     
     @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
@@ -28,6 +33,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedSignOutButton(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     private func configButton() {
@@ -40,28 +46,19 @@ class ProfileViewController: UIViewController {
     }
     
     private func configNavigationBar() {
-        
         let layer0 = CAGradientLayer()
-        
         layer0.colors = [
-            
             UIColor(red: 0.204, green: 0.58, blue: 0.902, alpha: 1).cgColor,
-            
             UIColor(red: 0.925, green: 0.431, blue: 0.678, alpha: 1).cgColor
-            
         ]
-        
         if let colors = layer0.colors {
             self.navigationController?.navigationBar.setGradientBackground(colors: colors)
         }
-        
-        
+
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        
+
         navigationController?.navigationBar.tintColor = UIColor.white
-        
-        
     }
     
     private func configBackgroundGradient() {

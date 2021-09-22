@@ -26,15 +26,14 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.configFloatingPanelUI()
     }
     
-    @objc func showMenu() {
-        let slideVC = FrameModalMenu()
-        slideVC.modalPresentationStyle = .custom
-        slideVC.transitioningDelegate = self
-        self.present(slideVC, animated: true, completion: nil)
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func tappedAvatarProfile(_ sender: UIButton) {
-        showMenu()
+        let storyboard =  UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     private func configFloatingPanel() {
