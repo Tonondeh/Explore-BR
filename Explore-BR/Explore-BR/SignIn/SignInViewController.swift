@@ -38,7 +38,9 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-        
+        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Home") as? HomeVC
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
