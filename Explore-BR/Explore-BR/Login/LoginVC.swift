@@ -23,4 +23,12 @@ class LoginVC: UIViewController {
         self.loginGoogleButton.layer.cornerRadius = 3.0
         self.loginEmailButton.layer.cornerRadius = 3.0
     }
+    
+    
+    @IBAction func tappedContinueWithEmailButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "SignIn", sender: nil)
+    }
+    
+    
+    
 }

@@ -22,7 +22,22 @@ class ResetPasswordViewController: UIViewController {
     func configUI(){
         self.resetPasswordButton.layer.cornerRadius = 3.0
         self.resetPasswordButton.applyGradient(colors: [blueLightButton,blueDarkButton])
-        
+    
     }
 
+    //fazer logica com o firebase e alert para confirmacao e volta p/SingIn
+    @IBAction func tappedChangePassword(_ sender: UIButton) {
+    }
+    
+    
+    
+    @IBAction func tappedCancelButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func tappedRegisterButton(_ sender: UIButton) {
+    }
+    
+    
 }

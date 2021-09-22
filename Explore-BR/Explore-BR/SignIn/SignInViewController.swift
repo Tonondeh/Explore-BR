@@ -8,7 +8,7 @@
 import UIKit
 
 class SignInViewController: UIViewController {
-
+    
     
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -36,10 +36,11 @@ class SignInViewController: UIViewController {
     
     
     
-
+    
     @IBAction func tappedSignInButton(_ sender: UIButton) {
+        
     }
- 
+    
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
         performSegue(withIdentifier: "ResetPassword", sender: nil)
     }

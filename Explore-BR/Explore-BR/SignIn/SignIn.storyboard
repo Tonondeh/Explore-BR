@@ -10,7 +10,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="SignInViewController" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" id="Y6W-OH-hqX" customClass="SignInViewController" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,13 +19,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore BR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W39-qi-jya">
-                                <rect key="frame" x="0.0" y="218" width="428" height="57.333333333333314"/>
+                                <rect key="frame" x="0.0" y="174" width="428" height="57.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="shk-w8-mtL">
-                                <rect key="frame" x="24" y="340.33333333333331" width="380" height="48"/>
+                                <rect key="frame" x="24" y="296.33333333333331" width="380" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="nuF-zO-sCz"/>
                                 </constraints>
@@ -33,10 +33,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="IoQ-0k-MQL">
-                                <rect key="frame" x="48" y="353" width="29.666666666666671" height="23"/>
+                                <rect key="frame" x="48" y="309" width="29.666666666666671" height="23"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="diR-Wx-UcD">
-                                <rect key="frame" x="24" y="412.33333333333331" width="380" height="48"/>
+                                <rect key="frame" x="24" y="368.33333333333331" width="380" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qc2-DD-57i"/>
                                 </constraints>
@@ -44,10 +44,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locked" translatesAutoresizingMaskIntoConstraints="NO" id="vBg-a1-GOO">
-                                <rect key="frame" x="54" y="421" width="21" height="30.666666666666686"/>
+                                <rect key="frame" x="54" y="377" width="21" height="30.666666666666686"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yds-zD-JLq">
-                                <rect key="frame" x="253" y="472.33333333333331" width="151" height="22"/>
+                                <rect key="frame" x="253" y="428.33333333333331" width="151" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="ZKE-h0-vOn"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A0y-Zd-pP1">
-                                <rect key="frame" x="24" y="526.33333333333337" width="380" height="48"/>
+                                <rect key="frame" x="24" y="482.33333333333331" width="380" height="47.999999999999943"/>
                                 <color key="backgroundColor" red="0.60888078479999996" green="0.6029113653" blue="0.6029113653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="r99-nN-Oi1"/>
@@ -95,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bG9-AC-7Z4">
-                                <rect key="frame" x="136" y="589.33333333333337" width="156" height="30"/>
+                                <rect key="frame" x="136" y="545.33333333333337" width="156" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="JHP-Ba-uOx"/>
                                 </constraints>
@@ -167,24 +167,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be0-er-6gb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1605.8411214953271" y="-56.371490280777543"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ALv-6D-ddw">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A9z-3R-gxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JLe-kv-e3o" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0s-TR-y3p">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="PzU-d2-Yu6"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="15.420560747663551" y="77.105831533477328"/>
         </scene>
     </scenes>
     <resources>
