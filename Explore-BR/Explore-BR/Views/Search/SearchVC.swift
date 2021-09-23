@@ -33,12 +33,13 @@ class SearchVC: UIViewController {
         self.configCollectionView()
         //        self.configCardView()
         //        self.configUI()
-        
+        self.navigationItem.titleView = searchBar
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationController?.title = "Search"
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
     func configCollectionView(){
@@ -69,9 +70,18 @@ class SearchVC: UIViewController {
     
     func configSearchBar(){
         searchBar.searchTextField.backgroundColor = .white
-        searchBar.searchTextField.layer.cornerRadius = 100.0
-        
-        
+        searchBar.searchTextField.layer.cornerRadius = 20.0
+        searchBar.searchTextField.layer.masksToBounds = true
+        searchBar.placeholder = "Faça sua Busca"
+        searchBar.setImage(UIImage(), for: .search, state: .normal)
+        searchBar.setPositionAdjustment(UIOffset(horizontal: 27, vertical: 0), for: .search)
+        searchBar.setPositionAdjustment(UIOffset(horizontal: -25, vertical: 0), for: .clear)
+        searchBar.searchTextField.layer.shadowColor = UIColor.black.cgColor
+        searchBar.searchTextField.layer.borderColor = UIColor.white.cgColor
+        searchBar.searchTextField.layer.borderWidth = 1.5
+        searchBar.layer.shadowOpacity = 0.40
+        searchBar.layer.shadowOffset = CGSize(width: 0, height: 4)
+        searchBar.layer.shadowRadius = 5
     }
     
     func configNavigationBar(){
@@ -79,9 +89,9 @@ class SearchVC: UIViewController {
         
         layer0.colors = [
             
-        UIColor(red: 0.204, green: 0.58, blue: 0.902, alpha: 1).cgColor,
+            UIColor(red: 0.204, green: 0.58, blue: 0.902, alpha: 1).cgColor,
             
-        UIColor(red: 0.925, green: 0.431, blue: 0.678, alpha: 1).cgColor
+            UIColor(red: 0.925, green: 0.431, blue: 0.678, alpha: 1).cgColor
             
         ]
         
@@ -112,6 +122,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
         
     }
     
- 
+    
     
 }
