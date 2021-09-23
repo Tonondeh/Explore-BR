@@ -13,8 +13,10 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchTableView: UITableView!
     
-    var placesArray: [Place] = [Place(name: "Parques"),Place(name: "Restaurantes"), Place(name: "Shopping"), Place(name: "Cinema"), Place(name: "zoologico"), Place(name: "Horti-Fruti"), Place(name: "Mercado"), Place(name: "Padaria")]
+    
+    var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true),Place(name: "Restaurantes", placeButtonEnable: false), Place(name: "Shopping", placeButtonEnable: false), Place(name: "Cinema", placeButtonEnable: false), Place(name: "zoologico", placeButtonEnable: false), Place(name: "Horti-Fruti", placeButtonEnable: false), Place(name: "Mercado", placeButtonEnable: false), Place(name: "Padaria", placeButtonEnable: false)]
     
     
     
@@ -42,11 +44,16 @@ class SearchVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
+    func configTableView(){
+        self.searchTableView.delegate = self
+        self.searchTableView.dataSource = self
+    }
+    
     func configCollectionView(){
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+        self.collectionView.showsHorizontalScrollIndicator = false
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             
@@ -103,7 +110,7 @@ class SearchVC: UIViewController {
 }
 
 
-extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
+extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     
     
@@ -115,13 +122,45 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource{
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
         
+        cell.delegate(delegate: self)
+        cell.index = indexPath
         cell.setUpCell(data: self.placesArray[indexPath.row])
-        
         
         return cell
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.view.frame.width, height: self.view.frame.height)
+    }
+    
+}
+
+extension SearchVC:PlacesCollectionViewCellDelegate{
+    func changePlaceButtonState(index: Int) {
+        
+        if let isPlaceButtonEnable = self.placesArray[index].placeButtonEnable{
+            print("Acionou", isPlaceButtonEnable )
+            if isPlaceButtonEnable {
+                self.placesArray[index].placeButtonEnable = false
+            } else {
+                self.placesArray[index].placeButtonEnable = true
+            }
+        }
+        self.placesArray[index].placeButtonEnable = !(self.placesArray[index].placeButtonEnable ?? false)
+        
+    }
+}
+
+extension SearchVC:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
     
     
 }
+

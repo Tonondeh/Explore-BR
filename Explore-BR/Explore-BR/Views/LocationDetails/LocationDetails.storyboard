@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,26 +21,26 @@
             <objects>
                 <viewController storyboardIdentifier="LocationDetails" id="mCW-1T-PVm" customClass="LocationDetailsViewController" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ri5-dg-4Zu">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-detail" translatesAutoresizingMaskIntoConstraints="NO" id="URH-Lp-RiM">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="322"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-detail" translatesAutoresizingMaskIntoConstraints="NO" id="URH-Lp-RiM">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="322"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="322" id="Jpk-3a-bWS"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0O-ou-Blo">
-                                <rect key="frame" x="18" y="244" width="392" height="426"/>
+                                <rect key="frame" x="18" y="244" width="354" height="426"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cascata do Caracol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tj-tj-gRb">
-                                        <rect key="frame" x="24" y="32" width="243" height="30"/>
+                                        <rect key="frame" x="24" y="32" width="222" height="30"/>
                                         <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-lr-9gq">
-                                        <rect key="frame" x="24" y="317.33333333333337" width="130" height="36"/>
+                                        <rect key="frame" x="24" y="328" width="130" height="36"/>
                                         <color key="backgroundColor" red="0.10407623320000001" green="0.2145056588" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="130" id="Gpc-kq-zQE"/>
@@ -53,7 +52,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vuh-aw-nnc">
-                                        <rect key="frame" x="238" y="317.33333333333337" width="130" height="36"/>
+                                        <rect key="frame" x="200" y="328" width="130" height="36"/>
                                         <color key="backgroundColor" red="0.10407623320000001" green="0.2145056588" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="9ez-AT-f51"/>
@@ -65,22 +64,22 @@
                                         </state>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like-active" translatesAutoresizingMaskIntoConstraints="NO" id="wdd-YS-S02">
-                                        <rect key="frame" x="324" y="24" width="44" height="44"/>
+                                        <rect key="frame" x="286" y="24" width="44" height="44"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sobre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iz8-yg-kOa">
-                                        <rect key="frame" x="23.999999999999996" y="117" width="55.666666666666657" height="24"/>
+                                        <rect key="frame" x="23.999999999999996" y="117" width="53.666666666666657" height="24"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.357 avaliações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS0-hG-jIi">
-                                        <rect key="frame" x="219" y="77" width="118" height="18"/>
+                                        <rect key="frame" x="186.66666666666663" y="77" width="112.33333333333334" height="18"/>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
                                         <color key="textColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-Yh-U35">
-                                        <rect key="frame" x="24" y="150" width="344" height="143.33333333333337"/>
+                                        <rect key="frame" x="24" y="150" width="306" height="154"/>
                                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu egestas eget varius id purus. Augue imperdiet platea sed eget neque fermentum. Risus varius vestibulum, leo amet. Sed vitae habitant blandit tellus. Varius aenean amet, tincidunt vulputate lobortis arcu laoreet lacus. Libero enim id in sed ullamcorper nibh viverra quisque. Nibh interdum quis in montes, facilisis vel pellentesque dictum et. In massa aliquam tempus et sit lobortis mauris egestas sed. Pharetra, nibh dictum odio congue dictum id risus pellentesque nunc. Nisl, arcu ultricies velit est phasellus mattis sollicitudin.</string>
                                         <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
                                         <color key="textColor" red="0.054901960784313725" green="0.23137254901960785" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
@@ -109,13 +108,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Veja o que estão comentando" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kft-n4-K2q">
-                                <rect key="frame" x="24" y="694" width="380" height="26.333333333333371"/>
+                                <rect key="frame" x="24" y="694" width="342" height="26"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uXz-RH-UUF">
-                                <rect key="frame" x="24" y="744.33333333333337" width="380" height="147.66666666666663"/>
+                                <rect key="frame" x="24" y="744" width="342" height="66"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-detail-1" translatesAutoresizingMaskIntoConstraints="NO" id="xaj-2w-HLA">
                                         <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
