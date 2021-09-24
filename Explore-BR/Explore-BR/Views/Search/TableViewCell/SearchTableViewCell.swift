@@ -20,8 +20,9 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var starFourImage: UIImageView!
     @IBOutlet weak var starFiveImage: UIImageView!
     @IBOutlet weak var backgroundHeartView: UIView!
-    @IBOutlet weak var heartButton: UIButton!
+    @IBOutlet weak var heartImage: UIImageView!
     
+
     static let identifier:String = "SearchTableViewCell"
     
     static func nib()->UINib{
@@ -33,7 +34,13 @@ class SearchTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    @IBAction func tappedHeartButton(_ sender: UIButton) {
+    public func setupCell(data:LocalList){
+        self.cardImageView.image = data.image
+        self.localTypeLabel.text = data.localType
+        self.localLabel.text = data.local
+        self.descriptionLabel.text = data.description
+        self.heartImage.image = data.heartIcon
     }
+    
     
 }

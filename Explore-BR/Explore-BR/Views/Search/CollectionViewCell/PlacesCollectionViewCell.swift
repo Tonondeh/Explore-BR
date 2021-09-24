@@ -14,7 +14,9 @@ protocol PlacesCollectionViewCellDelegate:AnyObject{
 class PlacesCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var placesButton: UIButton!
+    @IBOutlet weak var placesLabel: UILabel!
+    @IBOutlet weak var placesView: UIView!
+    
     
     var index:IndexPath?
     
@@ -32,14 +34,21 @@ class PlacesCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpCell(data: Place){
-        self.placesButton.setTitle("   "+data.name+"   ", for: .normal)
+        self.placesLabel.text = data.name
+        print("data.placeButtonEnable", data.placeButtonEnable)
         if let isPlaceButtonEnable = data.placeButtonEnable {
-            if isPlaceButtonEnable {
-                self.placesButton.tintColor = .white
-                self.placesButton.applyGradient(colors: [blueDarkButton,blueLightButton])
+            if !isPlaceButtonEnable {
+                self.placesLabel.tintColor = .white
+                self.placesView.applyGradientInView(colors: [blueDarkButton,blueLightButton])
             }else{
-//                self.placesButton.layer.removeFromSuperlayer()
-                self.placesButton.tintColor = .black
+//                for layer in self.placesView.layer.sublayers!{
+//                    print("batata 123")
+//                    if layer != nil{
+//                        layer.removeFromSuperlayer()
+//                    }
+//                }
+//                self.placesView.layer.removeFromSuperlayer()
+                self.placesLabel.tintColor = .black
             }
         }
     }
@@ -49,37 +58,24 @@ class PlacesCollectionViewCell: UICollectionViewCell {
         
     }
     
-    @IBAction func tappedPlacesButton(_ sender: UIButton) {
-        
-        if let indexPath = index {
-            self.delegate?.changePlaceButtonState(index: indexPath.row)
-            
-            if self.placesButton.tintColor == .black{
-                print("Preto nessa porra")
-                self.placesButton.applyGradient(colors: [blueDarkButton,blueLightButton])
-                self.placesButton.tintColor = .white
-            }else{
-                print("Gradiente")
-                self.placesButton.layer.sublayers?.popLast()
-                self.placesButton.tintColor = .black
-            }
-            
+//    @IBAction func tappedPlacesButton(_ sender: UIButton) {
 //
-//            if self.placesButton.tintColor == .white {
-//                print("Branco")
-//                self.placesButton.backgroundColor = .white
-//                //            self.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
-//                self.placesButton.tintColor = .black
-//            } else {
-//                //            self.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-//                print("Gradiente")
-//                self.placesButton.tintColor = .white
+//        if let indexPath = index {
+//            self.delegate?.changePlaceButtonState(index: indexPath.row)
 //
+//            if self.placesButton.tintColor == .black{
+//                print("Preto nessa porra")
 //                self.placesButton.applyGradient(colors: [blueDarkButton,blueLightButton])
+//                self.placesButton.tintColor = .white
+//            }else{
+//                print("Gradiente")
+//                self.placesButton.layer.sublayers?.popLast()
+//                self.placesButton.tintColor = .black
 //            }
-        }
+//
+//        }
         
-    }
+//    }
     
     
 }

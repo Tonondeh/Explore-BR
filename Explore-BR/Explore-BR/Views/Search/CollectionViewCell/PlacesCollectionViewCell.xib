@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,27 +17,42 @@
                 <rect key="frame" x="0.0" y="0.0" width="102" height="36"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNZ-KT-f7E">
-                        <rect key="frame" x="10" y="0.0" width="82" height="36"/>
-                        <state key="normal" title="Button"/>
-                        <connections>
-                            <action selector="tappedPlacesButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="cGU-tq-Llr"/>
-                        </connections>
-                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04e-4W-5oF">
+                        <rect key="frame" x="0.0" y="0.0" width="102" height="36"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqV-J8-G4N">
+                                <rect key="frame" x="30" y="7.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aqV-J8-G4N" firstAttribute="centerX" secondItem="04e-4W-5oF" secondAttribute="centerX" id="6BB-uz-hYR"/>
+                            <constraint firstItem="aqV-J8-G4N" firstAttribute="centerY" secondItem="04e-4W-5oF" secondAttribute="centerY" id="duT-jb-mxB"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="nNZ-KT-f7E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0LO-WE-CcZ"/>
-                <constraint firstAttribute="trailing" secondItem="nNZ-KT-f7E" secondAttribute="trailing" constant="10" id="E8B-5m-4vv"/>
-                <constraint firstAttribute="bottom" secondItem="nNZ-KT-f7E" secondAttribute="bottom" id="NJx-ha-Aw7"/>
-                <constraint firstItem="nNZ-KT-f7E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dVD-ru-LbB"/>
+                <constraint firstItem="04e-4W-5oF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JeJ-AF-5nZ"/>
+                <constraint firstAttribute="bottom" secondItem="04e-4W-5oF" secondAttribute="bottom" id="XnI-o2-224"/>
+                <constraint firstAttribute="trailing" secondItem="04e-4W-5oF" secondAttribute="trailing" id="Z2b-Il-3Ui"/>
+                <constraint firstItem="04e-4W-5oF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o19-jZ-kKv"/>
             </constraints>
             <size key="customSize" width="261" height="124"/>
             <connections>
-                <outlet property="placesButton" destination="nNZ-KT-f7E" id="y8l-YQ-FAV"/>
+                <outlet property="placesLabel" destination="aqV-J8-G4N" id="zOA-lb-blq"/>
+                <outlet property="placesView" destination="04e-4W-5oF" id="HQw-Eh-1ep"/>
             </connections>
             <point key="canvasLocation" x="84.057971014492765" y="91.741071428571431"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -63,6 +63,7 @@
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
+		656EDF1826FD7F0D0016FF56 /* LocalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656EDF1726FD7F0D0016FF56 /* LocalList.swift */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
@@ -139,6 +140,7 @@
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
+		656EDF1726FD7F0D0016FF56 /* LocalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalList.swift; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				3A58728626FB6F8600ECED4A /* Place.swift */,
+				656EDF1726FD7F0D0016FF56 /* LocalList.swift */,
 			);
 			path = ModelSearch;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				3A58728726FB6F8600ECED4A /* PlacesCollectionViewCell.swift in Sources */,
 				13E16C3826D739D60054C017 /* NavigationBarGradient.swift in Sources */,
 				3A58728926FB6F8600ECED4A /* Place.swift in Sources */,
+				656EDF1826FD7F0D0016FF56 /* LocalList.swift in Sources */,
 				3A58727B26FB6F4100ECED4A /* BestReviewsTableViewCell.swift in Sources */,
 				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,

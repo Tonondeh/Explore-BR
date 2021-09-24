@@ -18,6 +18,7 @@ class SearchVC: UIViewController {
     
     var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true),Place(name: "Restaurantes", placeButtonEnable: false), Place(name: "Shopping", placeButtonEnable: false), Place(name: "Cinema", placeButtonEnable: false), Place(name: "zoologico", placeButtonEnable: false), Place(name: "Horti-Fruti", placeButtonEnable: false), Place(name: "Mercado", placeButtonEnable: false), Place(name: "Padaria", placeButtonEnable: false)]
     
+    var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
     
     
     //    @IBOutlet weak var cardView: UIView!
@@ -47,6 +48,7 @@ class SearchVC: UIViewController {
     func configTableView(){
         self.searchTableView.delegate = self
         self.searchTableView.dataSource = self
+        self.searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
     }
     
     func configCollectionView(){
@@ -112,7 +114,10 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.placesArray[indexPath.row].placeButtonEnable = !(self.placesArray[indexPath.row].placeButtonEnable ?? false)
+        self.collectionView.reloadItems(at: [indexPath])
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.placesArray.count
@@ -131,7 +136,7 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        return CGSize(width: 127, height: 33)
     }
     
 }
@@ -141,11 +146,11 @@ extension SearchVC:PlacesCollectionViewCellDelegate{
         
         if let isPlaceButtonEnable = self.placesArray[index].placeButtonEnable{
             print("Acionou", isPlaceButtonEnable )
-            if isPlaceButtonEnable {
-                self.placesArray[index].placeButtonEnable = false
-            } else {
-                self.placesArray[index].placeButtonEnable = true
-            }
+//            if isPlaceButtonEnable {
+//                self.placesArray[index].placeButtonEnable = false
+//            } else {
+//                self.placesArray[index].placeButtonEnable = true
+//            }
         }
         self.placesArray[index].placeButtonEnable = !(self.placesArray[index].placeButtonEnable ?? false)
         
@@ -154,11 +159,20 @@ extension SearchVC:PlacesCollectionViewCellDelegate{
 
 extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.placeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+        
+        cell?.setupCell(data: self.placeList[indexPath.row])
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 414
     }
     
     
