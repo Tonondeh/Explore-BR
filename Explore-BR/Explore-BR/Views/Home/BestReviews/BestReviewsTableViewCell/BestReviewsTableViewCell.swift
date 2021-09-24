@@ -23,6 +23,7 @@ class BestReviewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.configCollectionView()
+        self.selectionStyle = .none
     }
     
     private func configCollectionView() {
@@ -55,15 +56,14 @@ extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.identifier, for: indexPath) as? CardCollectionViewCell
-        
+
         cell?.setupCell(data: self.cardList[indexPath.row])
-//        cell?.roundCorners(.allCorners, radius: 30.0)
         
         return cell ?? UICollectionViewCell()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 149, height: 309)
+        return CGSize(width: 149, height: 209)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
