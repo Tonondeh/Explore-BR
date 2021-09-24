@@ -20,34 +20,26 @@ class SearchVC: UIViewController {
     
     var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
     
-    
-    //    @IBOutlet weak var cardView: UIView!
-    
-    //    @IBOutlet weak var buttonHoteis: UIButton!
-    //
-    //    @IBOutlet weak var buttonParques: UIButton!
-    //
-    //    @IBOutlet weak var buttonRestaurantes: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configSearchBar()
         self.configCollectionView()
-        //        self.configCardView()
-        //        self.configUI()
+        self.configTableView()
         self.navigationItem.titleView = searchBar
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.title = "Search"
         self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.backItem?.backButtonTitle = ""
+        
     }
     
     func configTableView(){
         self.searchTableView.delegate = self
         self.searchTableView.dataSource = self
+        self.searchTableView.separatorStyle = .none
         self.searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
     }
     
@@ -62,20 +54,7 @@ class SearchVC: UIViewController {
             self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
         }
         
-        
-        
     }
-    
-    //    func configUI(){
-    //       self.buttonParques.layer.cornerRadius = 3.0
-    //        self.buttonParques.applyGradient(colors: [blueDarkButton,blueLightButton])
-    //
-    //
-    //
-    //    }
-    //    func configCardView(){
-    //        self.cardView.layer.cornerRadius = 20.0
-    //    }
     
     func configSearchBar(){
         searchBar.searchTextField.backgroundColor = .white
@@ -111,12 +90,40 @@ class SearchVC: UIViewController {
     
 }
 
+var _selectedIndexPath : IndexPath? = nil
 
 extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.placesArray[indexPath.row].placeButtonEnable = !(self.placesArray[indexPath.row].placeButtonEnable ?? false)
         self.collectionView.reloadItems(at: [indexPath])
+        
+        if ((_selectedIndexPath) != nil){
+            
+            if indexPath.compare(_selectedIndexPath!) == ComparisonResult.orderedSame {
+                
+                //if the user tap the same cell that was selected previously deselect it.
+                
+                _selectedIndexPath = nil;
+            }
+            else
+            {
+                // save the currently selected indexPath
+                
+                _selectedIndexPath = indexPath
+                
+            }
+        }
+        else{
+            
+            // else, savee the indexpath for future reference if we don't have previous selected cell
+            
+            _selectedIndexPath = indexPath;
+        }
+        
+        // and now only reload only the visible cells
+        
+        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -125,13 +132,30 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
+        //        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
+        //
+        //
+        //        return cell
         
-        cell.delegate(delegate: self)
-        cell.index = indexPath
-        cell.setUpCell(data: self.placesArray[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell
         
-        return cell
+        if _selectedIndexPath == indexPath{
+            
+            //If the cell is selected
+            cell?.isSelected = true
+            cell?.backgroundColor = UIColor.red
+        }
+        else{
+            // If the cell is not selected
+            cell?.isSelected=false
+            cell?.backgroundColor = UIColor.gray
+            
+            
+        }
+        
+        cell?.setUpCell(data: self.placesArray[indexPath.row])
+        
+        return cell ?? UICollectionViewCell()
         
     }
     
@@ -139,22 +163,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         return CGSize(width: 127, height: 33)
     }
     
-}
-
-extension SearchVC:PlacesCollectionViewCellDelegate{
-    func changePlaceButtonState(index: Int) {
-        
-        if let isPlaceButtonEnable = self.placesArray[index].placeButtonEnable{
-            print("Acionou", isPlaceButtonEnable )
-//            if isPlaceButtonEnable {
-//                self.placesArray[index].placeButtonEnable = false
-//            } else {
-//                self.placesArray[index].placeButtonEnable = true
-//            }
-        }
-        self.placesArray[index].placeButtonEnable = !(self.placesArray[index].placeButtonEnable ?? false)
-        
-    }
 }
 
 extension SearchVC:UITableViewDelegate,UITableViewDataSource{

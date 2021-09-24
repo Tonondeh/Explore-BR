@@ -10,6 +10,7 @@ import UIKit
 class SearchTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var cardWrapperView: UIView!
     @IBOutlet weak var cardImageView: UIImageView!
     @IBOutlet weak var localTypeLabel: UILabel!
     @IBOutlet weak var localLabel: UILabel!
@@ -31,7 +32,23 @@ class SearchTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.selectionStyle = .none
+        self.configCardWrapperView()
+        self.configBackgroundHeartView()
+    }
+    
+    private func configCardWrapperView() {
+        self.cardWrapperView.layer.cornerRadius = 20
+    }
+    
+    private func configBackgroundHeartView() {
+        self.backgroundHeartView.layer.cornerRadius = 18
+        self.backgroundHeartView.layer.shadowColor = UIColor.black.cgColor
+        self.backgroundHeartView.layer.borderColor = UIColor.white.cgColor
+        self.backgroundHeartView.layer.borderWidth = 1.5
+        self.backgroundHeartView.layer.shadowOpacity = 0.40
+        self.backgroundHeartView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.backgroundHeartView.layer.shadowRadius = 5
     }
 
     public func setupCell(data:LocalList){
