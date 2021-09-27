@@ -48,6 +48,7 @@ class SearchVC: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.showsHorizontalScrollIndicator = false
+        self.collectionView.backgroundColor = .systemGray6
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
             
@@ -143,12 +144,12 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             
             //If the cell is selected
             cell?.isSelected = true
-            cell?.backgroundColor = UIColor.red
+            cell?.backgroundColor = UIColor.systemGray6
         }
         else{
             // If the cell is not selected
             cell?.isSelected=false
-            cell?.backgroundColor = UIColor.gray
+            cell?.backgroundColor = UIColor.systemGray6
             
             
         }
@@ -174,6 +175,9 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
         
+        cell?.delegate(delegate: self)
+        cell?.index = indexPath
+        
         cell?.setupCell(data: self.placeList[indexPath.row])
         
         return cell ?? UITableViewCell()
@@ -183,6 +187,23 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         return 414
     }
     
+    
+}
+
+extension SearchVC: SearchTableViewCellDelegate {
+    func changeHeartState(index: Int) {
+        self.placeList[index].heartIconEnable = !self.placeList[index].heartIconEnable
+        
+        let isHeartEnabled: Bool = self.placeList[index].heartIconEnable
+        
+        if isHeartEnabled {
+            self.placeList[index].heartIcon = UIImage(systemName: "heart.fill") ?? UIImage()
+        } else {
+            self.placeList[index].heartIcon = UIImage(systemName: "heart") ?? UIImage()
+        }
+        
+        self.searchTableView.reloadData()
+    }
     
 }
 

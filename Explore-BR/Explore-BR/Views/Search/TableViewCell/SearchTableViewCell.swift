@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SearchTableViewCellDelegate: AnyObject {
+    func changeHeartState(index: Int)
+}
+
 class SearchTableViewCell: UITableViewCell {
 
     
@@ -21,7 +25,15 @@ class SearchTableViewCell: UITableViewCell {
     @IBOutlet weak var starFourImage: UIImageView!
     @IBOutlet weak var starFiveImage: UIImageView!
     @IBOutlet weak var backgroundHeartView: UIView!
-    @IBOutlet weak var heartImage: UIImageView!
+    @IBOutlet weak var heartButton: UIButton!
+    
+    var index: IndexPath?
+    
+    weak private var delegate: SearchTableViewCellDelegate?
+
+    public func delegate(delegate: SearchTableViewCellDelegate?) {
+        self.delegate = delegate
+    }
     
 
     static let identifier:String = "SearchTableViewCell"
@@ -36,6 +48,14 @@ class SearchTableViewCell: UITableViewCell {
         self.configCardWrapperView()
         self.configBackgroundHeartView()
     }
+    
+    @IBAction func tappedHeartButton(_ sender: UIButton) {
+        if let indexPath = index {
+            self.delegate?.changeHeartState(index: indexPath.row)
+        }
+    }
+    
+    
     
     private func configCardWrapperView() {
         self.cardWrapperView.layer.cornerRadius = 20
@@ -56,7 +76,15 @@ class SearchTableViewCell: UITableViewCell {
         self.localTypeLabel.text = data.localType
         self.localLabel.text = data.local
         self.descriptionLabel.text = data.description
-        self.heartImage.image = data.heartIcon
+        self.heartButton.setImage(data.heartIcon, for: .normal)
+        
+        if data.heartIconEnable {
+            self.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            self.heartButton.tintColor = .red
+        } else {
+            self.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            self.heartButton.tintColor = .red
+        }
     }
     
     

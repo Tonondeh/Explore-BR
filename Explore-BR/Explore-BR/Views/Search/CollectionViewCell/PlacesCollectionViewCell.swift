@@ -56,7 +56,9 @@ class PlacesCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.placesView.layer.borderColor = UIColor.black.cgColor
+        self.placesView.layer.borderWidth = 1
+        self.placesView.layer.cornerRadius = 6
     }
     
 }

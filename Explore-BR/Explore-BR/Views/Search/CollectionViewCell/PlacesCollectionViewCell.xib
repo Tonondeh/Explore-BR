@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlacesCollectionViewCell" customModule="Explore_BR" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PlacesCollectionViewCell" id="gTV-IL-0wX" customClass="PlacesCollectionViewCell" customModule="Explore_BR" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="102" height="36"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="04e-4W-5oF">
-                        <rect key="frame" x="0.0" y="0.0" width="102" height="36"/>
+                        <rect key="frame" x="10" y="0.0" width="82" height="36"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqV-J8-G4N">
-                                <rect key="frame" x="30" y="7.5" width="42" height="21"/>
+                                <rect key="frame" x="20" y="7.5" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,11 +36,12 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="04e-4W-5oF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JeJ-AF-5nZ"/>
                 <constraint firstAttribute="bottom" secondItem="04e-4W-5oF" secondAttribute="bottom" id="XnI-o2-224"/>
-                <constraint firstAttribute="trailing" secondItem="04e-4W-5oF" secondAttribute="trailing" id="Z2b-Il-3Ui"/>
-                <constraint firstItem="04e-4W-5oF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="o19-jZ-kKv"/>
+                <constraint firstAttribute="trailing" secondItem="04e-4W-5oF" secondAttribute="trailing" constant="10" id="Z2b-Il-3Ui"/>
+                <constraint firstItem="04e-4W-5oF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="o19-jZ-kKv"/>
             </constraints>
             <size key="customSize" width="261" height="124"/>
             <connections>
