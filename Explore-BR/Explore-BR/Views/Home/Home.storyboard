@@ -92,43 +92,48 @@
             </objects>
             <point key="canvasLocation" x="1973.913043478261" y="-84.375"/>
         </scene>
-        <!--Eventos-->
-        <scene sceneID="0IS-gv-2ZY">
-            <objects>
-                <viewController id="ybc-AG-rgW" customClass="EventsMapVC" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VBq-Wl-uFW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="5Vk-yq-1Vp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Eventos" image="glass-cheers" id="4jS-lD-haO"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nH1-oP-Wak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1064" y="625"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Tab View Controller-->
         <scene sceneID="Je4-bD-spm">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="FpY-Sb-q0P" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="FpY-Sb-q0P" customClass="HomeTabViewController" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="uO5-ny-LmL">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="uO5-ny-LmL">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" systemColor="systemGray6Color"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
                         <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="pf7-PY-4CV" kind="relationship" relationship="viewControllers" id="9jH-gC-cK8"/>
-                        <segue destination="ybc-AG-rgW" kind="relationship" relationship="viewControllers" id="9Ud-sl-VwN"/>
+                        <segue destination="Uak-lo-2i1" kind="relationship" relationship="viewControllers" destinationCreationSelector="EventMap" id="8Vp-U1-IZn"/>
+                        <segue destination="ljR-uQ-uQW" kind="relationship" relationship="viewControllers" destinationCreationSelector="NewEvent" id="zsR-oV-1J7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xK-or-bCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-394" y="164"/>
+            <point key="canvasLocation" x="-368" y="66"/>
+        </scene>
+        <!--NewEvent-->
+        <scene sceneID="Scz-6V-AVz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NewEvent" storyboardName="NewEvent" id="ljR-uQ-uQW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" enabled="NO" title="Novo Evento" image="map-marked" id="hxn-mK-RTy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMk-6G-Vbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="364"/>
+        </scene>
+        <!--EventMap-->
+        <scene sceneID="FUi-dg-eH8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQj-wb-ftE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="EventMap" storyboardName="EventMap" id="Uak-lo-2i1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" enabled="NO" title="Eventos" image="glass-cheers" id="kfj-M8-nSP"/>
+                </viewControllerPlaceholder>
+            </objects>
+            <point key="canvasLocation" x="461" y="263"/>
         </scene>
         <!--Explorar-->
         <scene sceneID="3Vu-Bz-03q">
@@ -155,9 +160,13 @@
     <resources>
         <image name="glass-cheers" width="29" height="24"/>
         <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="map-marked" width="26" height="23.5"/>
         <image name="profile" width="176" height="178"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
