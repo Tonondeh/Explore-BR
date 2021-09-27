@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FpY-Sb-q0P">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Home" id="Y6W-OH-hqX" customClass="HomeVC" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mk8-g4-hQe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </mapView>
+                            <view opaque="NO" clipsSubviews="YES" alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLh-cP-pfn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3H5-IU-Wed"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-fL-CAG">
+                                <rect key="frame" x="18" y="62" width="378" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesquise seus locais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1e-Pe-vmA">
+                                        <rect key="frame" x="24" y="0.0" width="291" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-wQ-wNF">
+                                        <rect key="frame" x="327" y="7.5" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="kD9-na-RRZ"/>
+                                            <constraint firstAttribute="width" constant="33" id="mph-cw-G53"/>
+                                        </constraints>
+                                        <state key="normal" image="profile"/>
+                                        <connections>
+                                            <action selector="tappedAvatarProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="3qA-H0-aHk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="M1e-Pe-vmA" secondAttribute="bottom" id="4dG-7N-r3Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="MDx-wQ-wNF" secondAttribute="trailing" constant="18" id="NgA-i2-ye1"/>
+                                    <constraint firstItem="M1e-Pe-vmA" firstAttribute="top" secondItem="Jcy-fL-CAG" secondAttribute="top" id="WKc-PK-JP4"/>
+                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="centerY" secondItem="Jcy-fL-CAG" secondAttribute="centerY" id="bq5-05-Zjv"/>
+                                    <constraint firstItem="M1e-Pe-vmA" firstAttribute="leading" secondItem="Jcy-fL-CAG" secondAttribute="leading" constant="24" id="fzA-sW-mVx"/>
+                                    <constraint firstAttribute="height" constant="48" id="jvX-yR-uLi"/>
+                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="leading" secondItem="M1e-Pe-vmA" secondAttribute="trailing" constant="12" id="tE1-tO-0fF"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="z53-K0-sh3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jcy-fL-CAG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="18" id="2BR-ao-WGZ"/>
+                            <constraint firstItem="Mk8-g4-hQe" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="58e-YC-I7c"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="AOn-yp-5K4"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Hay-5T-RGh"/>
+                            <constraint firstItem="qLh-cP-pfn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="b51-9x-ZsU"/>
+                            <constraint firstItem="Mk8-g4-hQe" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="cIl-Ti-ioi"/>
+                            <constraint firstAttribute="bottom" secondItem="Mk8-g4-hQe" secondAttribute="bottom" id="e7r-81-G5Z"/>
+                            <constraint firstItem="Jcy-fL-CAG" firstAttribute="top" secondItem="qLh-cP-pfn" secondAttribute="bottom" constant="18" id="hiV-YT-uX3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Jcy-fL-CAG" secondAttribute="trailing" constant="18" id="jYr-no-rcC"/>
+                            <constraint firstItem="Mk8-g4-hQe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xzE-OE-cXJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z7b-Y8-azq"/>
+                    <connections>
+                        <outlet property="avatarProfileButton" destination="MDx-wQ-wNF" id="1Sl-KS-g6n"/>
+                        <outlet property="searchLabel" destination="M1e-Pe-vmA" id="otl-1p-zks"/>
+                        <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
+                        <outlet property="wrapSearchBarView" destination="Jcy-fL-CAG" id="kuW-Lp-Wog"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="-84.375"/>
+        </scene>
+        <!--Home Tab View Controller-->
+        <scene sceneID="Je4-bD-spm">
+            <objects>
+                <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="FpY-Sb-q0P" customClass="HomeTabViewController" customModule="Explore_BR" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="uO5-ny-LmL">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" systemColor="systemGray5Color"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.0" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pf7-PY-4CV" kind="relationship" relationship="viewControllers" id="9jH-gC-cK8"/>
+                        <segue destination="Uak-lo-2i1" kind="relationship" relationship="viewControllers" destinationCreationSelector="EventMap" id="8Vp-U1-IZn"/>
+                        <segue destination="ljR-uQ-uQW" kind="relationship" relationship="viewControllers" destinationCreationSelector="NewEvent" id="zsR-oV-1J7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xK-or-bCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="66"/>
+        </scene>
+        <!--NewEvent-->
+        <scene sceneID="Scz-6V-AVz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NewEvent" storyboardName="NewEvent" id="ljR-uQ-uQW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" enabled="NO" title="Novo Evento" image="map-marked" id="hxn-mK-RTy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMk-6G-Vbn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="364"/>
+        </scene>
+        <!--EventMap-->
+        <scene sceneID="FUi-dg-eH8">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="EventMap" storyboardName="EventMap" id="Uak-lo-2i1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" enabled="NO" title="Eventos" image="glass-cheers" id="kfj-M8-nSP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQj-wb-ftE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="461" y="263"/>
+        </scene>
+        <!--Explorar-->
+        <scene sceneID="3Vu-Bz-03q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pf7-PY-4CV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Explorar" id="Wde-8Z-VhO">
+                        <imageReference key="image" image="globe" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VIl-mY-A8M">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="gXY-WK-2ry"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snj-Yn-vCw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.768115942029" y="-84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="glass-cheers" width="29" height="24"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="map-marked" width="26" height="23.5"/>
+        <image name="profile" width="176" height="178"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
