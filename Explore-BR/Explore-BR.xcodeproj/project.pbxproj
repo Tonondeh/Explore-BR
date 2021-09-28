@@ -63,6 +63,7 @@
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
 		65A9655427035A2A0000008B /* EmptyState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9655327035A2A0000008B /* EmptyState.storyboard */; };
+		65A9655627035B410000008B /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A9655527035B410000008B /* EmptyState.swift */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65C18F0A27029E4C007E240E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65C18F0927029E4B007E240E /* GoogleService-Info.plist */; };
@@ -142,6 +143,7 @@
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
 		65A9655327035A2A0000008B /* EmptyState.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmptyState.storyboard; sourceTree = "<group>"; };
+		65A9655527035B410000008B /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65C18F0927029E4B007E240E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				65A9655327035A2A0000008B /* EmptyState.storyboard */,
+				65A9655527035B410000008B /* EmptyState.swift */,
 			);
 			path = EmptyState;
 			sourceTree = "<group>";
@@ -652,6 +655,7 @@
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
+				65A9655627035B410000008B /* EmptyState.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
