@@ -36,7 +36,14 @@ class NewEventViewController: UIViewController {
     }
     
     private func configureUI() {
+        // background Content View
         self.mainContentView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
+        
+        // view of update location
+        self.updateLocationView.layer.borderWidth = 1.0
+        self.updateLocationView.layer.borderColor = UIColor(hex: "#000046").cgColor
+        self.updateLocationView.layer.cornerRadius = 15
+        self.updateLocationView.backgroundColor = UIColor.white
     }
     
     private func configNavigationBar() {
@@ -64,8 +71,8 @@ class NewEventViewController: UIViewController {
             
             self.eventNameTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Qual o nome do evento")
             
-           }
-       
+        }
+        
         if let imageCalendar: UIImage = UIImage(named: "calendarImage.png"){
             
             self.inicialDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de inicio")
@@ -74,12 +81,12 @@ class NewEventViewController: UIViewController {
             
         }
         
-//        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png"){
-//            
-//            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
-//        }
+        //        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png"){
+        //
+        //            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
+        //        }
     }
-
+    
 }
 
 

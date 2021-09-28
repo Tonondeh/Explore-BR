@@ -59,6 +59,7 @@
 		627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627EF24626D6FD380053B7F1 /* ColorsGradient.swift */; };
 		629334FC26FBB2BB00E12B50 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 629334FB26FBB2BB00E12B50 /* Alert.swift */; };
 		6293350426FBE65B00E12B50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6293350326FBE65B00E12B50 /* User.swift */; };
+		62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6D312703C935004646D1 /* UIColor+Hex.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
@@ -137,6 +138,7 @@
 		627EF24626D6FD380053B7F1 /* ColorsGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsGradient.swift; sourceTree = "<group>"; };
 		629334FB26FBB2BB00E12B50 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		6293350326FBE65B00E12B50 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		62EC6D312703C935004646D1 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
 				650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */,
 				629334FB26FBB2BB00E12B50 /* Alert.swift */,
+				62EC6D312703C935004646D1 /* UIColor+Hex.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				65C18F1A27029FEB007E240E /* LocalList.swift in Sources */,
 				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
+				62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */,
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
 				6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */,
 				FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */,
