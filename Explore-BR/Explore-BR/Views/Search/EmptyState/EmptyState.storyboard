@@ -32,7 +32,40 @@
                             </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26e-qM-EWW">
                                 <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty-state" translatesAutoresizingMaskIntoConstraints="NO" id="YcE-MI-8RI">
+                                        <rect key="frame" x="24" y="153" width="366" height="266"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="266" id="Gtk-fY-oCr"/>
+                                            <constraint firstAttribute="width" constant="366" id="kPH-aO-Owt"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado da busca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYD-JS-clL">
+                                        <rect key="frame" x="18" y="17" width="160" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="NZz-Qt-fGq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A não! Sua busca esta vazia. Tente novamente." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sh-A4-uaj">
+                                        <rect key="frame" x="105" y="83" width="204" height="36"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="7Sh-A4-uaj" firstAttribute="leading" secondItem="26e-qM-EWW" secondAttribute="leading" constant="105" id="49U-zU-JAc"/>
+                                    <constraint firstItem="7Sh-A4-uaj" firstAttribute="top" secondItem="NYD-JS-clL" secondAttribute="bottom" constant="44" id="FZU-pp-vwQ"/>
+                                    <constraint firstItem="NYD-JS-clL" firstAttribute="leading" secondItem="26e-qM-EWW" secondAttribute="leading" constant="18" id="NVI-8p-N2T"/>
+                                    <constraint firstItem="NYD-JS-clL" firstAttribute="top" secondItem="26e-qM-EWW" secondAttribute="top" constant="17" id="Sh4-tu-qJq"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Sh-A4-uaj" secondAttribute="trailing" constant="105" id="Z4f-tY-qYc"/>
+                                    <constraint firstItem="YcE-MI-8RI" firstAttribute="leading" secondItem="26e-qM-EWW" secondAttribute="leading" constant="24" id="chR-bi-sS9"/>
+                                    <constraint firstItem="YcE-MI-8RI" firstAttribute="top" secondItem="7Sh-A4-uaj" secondAttribute="bottom" constant="34" id="fel-zP-2Nc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -54,8 +87,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="empty-state" width="366" height="237"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
