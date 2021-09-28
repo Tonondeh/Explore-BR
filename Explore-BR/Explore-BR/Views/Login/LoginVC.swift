@@ -66,7 +66,6 @@ class LoginVC: UIViewController {
     
     
     @IBAction func tappedLoginEmailButton(_ sender: UIButton) {
-        print("Chegou")
         self.performSegue(withIdentifier: "SignIn", sender: nil)
     }
     
