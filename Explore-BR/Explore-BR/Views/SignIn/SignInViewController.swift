@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
-        
+        self.checkButtonEnabled(false)
     }
     
     func configTextField(){
@@ -34,8 +34,26 @@ class SignInViewController: UIViewController {
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
     
+    func validateTextFields() {
+        let email: String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
+        
+        if email.isEmpty || password.isEmpty {
+            self.checkButtonEnabled(false)
+        } else {
+            self.checkButtonEnabled(true)
+        }
+    }
     
-    
+    func checkButtonEnabled(_ isButtonEnabled: Bool) {
+        if isButtonEnabled {
+            self.signInButton.setTitleColor(.white, for: .normal)
+            self.signInButton.isEnabled = true
+        } else {
+            self.signInButton.setTitleColor(.lightGray, for: .normal)
+            self.signInButton.isEnabled = false
+        }
+    }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
         let storyboard =  UIStoryboard(name: "Home", bundle: nil)
@@ -70,8 +88,18 @@ class SignInViewController: UIViewController {
 extension SignInViewController:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        
+        if textField == self.emailTextField {
+            self.passwordTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.validateTextFields()
     }
     
 }
