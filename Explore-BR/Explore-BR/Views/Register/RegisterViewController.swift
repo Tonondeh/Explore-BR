@@ -6,31 +6,38 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    var auth: Auth?
+    var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
         self.checkButtonEnabled(false)
         self.configTextField()
+        self.auth = Auth.auth()
+        self.alert = Alert(viewController: self)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
+        self.registerUser(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "")
     }
     
     func configUI(){
         self.registerButton.layer.cornerRadius = 3.0
         self.registerButton.applyGradient(colors: [blueLightButton,blueDarkButton])
-
-       
-
+        
+        
+        
     }
     
     func configTextFieldDelegates(delegate: UITextFieldDelegate?) {
@@ -66,7 +73,27 @@ class RegisterViewController: UIViewController {
             self.registerButton.isEnabled = false
         }
     }
-
+    
+    private func registerUser(email: String, password: String) {
+        if self.passwordTextField.text != self.confirmPasswordTextField.text {
+            self.alert?.showAlert(title: "Ops", message: "As senha estão diferentes, digite novamente por favor", completion: nil)
+        } else {
+            self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
+                
+                if let error = error {
+                    self.alert?.showAlert(title: "Erro", message: "Verifique os dados inseridos", completion: nil)
+                    
+                    print("error =", error)
+                } else {
+                    self.alert?.showAlert(title: "Sucesso!", message: "Usuário cadastrado com sucesso!") {
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                }
+                
+            })
+        }
+    }
+    
 }
 
 extension RegisterViewController: UITextFieldDelegate {
