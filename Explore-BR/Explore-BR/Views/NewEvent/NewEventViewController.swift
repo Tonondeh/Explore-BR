@@ -9,7 +9,8 @@ import UIKit
 import MapKit
 
 class NewEventViewController: UIViewController {
-        
+    
+    @IBOutlet weak var mainContentView: UIView!
     @IBOutlet weak var eventMapView: MKMapView!
     @IBOutlet weak var updateLocationView: UIView!
     @IBOutlet weak var addressLabel: UILabel!
@@ -26,6 +27,7 @@ class NewEventViewController: UIViewController {
         super.viewDidLoad()
         self.configNavigationBar()
         self.configTextField()
+        self.configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +35,9 @@ class NewEventViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
     
-    
+    private func configureUI() {
+        self.mainContentView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
+    }
     
     private func configNavigationBar() {
         self.navigationItem.setHidesBackButton(true, animated: true)

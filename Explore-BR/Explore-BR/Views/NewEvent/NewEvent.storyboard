@@ -241,6 +241,7 @@
                         <outlet property="eventMapView" destination="QZ1-gE-gEO" id="ztV-9t-ZMu"/>
                         <outlet property="eventNameTextField" destination="gef-uD-fim" id="dRh-j1-pO2"/>
                         <outlet property="inicialDateTextField" destination="Cfd-OF-8k8" id="ylh-d0-LO4"/>
+                        <outlet property="mainContentView" destination="FaT-V5-gJD" id="jRw-uY-f0p"/>
                         <outlet property="photoEventImageView" destination="P7X-XA-Hpy" id="sD5-nu-IvS"/>
                         <outlet property="selectPhotoView" destination="Ncm-pO-UI2" id="Nua-Wy-6fJ"/>
                         <outlet property="takePhotoCameraView" destination="ykx-ae-0MB" id="R1B-VW-ViZ"/>
