@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-zl-hJz">
-                                <rect key="frame" x="83.666666666666686" y="718" width="208" height="30"/>
+                                <rect key="frame" x="96.666666666666686" y="718" width="182" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Já possui cadastro?">
@@ -41,7 +41,7 @@
                                                 <font key="NSFont" metaFont="system" size="15"/>
                                             </attributes>
                                         </fragment>
-                                        <fragment content="Cadastrar">
+                                        <fragment content="Entrar">
                                             <attributes>
                                                 <color key="NSColor" red="0.10588235294117647" green="0.77254901960784317" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" metaFont="system" size="15"/>
@@ -54,7 +54,6 @@
                                 <rect key="frame" x="24" y="234.33333333333337" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VMy-My-ZtN"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="iOm-Ka-nZi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -62,7 +61,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-Ql-o0V">
                                 <rect key="frame" x="24" y="305.33333333333331" width="327" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="U4i-9P-Pgs"/>
                                     <constraint firstAttribute="height" constant="48" id="Vi1-eL-FdF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,7 +70,6 @@
                                 <rect key="frame" x="24" y="376.33333333333331" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="OPQ-Qa-X57"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="oZf-fC-urf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -87,7 +84,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirme sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jI-ud6">
                                 <rect key="frame" x="24" y="447.33333333333331" width="327" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="eTD-uu-Hl8"/>
                                     <constraint firstAttribute="height" constant="48" id="w5u-Cg-wEA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
