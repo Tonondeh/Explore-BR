@@ -15,6 +15,11 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cardRegionLabel: UILabel!
     @IBOutlet weak var backgroundHeartView: UIView!
     @IBOutlet weak var heartImage: UIImageView!
+    @IBOutlet weak var starOneImage: UIImageView!
+    @IBOutlet weak var starTwoImage: UIImageView!
+    @IBOutlet weak var starThreeImage: UIImageView!
+    @IBOutlet weak var starFourImage: UIImageView!
+    @IBOutlet weak var starFiveImage: UIImageView!
     
     static let identifier: String = "CardCollectionViewCell"
     

@@ -154,6 +154,11 @@
                 <outlet property="cardRegionLabel" destination="dYP-mZ-gfR" id="nFW-lp-KYV"/>
                 <outlet property="cardTitleLabel" destination="vdx-lT-yJg" id="PSz-HS-ahb"/>
                 <outlet property="heartImage" destination="BEt-Sy-2Wy" id="9oG-vz-cVN"/>
+                <outlet property="starFiveImage" destination="9Sx-rY-n5L" id="v7V-4h-UHO"/>
+                <outlet property="starFourImage" destination="92g-Lq-jED" id="xhR-0D-XDq"/>
+                <outlet property="starOneImage" destination="Nhv-6q-cOG" id="wXC-Nj-b2w"/>
+                <outlet property="starThreeImage" destination="Ul0-u7-DUn" id="IXe-g1-Sfi"/>
+                <outlet property="starTwoImage" destination="LQZ-cE-t2z" id="ETu-e0-KcK"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="15.736607142857142"/>
         </collectionViewCell>
