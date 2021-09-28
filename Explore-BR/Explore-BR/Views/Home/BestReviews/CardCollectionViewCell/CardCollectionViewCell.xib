@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -54,6 +55,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh8-Cq-UCh">
+                        <rect key="frame" x="112" y="9" width="24" height="24"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BEt-Sy-2Wy">
+                                <rect key="frame" x="3" y="4.5" width="18" height="15.5"/>
+                                <color key="tintColor" red="0.90588235289999997" green="0.1137254902" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="18" id="79B-OM-71Y"/>
+                                    <constraint firstAttribute="height" constant="18" id="uFI-c5-S6z"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BEt-Sy-2Wy" firstAttribute="centerX" secondItem="xh8-Cq-UCh" secondAttribute="centerX" id="8kb-RV-Ees"/>
+                            <constraint firstAttribute="width" constant="24" id="LUv-6S-QUi"/>
+                            <constraint firstAttribute="height" constant="24" id="TEG-5Z-qO5"/>
+                            <constraint firstItem="BEt-Sy-2Wy" firstAttribute="centerY" secondItem="xh8-Cq-UCh" secondAttribute="centerY" id="rQX-Wr-eXd"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -72,20 +93,28 @@
                 <constraint firstAttribute="trailing" secondItem="MxT-kf-w8P" secondAttribute="trailing" constant="12" id="jAh-wl-mNq"/>
                 <constraint firstItem="E4g-CB-ZmW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="oCz-P1-Iex"/>
                 <constraint firstItem="I4S-uw-98x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="pOn-aQ-1yc"/>
+                <constraint firstItem="xh8-Cq-UCh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="qev-B1-QoE"/>
+                <constraint firstAttribute="trailing" secondItem="xh8-Cq-UCh" secondAttribute="trailing" constant="13" id="tCc-VD-sTe"/>
                 <constraint firstItem="E4g-CB-ZmW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yGc-yI-7Lk"/>
                 <constraint firstItem="vdx-lT-yJg" firstAttribute="top" secondItem="E4g-CB-ZmW" secondAttribute="bottom" constant="5" id="z5G-cA-P2a"/>
             </constraints>
             <size key="customSize" width="160" height="230"/>
             <connections>
+                <outlet property="backgroundHeartView" destination="xh8-Cq-UCh" id="0Ud-6l-54i"/>
                 <outlet property="cardImage" destination="E4g-CB-ZmW" id="F8G-qM-hye"/>
                 <outlet property="cardLocalTypeLabel" destination="I4S-uw-98x" id="BDY-k4-Gne"/>
                 <outlet property="cardRegionLabel" destination="dYP-mZ-gfR" id="nFW-lp-KYV"/>
                 <outlet property="cardTitleLabel" destination="vdx-lT-yJg" id="PSz-HS-ahb"/>
+                <outlet property="heartImage" destination="BEt-Sy-2Wy" id="9oG-vz-cVN"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="15.736607142857142"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="location-detail" width="414" height="322"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
