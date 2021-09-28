@@ -49,6 +49,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="loginBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sWT-vt-z3R"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frC-sF-gxg">
                                 <rect key="frame" x="24" y="234.33333333333337" width="327" height="48"/>
