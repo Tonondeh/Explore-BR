@@ -20,6 +20,15 @@ class SearchVC: UIViewController {
     
     var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
     
+//    let emptyState:EmptyStateViewController = storyboard
+    
+//    func loadAndAddView(){
+//        let storyboard =  UIStoryboard(name: "EmptyStateViewController", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "EmptyStateViewController") as? EmptyStateViewController
+//        self.currentNavigation?.pushViewController(vc ?? UIViewController(), animated: true)
+//        self.view.addSubview(storyboard)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
@@ -27,6 +36,10 @@ class SearchVC: UIViewController {
         self.configCollectionView()
         self.configTableView()
         self.navigationItem.titleView = searchBar
+//        self.searchTableView.removeFromSuperview()
+//        let customView = UIView.createInstance(ofType: EmptyStateViewController)
+//            self.view.addSubview(customView)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -207,3 +220,11 @@ extension SearchVC: SearchTableViewCellDelegate {
     
 }
 
+//extension UIView {
+//    
+//    static func createInstance<T: UIView>(ofType type: T.Type) -> T {
+//        let className = NSStringFromClass(type).components(separatedBy: ".").last
+//        return Bundle.main.loadNibNamed(className!, owner: self, options: nil)![0] as! T
+//    }
+//
+//}
