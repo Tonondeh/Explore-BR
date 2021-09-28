@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svp-MW-bNE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svp-MW-bNE">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,6 +46,9 @@
                                     <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uFc-QR-8JM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-S5-bJ3">
                                 <rect key="frame" x="24" y="422" width="366" height="48"/>
@@ -61,6 +63,9 @@
                                     <imageReference key="image" image="logo-google" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedLoginGoogleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="zu1-lA-naw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gif-wE-fnD">
                                 <rect key="frame" x="24" y="502" width="366" height="48"/>
@@ -75,7 +80,7 @@
                                     <color key="titleColor" red="0.98431372549999996" green="0.99607843139999996" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="tappedContinueWithEmailButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="l0K-Do-qss"/>
+                                    <action selector="tappedLoginEmailButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0lk-Sc-fuY"/>
                                 </connections>
                             </button>
                         </subviews>

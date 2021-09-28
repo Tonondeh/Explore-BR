@@ -14,7 +14,9 @@ class Alert: NSObject {
     func showAlert(title: String, message: String, completion: (() -> Void)?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "OK", style: .default)
+        let action = UIAlertAction(title: "OK", style: .default) { action in
+            completion?()
+        }
         
         alertController.addAction(action)
         

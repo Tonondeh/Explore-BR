@@ -13,6 +13,13 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cardTitleLabel: UILabel!
     @IBOutlet weak var cardLocalTypeLabel: UILabel!
     @IBOutlet weak var cardRegionLabel: UILabel!
+    @IBOutlet weak var backgroundHeartView: UIView!
+    @IBOutlet weak var heartImage: UIImageView!
+    @IBOutlet weak var starOneImage: UIImageView!
+    @IBOutlet weak var starTwoImage: UIImageView!
+    @IBOutlet weak var starThreeImage: UIImageView!
+    @IBOutlet weak var starFourImage: UIImageView!
+    @IBOutlet weak var starFiveImage: UIImageView!
     
     static let identifier: String = "CardCollectionViewCell"
     
@@ -22,7 +29,18 @@ class CardCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.configBackgroundHeartView()
+    }
+    
+    private func configBackgroundHeartView() {
+        self.backgroundHeartView.layer.cornerRadius = 12
+        self.backgroundHeartView.layer.shadowColor = UIColor.black.cgColor
+        self.backgroundHeartView.layer.borderColor = UIColor.white.cgColor
+        self.backgroundHeartView.layer.borderWidth = 1.5
+        self.backgroundHeartView.layer.shadowOpacity = 0.40
+        self.backgroundHeartView.layer.shadowOffset = CGSize(width: 0, height: 4)
+        self.backgroundHeartView.layer.shadowRadius = 5
     }
     
     override func layoutSubviews() {
@@ -40,7 +58,7 @@ class CardCollectionViewCell: UICollectionViewCell {
            self.layer.shadowColor = UIColor.black.cgColor
            self.layer.shadowOffset = CGSize(width: 0, height: 4.0)
            self.layer.shadowRadius = 6.0
-           self.layer.shadowOpacity = 0.6
+           self.layer.shadowOpacity = 0.16
            self.layer.cornerRadius = 18.0
            self.layer.masksToBounds = false
            self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath

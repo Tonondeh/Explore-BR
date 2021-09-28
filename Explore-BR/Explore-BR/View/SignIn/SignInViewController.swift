@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -14,18 +15,20 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var auth: Auth?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
         
+        self.auth = Auth.auth()
     }
-    
+
     func configTextField(){
         self.emailTextField.delegate = self
         self.emailTextField.keyboardType = .emailAddress
         self.passwordTextField.delegate = self
-        
     }
     
     
@@ -38,29 +41,33 @@ class SignInViewController: UIViewController {
     
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Home") as? HomeVC
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        
+        if emailTextField.text == "" || passwordTextField.text == "" {
+            print("ta vazio")
+        } else {
+            auth?.signIn(withEmail: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "", completion: { result, error in
+                
+                if let error = error {
+                    print("error", error)
+                } else {
+                    print("deu certo!")
+                    // fazer navegação...
+                }
+                
+            })
+        }
+        
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
         performSegue(withIdentifier: "ResetPassword", sender: nil)
     }
     
-    @IBAction func tappedSocialSignInButton(_ sender: UIButton) {     
-        for controller in self.navigationController!.viewControllers as Array {
-            if controller.isKind(of: LoginVC.self) {
-                self.navigationController!.popToViewController(controller, animated: true)
-                break
-            }
-        }
+    @IBAction func tappedSocialSignInButton(_ sender: UIButton) {
     }
     
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        let storyboard =  UIStoryboard(name: "Register", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Register") as? RegisterViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
