@@ -52,6 +52,8 @@ class RegisterViewController: UIViewController {
         
         self.passwordTextField.isSecureTextEntry = true
         self.confirmPasswordTextField.isSecureTextEntry = true
+        
+        self.emailTextField.keyboardType = .emailAddress
     }
     
     func validateTextFields() {
