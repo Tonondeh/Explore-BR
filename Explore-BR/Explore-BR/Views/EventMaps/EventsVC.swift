@@ -6,38 +6,44 @@
 //
 
 import UIKit
+import FloatingPanel
 
-class EventsVC: UIViewController, UITextFieldDelegate{
+class EventsVC: UIViewController{
+    
+    var fpc: FloatingPanelController?
     
     @IBOutlet weak var statusBackgroundView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureUI()
+        self.configFloatingPanel()
+        self.configFloatingPanelUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        self.showMenu()
+    private func configFloatingPanel() {
+        
+        fpc = FloatingPanelController()
+        
+//        fpc?.delegate = self // Optional
+        
+        // Set a content view controller.
+        let eventMapPanelViewController = EventMapPanelViewController()
+        
+        fpc?.set(contentViewController: eventMapPanelViewController)
+        
+        // Add and show the views managed by the `FloatingPanelController` object to self.view.
+        fpc?.addPanel(toParent: self)
     }
     
-    @objc func showMenu() {
-        let slideVC = EventModalMenu()
-        slideVC.modalPresentationStyle = .custom
-        slideVC.transitioningDelegate = self
-        self.present(slideVC, animated: true, completion: nil)
-    }
-    
-    func configureUI() {
-//        self.statusBackgroundView.applyGradientInView(colors: [blueLightButton,blueLightButton])
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.resignFirstResponder()
+    private func configFloatingPanelUI() {
+        let appearance = SurfaceAppearance()
+        
+        appearance.cornerRadius = 18.0
+        
+        fpc?.surfaceView.appearance = appearance
+        
+        fpc?.surfaceView.grabberHandlePadding = 10.0
+        fpc?.surfaceView.grabberHandleSize = .init(width: 56.0, height: 2.0)
     }
     
 }
 
-extension EventsVC: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        ModalPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-}
