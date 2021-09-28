@@ -39,7 +39,9 @@ class NewEventViewController: UIViewController {
         self.navigationController?.navigationBar.setGradientBackground(colors: [blueNavController, pinkNavController])
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.navigationController?.title = "Novo Evento"
+//        self.navigationController?.title = "Novo Evento"
+        self.navigationItem.title = "Novo Evento"
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     private func configTextField() {

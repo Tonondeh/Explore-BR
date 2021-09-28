@@ -160,10 +160,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="48" id="Iat-QO-bI9"/>
                                                 </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Criar Evento">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                </buttonConfiguration>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Criar Evento"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -228,7 +227,7 @@
                             <constraint firstItem="lak-8x-6aX" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Htv-pf-ZHw"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lak-8x-6aX" secondAttribute="trailing" id="Ihj-B9-Mi3"/>
                             <constraint firstItem="lak-8x-6aX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LJ3-CS-qoU"/>
-                            <constraint firstItem="FaT-V5-gJD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" multiplier="0.57971" constant="174" id="rdC-cj-8qk"/>
+                            <constraint firstItem="FaT-V5-gJD" firstAttribute="width" secondItem="5EZ-qb-Rvc" secondAttribute="width" id="TZn-JI-iy4"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Novo Evento" image="map-marked" id="5bS-vo-ydK"/>
