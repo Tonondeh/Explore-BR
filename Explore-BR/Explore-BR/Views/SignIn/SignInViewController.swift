@@ -31,7 +31,9 @@ class SignInViewController: UIViewController {
         self.emailTextField.delegate = self
         self.emailTextField.keyboardType = .emailAddress
         self.passwordTextField.delegate = self
-        
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField.autocapitalizationType = .none
+        self.passwordTextField.autocorrectionType = .no
     }
     
     
