@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FpY-Sb-q0P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FpY-Sb-q0P">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -31,15 +30,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jcy-fL-CAG">
                                 <rect key="frame" x="18" y="62" width="378" height="48"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Pesquise seus locais" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="COh-gO-22n">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesquise seus locais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1e-Pe-vmA">
                                         <rect key="frame" x="24" y="0.0" width="291" height="48"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="tappedSearchTextField:" destination="Y6W-OH-hqX" eventType="editingDidBegin" id="qsk-Iv-aLJ"/>
-                                        </connections>
-                                    </textField>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDx-wQ-wNF">
                                         <rect key="frame" x="327" y="7.5" width="33" height="33"/>
                                         <constraints>
@@ -54,13 +50,13 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="COh-gO-22n" firstAttribute="top" secondItem="Jcy-fL-CAG" secondAttribute="top" id="38J-0W-7Dp"/>
-                                    <constraint firstItem="COh-gO-22n" firstAttribute="leading" secondItem="Jcy-fL-CAG" secondAttribute="leading" constant="24" id="FC4-OY-dC8"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1e-Pe-vmA" secondAttribute="bottom" id="4dG-7N-r3Q"/>
                                     <constraint firstAttribute="trailing" secondItem="MDx-wQ-wNF" secondAttribute="trailing" constant="18" id="NgA-i2-ye1"/>
-                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="leading" secondItem="COh-gO-22n" secondAttribute="trailing" constant="12" id="XUV-mz-K27"/>
+                                    <constraint firstItem="M1e-Pe-vmA" firstAttribute="top" secondItem="Jcy-fL-CAG" secondAttribute="top" id="WKc-PK-JP4"/>
                                     <constraint firstItem="MDx-wQ-wNF" firstAttribute="centerY" secondItem="Jcy-fL-CAG" secondAttribute="centerY" id="bq5-05-Zjv"/>
+                                    <constraint firstItem="M1e-Pe-vmA" firstAttribute="leading" secondItem="Jcy-fL-CAG" secondAttribute="leading" constant="24" id="fzA-sW-mVx"/>
                                     <constraint firstAttribute="height" constant="48" id="jvX-yR-uLi"/>
-                                    <constraint firstAttribute="bottom" secondItem="COh-gO-22n" secondAttribute="bottom" id="kzg-s3-tgQ"/>
+                                    <constraint firstItem="MDx-wQ-wNF" firstAttribute="leading" secondItem="M1e-Pe-vmA" secondAttribute="trailing" constant="12" id="tE1-tO-0fF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="z53-K0-sh3"/>
                                 </constraints>
                             </view>
@@ -83,7 +79,7 @@
                     <navigationItem key="navigationItem" id="Z7b-Y8-azq"/>
                     <connections>
                         <outlet property="avatarProfileButton" destination="MDx-wQ-wNF" id="1Sl-KS-g6n"/>
-                        <outlet property="searchTextField" destination="COh-gO-22n" id="S9X-OO-2Yv"/>
+                        <outlet property="searchLabel" destination="M1e-Pe-vmA" id="otl-1p-zks"/>
                         <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
                         <outlet property="wrapSearchBarView" destination="Jcy-fL-CAG" id="kuW-Lp-Wog"/>
                     </connections>
@@ -128,10 +124,10 @@
         <!--EventMap-->
         <scene sceneID="FUi-dg-eH8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SQj-wb-ftE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardIdentifier="EventMap" storyboardName="EventMap" id="Uak-lo-2i1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" enabled="NO" title="Eventos" image="glass-cheers" id="kfj-M8-nSP"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQj-wb-ftE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="461" y="263"/>
         </scene>

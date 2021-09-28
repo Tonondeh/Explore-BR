@@ -11,30 +11,36 @@ import FloatingPanel
 class HomeVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var statusBackgroundView: UIView!
-    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var wrapSearchBarView: UIView!
     @IBOutlet weak var avatarProfileButton: UIButton!
+    @IBOutlet weak var searchLabel: UILabel!
     
     var fpc: FloatingPanelController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
-        self.searchTextField.delegate = self
         
         self.configFloatingPanel()
         self.configFloatingPanelUI()
+        self.configSearchLabel()
+        self.setupLabelTap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    
-    @IBAction func tappedSearchTextField(_ sender: UITextField) {
+    @objc func tappedLabel(_ sender: UITapGestureRecognizer) {
         let storyboard =  UIStoryboard(name: "Search", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Search") as? SearchVC
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+    }
+    
+    func setupLabelTap() {
+        let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.tappedLabel(_:)))
+        self.searchLabel.isUserInteractionEnabled = true
+        self.searchLabel.addGestureRecognizer(labelTap)
     }
     
     @IBAction func tappedAvatarProfile(_ sender: UIButton) {
@@ -46,7 +52,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
         
-//        fpc?.delegate = self // Optional
+        //        fpc?.delegate = self // Optional
         
         // Set a content view controller.
         let bestReviewsViewController = BestReviewsViewController()
@@ -84,6 +90,10 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.avatarProfileButton.layer.shadowOpacity = 1
         self.avatarProfileButton.layer.shadowRadius = 30
         self.avatarProfileButton.layer.shadowOffset = CGSize(width: 0, height: 4.0)
+    }
+    
+    private func configSearchLabel() {
+        self.searchLabel.textColor = UIColor.placeholderText
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
