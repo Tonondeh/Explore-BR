@@ -52,7 +52,10 @@ class LoginVC: UIViewController {
                 if let error = error {
                     print("error =", error)
                 } else {
-                    // fazer navegação para home...
+                    let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+                    let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+                    
+                    navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
                 }
                 
             })
