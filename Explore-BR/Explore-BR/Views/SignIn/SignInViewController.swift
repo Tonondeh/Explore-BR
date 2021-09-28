@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -14,11 +15,16 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var auth: Auth?
+    var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
         self.checkButtonEnabled(false)
+        self.auth = Auth.auth()
+        self.alert = Alert(viewController: self)
     }
     
     func configTextField(){
@@ -55,11 +61,26 @@ class SignInViewController: UIViewController {
         }
     }
     
-    @IBAction func tappedSignInButton(_ sender: UIButton) {
-        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-        let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+    private func handleLogin() {
+        let email: String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
         
-        navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
+            if let error = error {
+                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
+                
+                print("Error", error)
+            } else {
+                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+                
+                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+            }
+        })
+    }
+    
+    @IBAction func tappedSignInButton(_ sender: UIButton) {
+        self.handleLogin()
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
