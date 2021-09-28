@@ -16,12 +16,14 @@ class LoginVC: UIViewController {
     @IBOutlet weak var loginEmailButton: UIButton!
     
     var auth: Auth?
+    var alert: Alert?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
         
         self.auth = Auth.auth()
+        self.alert = Alert(viewController: self)
     }
     
     @IBAction func tappedLoginAppleButton(_ sender: UIButton) {
@@ -51,6 +53,8 @@ class LoginVC: UIViewController {
                 
                 if let error = error {
                     print("error =", error)
+                    
+                    self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, verifique os dados e tente novamente", completion: nil)
                 } else {
                     let storyboard =  UIStoryboard(name: "Home", bundle: nil)
                     let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
