@@ -15,8 +15,19 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qts-lc-6f4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qts-lc-6f4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="PyF-K2-edv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Qts-lc-6f4" secondAttribute="bottom" id="REb-4w-72J"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qts-lc-6f4" secondAttribute="trailing" id="grE-v7-hpe"/>
+                            <constraint firstItem="Qts-lc-6f4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v1b-mm-06W"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Eventos" image="glass-cheers" id="Yf0-Sx-68d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
