@@ -84,7 +84,7 @@
                                     <constraint firstAttribute="width" constant="26" id="QAx-BT-ChR"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jI-ud6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirme sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jI-ud6">
                                 <rect key="frame" x="24" y="447.33333333333331" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="eTD-uu-Hl8"/>
@@ -110,6 +110,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="R29-7W-ggi"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locked" translatesAutoresizingMaskIntoConstraints="NO" id="cnZ-ad-2ND">
                                 <rect key="frame" x="39" y="458.33333333333331" width="26" height="26"/>
@@ -168,6 +171,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="Y6c-jI-ud6" id="Hed-5O-0qz"/>
+                        <outlet property="emailTextField" destination="nRo-Ql-o0V" id="c8V-ev-qGv"/>
+                        <outlet property="nameTextField" destination="frC-sF-gxg" id="mgY-jR-JYL"/>
+                        <outlet property="passwordTextField" destination="3m8-PX-gid" id="BJK-kr-LUY"/>
                         <outlet property="registerButton" destination="ZeY-FV-d0A" id="PsV-VI-Ovu"/>
                     </connections>
                 </viewController>
