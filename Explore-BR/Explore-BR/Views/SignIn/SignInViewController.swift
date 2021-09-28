@@ -22,7 +22,6 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
-        self.checkButtonEnabled(false)
         self.auth = Auth.auth()
         self.alert = Alert(viewController: self)
     }
@@ -42,17 +41,6 @@ class SignInViewController: UIViewController {
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
     
-    func validateTextFields() {
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        if email.isEmpty || password.isEmpty {
-            self.checkButtonEnabled(false)
-        } else {
-            self.checkButtonEnabled(true)
-        }
-    }
-    
     func checkButtonEnabled(_ isButtonEnabled: Bool) {
         if isButtonEnabled {
             self.signInButton.setTitleColor(.white, for: .normal)
@@ -66,6 +54,9 @@ class SignInViewController: UIViewController {
     private func handleLogin() {
         let email: String = self.emailTextField.text ?? ""
         let password: String = self.passwordTextField.text ?? ""
+        
+        guard !email.isEmpty else { return self.emailTextField.shake() }
+        guard !password.isEmpty else { return self.passwordTextField.shake() }
         
         self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
             if let error = error {
@@ -119,10 +110,6 @@ extension SignInViewController:UITextFieldDelegate{
         }
 
         return true
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.validateTextFields()
     }
     
 }
