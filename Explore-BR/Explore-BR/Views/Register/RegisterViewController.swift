@@ -49,6 +49,9 @@ class RegisterViewController: UIViewController {
     
     private func configTextField() {
         self.configTextFieldDelegates(delegate: self)
+        
+        self.passwordTextField.isSecureTextEntry = true
+        self.confirmPasswordTextField.isSecureTextEntry = true
     }
     
     func validateTextFields() {
