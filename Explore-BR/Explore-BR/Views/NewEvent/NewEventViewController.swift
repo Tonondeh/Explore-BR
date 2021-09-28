@@ -36,12 +36,11 @@ class NewEventViewController: UIViewController {
     
     
     private func configNavigationBar() {
-        self.navigationController?.navigationBar.setGradientBackground(colors: [blueNavController, pinkNavController])
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-//        self.navigationController?.title = "Novo Evento"
-        self.navigationItem.title = "Novo Evento"
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.setGradientBackground(colors: [blueNavController, pinkNavController])
+        self.title? = "Novo Evento"
     }
     
     private func configTextField() {
