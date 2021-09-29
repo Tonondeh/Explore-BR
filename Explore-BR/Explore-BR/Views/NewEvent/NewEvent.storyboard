@@ -165,6 +165,7 @@
                                                 <state key="normal" title="Criar Evento"/>
                                             </button>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="Cfd-OF-8k8" firstAttribute="top" secondItem="gef-uD-fim" secondAttribute="bottom" constant="15" id="1Qr-gX-ecf"/>
                                             <constraint firstItem="GWa-O9-8cS" firstAttribute="leading" secondItem="FaT-V5-gJD" secondAttribute="leading" constant="24" id="3Af-nS-P53"/>
@@ -211,6 +212,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="FaT-V5-gJD" firstAttribute="top" secondItem="lak-8x-6aX" secondAttribute="top" id="0sG-xL-ven"/>
                                     <constraint firstAttribute="bottom" secondItem="FaT-V5-gJD" secondAttribute="bottom" constant="-6" id="GSE-IB-KCk"/>
@@ -256,6 +258,9 @@
         <image name="image-default" width="87.333335876464844" height="68"/>
         <image name="image-location" width="20.333333969116211" height="20.333333969116211"/>
         <image name="map-marked" width="26" height="23.333333969116211"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
