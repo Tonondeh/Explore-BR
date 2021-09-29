@@ -62,8 +62,8 @@
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
-		65A96559270366680000008B /* EmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A96557270366680000008B /* EmptyStateViewController.swift */; };
-		65A9655A270366680000008B /* EmptyStateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A96558270366680000008B /* EmptyStateViewController.xib */; };
+		657894992704B47F0010BF10 /* EmptyStateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657894972704B47F0010BF10 /* EmptyStateTableViewCell.swift */; };
+		6578949A2704B47F0010BF10 /* EmptyStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 657894982704B47F0010BF10 /* EmptyStateTableViewCell.xib */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65C18F0A27029E4C007E240E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65C18F0927029E4B007E240E /* GoogleService-Info.plist */; };
@@ -142,8 +142,8 @@
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
-		65A96557270366680000008B /* EmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateViewController.swift; sourceTree = "<group>"; };
-		65A96558270366680000008B /* EmptyStateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateViewController.xib; sourceTree = "<group>"; };
+		657894972704B47F0010BF10 /* EmptyStateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableViewCell.swift; sourceTree = "<group>"; };
+		657894982704B47F0010BF10 /* EmptyStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyStateTableViewCell.xib; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65C18F0927029E4B007E240E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		1357495B26D733E6009E6233 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				65A96552270359F40000008B /* EmptyState */,
+				657894962704B4420010BF10 /* EmptyStateCell */,
 				65C18F1827029FCA007E240E /* ModelSearch */,
 				6525095626FD20B50080B792 /* TableViewCell */,
 				3A58728226FB6F8600ECED4A /* CollectionViewCell */,
@@ -383,13 +383,13 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		65A96552270359F40000008B /* EmptyState */ = {
+		657894962704B4420010BF10 /* EmptyStateCell */ = {
 			isa = PBXGroup;
 			children = (
-				65A96557270366680000008B /* EmptyStateViewController.swift */,
-				65A96558270366680000008B /* EmptyStateViewController.xib */,
+				657894972704B47F0010BF10 /* EmptyStateTableViewCell.swift */,
+				657894982704B47F0010BF10 /* EmptyStateTableViewCell.xib */,
 			);
-			path = EmptyState;
+			path = EmptyStateCell;
 			sourceTree = "<group>";
 		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
@@ -561,7 +561,6 @@
 				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
-				65A9655A270366680000008B /* EmptyStateViewController.xib in Resources */,
 				627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */,
 				627EF22A26D6FCA30053B7F1 /* SF-Pro-Text-Ultralight.otf in Resources */,
 				627EF24226D6FD210053B7F1 /* SignIn.storyboard in Resources */,
@@ -577,6 +576,7 @@
 				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
 				627EF22C26D6FCA30053B7F1 /* SF-Pro-Text-Thin.otf in Resources */,
 				627EF22E26D6FCA30053B7F1 /* SF-Pro-Text-BoldItalic.otf in Resources */,
+				6578949A2704B47F0010BF10 /* EmptyStateTableViewCell.xib in Resources */,
 				3A58728826FB6F8600ECED4A /* PlacesCollectionViewCell.xib in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
 				0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */,
@@ -649,7 +649,6 @@
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
 				6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */,
-				65A96559270366680000008B /* EmptyStateViewController.swift in Sources */,
 				FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */,
 				3A58727E26FB6F4100ECED4A /* CardCollectionViewCell.swift in Sources */,
 				65C18F1C27029FF9007E240E /* Place.swift in Sources */,
@@ -664,6 +663,7 @@
 				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
+				657894992704B47F0010BF10 /* EmptyStateTableViewCell.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,

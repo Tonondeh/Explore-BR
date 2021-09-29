@@ -181,11 +181,17 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
 
 extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.placeList.isEmpty{
+            return 1
+        }
         return self.placeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if self.placeList.isEmpty{
+            
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
         
         cell?.delegate(delegate: self)
