@@ -47,6 +47,9 @@ class NewEventViewController: UIViewController {
         self.setStyleViewButton(uiView: self.updateLocationView)
         self.setStyleViewButton(uiView: self.selectPhotoView)
         self.setStyleViewButton(uiView: self.takePhotoCameraView)
+        
+        self.createEventButton.layer.cornerRadius = 3.0
+        self.createEventButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
     
     private func setStyleViewButton(uiView: UIView) {
