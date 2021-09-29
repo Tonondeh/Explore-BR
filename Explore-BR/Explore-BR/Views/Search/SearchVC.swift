@@ -16,7 +16,7 @@ class SearchVC: UIViewController {
     @IBOutlet weak var searchTableView: UITableView!
     
     
-    var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true),Place(name: "Restaurantes", placeButtonEnable: false), Place(name: "Shopping", placeButtonEnable: false), Place(name: "Cinema", placeButtonEnable: false), Place(name: "zoologico", placeButtonEnable: false), Place(name: "Horti-Fruti", placeButtonEnable: false), Place(name: "Mercado", placeButtonEnable: false), Place(name: "Padaria", placeButtonEnable: false)]
+    var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true, id: "1"),Place(name: "Restaurantes", placeButtonEnable: false, id: "2"), Place(name: "Shopping", placeButtonEnable: false, id: "3"), Place(name: "Cinema", placeButtonEnable: false, id: "4"), Place(name: "Zoologico", placeButtonEnable: false, id: "5")]
     
     var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
     
