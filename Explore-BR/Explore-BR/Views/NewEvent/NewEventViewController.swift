@@ -49,7 +49,18 @@ class NewEventViewController: UIViewController {
         self.updateLocationView.layer.borderWidth = 1.0
         self.updateLocationView.layer.borderColor = UIColor(hex: "#000046").cgColor
         self.updateLocationView.layer.cornerRadius = 15
-        self.updateLocationView.backgroundColor = UIColor.white
+        self.updateLocationView.backgroundColor = .clear
+        
+        // view of select photo
+        self.selectPhotoView.layer.borderWidth = 1.0
+        self.selectPhotoView.layer.borderColor = UIColor(hex: "#000046").cgColor
+        self.selectPhotoView.layer.cornerRadius = 15
+        self.selectPhotoView.backgroundColor = .clear
+        
+        self.takePhotoCameraView.layer.borderWidth = 1.0
+        self.takePhotoCameraView.layer.borderColor = UIColor(hex: "#000046").cgColor
+        self.takePhotoCameraView.layer.cornerRadius = 15
+        self.takePhotoCameraView.backgroundColor = .clear
     }
     
     private func configNavigationBar() {
