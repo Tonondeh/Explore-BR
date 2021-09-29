@@ -20,15 +20,6 @@ class SearchVC: UIViewController {
     
     var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
     
-//    let emptyState:EmptyStateViewController = storyboard
-    
-//    func loadAndAddView(){
-//        let storyboard =  UIStoryboard(name: "EmptyStateViewController", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "EmptyStateViewController") as? EmptyStateViewController
-//        self.currentNavigation?.pushViewController(vc ?? UIViewController(), animated: true)
-//        self.view.addSubview(storyboard)
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
@@ -36,10 +27,6 @@ class SearchVC: UIViewController {
         self.configCollectionView()
         self.configTableView()
         self.navigationItem.titleView = searchBar
-//        self.searchTableView.removeFromSuperview()
-//        let customView = UIView.createInstance(ofType: EmptyStateViewController)
-//            self.view.addSubview(customView)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,17 +41,16 @@ class SearchVC: UIViewController {
         self.searchTableView.dataSource = self
         self.searchTableView.separatorStyle = .none
         self.searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
+        self.searchTableView.register(EmptyStateTableViewCell.nib(), forCellReuseIdentifier: EmptyStateTableViewCell.identifier)
     }
     
     func configCollectionView(){
-        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.backgroundColor = .systemGray6
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
-            
             self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
         }
         
@@ -146,11 +132,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
-        //
-        //
-        //        return cell
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell
         
         if _selectedIndexPath == indexPath{
@@ -163,7 +144,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             // If the cell is not selected
             cell?.isSelected=false
             cell?.backgroundColor = UIColor.systemGray6
-            
             
         }
         
@@ -190,16 +170,21 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if self.placeList.isEmpty{
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+            
+            return cell ?? UITableViewCell()
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+            
+            cell?.delegate(delegate: self)
+            cell?.index = indexPath
+            
+            cell?.setupCell(data: self.placeList[indexPath.row])
+            
+            return cell ?? UITableViewCell()
             
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
         
-        cell?.delegate(delegate: self)
-        cell?.index = indexPath
-        
-        cell?.setupCell(data: self.placeList[indexPath.row])
-        
-        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -225,12 +210,3 @@ extension SearchVC: SearchTableViewCellDelegate {
     }
     
 }
-
-//extension UIView {
-//    
-//    static func createInstance<T: UIView>(ofType type: T.Type) -> T {
-//        let className = NSStringFromClass(type).components(separatedBy: ".").last
-//        return Bundle.main.loadNibNamed(className!, owner: self, options: nil)![0] as! T
-//    }
-//
-//}
