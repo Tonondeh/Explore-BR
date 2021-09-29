@@ -42,25 +42,18 @@ class NewEventViewController: UIViewController {
     }
     
     private func configureUI() {
-        // background Content View
         self.mainContentView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
         
-        // view of update location
-        self.updateLocationView.layer.borderWidth = 1.0
-        self.updateLocationView.layer.borderColor = UIColor(hex: "#000046").cgColor
-        self.updateLocationView.layer.cornerRadius = 15
-        self.updateLocationView.backgroundColor = .clear
-        
-        // view of select photo
-        self.selectPhotoView.layer.borderWidth = 1.0
-        self.selectPhotoView.layer.borderColor = UIColor(hex: "#000046").cgColor
-        self.selectPhotoView.layer.cornerRadius = 15
-        self.selectPhotoView.backgroundColor = .clear
-        
-        self.takePhotoCameraView.layer.borderWidth = 1.0
-        self.takePhotoCameraView.layer.borderColor = UIColor(hex: "#000046").cgColor
-        self.takePhotoCameraView.layer.cornerRadius = 15
-        self.takePhotoCameraView.backgroundColor = .clear
+        self.setStyleViewButton(uiView: self.updateLocationView)
+        self.setStyleViewButton(uiView: self.selectPhotoView)
+        self.setStyleViewButton(uiView: self.takePhotoCameraView)
+    }
+    
+    private func setStyleViewButton(uiView: UIView) {
+        uiView.layer.borderWidth = 1.0
+        uiView.layer.borderColor = UIColor(hex: "#000046").cgColor
+        uiView.layer.cornerRadius = 15
+        uiView.backgroundColor = .clear
     }
     
     private func configNavigationBar() {
