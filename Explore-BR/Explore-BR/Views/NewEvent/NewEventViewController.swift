@@ -28,7 +28,7 @@ class NewEventViewController: UIViewController {
         self.configNavigationBar()
         self.configTextField()
         self.configureUI()
-        self.setLocationEventOnMap(latitude: 53.554438, longitude: 9.9629445)
+        self.configureLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +42,11 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    private func configureLocation() {
+        self.setLocationEventOnMap(latitude: -30.0392981, longitude: -51.2146267)
+        self.setAddressEventWithCoordinates(latitude: -30.0392981, longitude: -51.2146267)
+    }
+    
     private func setLocationEventOnMap(latitude: Double, longitude: Double) {
         let center = CLLocationCoordinate2DMake(latitude, longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006)
@@ -50,6 +55,26 @@ class NewEventViewController: UIViewController {
         let annotation = MKPointAnnotation()
         annotation.coordinate = center
         self.eventMapView.addAnnotation(annotation)
+    }
+    
+    private func setAddressEventWithCoordinates(latitude: Double, longitude: Double) {
+        var centerAddress : CLLocationCoordinate2D = CLLocationCoordinate2D()
+        let geoCoder: CLGeocoder = CLGeocoder()
+        
+        let latitude: Double = latitude
+        let longitude: Double = longitude
+        centerAddress.latitude = latitude
+        centerAddress.longitude = longitude
+        let location: CLLocation = CLLocation(latitude: centerAddress.latitude, longitude: centerAddress.longitude)
+        
+        geoCoder.reverseGeocodeLocation(location) { (placemarks, _) in
+            if let placemarks = placemarks {
+                let pm = placemarks[0] as CLPlacemark
+                if let thoroughfare = pm.thoroughfare, let subThoroughfare = pm.subThoroughfare, let subLocality = pm.subLocality, let locality = pm.locality, let postalCode = pm.postalCode {
+                    self.addressLabel.text = "Endereço: \(thoroughfare), \(subThoroughfare)\nBairro: \(subLocality) - \(locality).\nCEP \(postalCode)"
+                }
+            }
+        }
     }
     
     private func configureUI() {
