@@ -29,6 +29,8 @@ class NewEventViewController: UIViewController {
         self.configTextField()
         self.configureUI()
         self.configureLocation()
+        self.createDatePickerStart()
+        self.createDatePickerEnd()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +42,53 @@ class NewEventViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    let datePickerStart = UIDatePicker()
+    private func createDatePickerStart() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let okButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(okPressedStart))
+        toolbar.setItems([okButton], animated: true)
+        
+        self.inicialDateTextField.inputAccessoryView = toolbar
+        self.inicialDateTextField.inputView = datePickerStart
+        
+        datePickerStart.datePickerMode = .dateAndTime
+        datePickerStart.preferredDatePickerStyle = .wheels
+    }
+    
+    @objc func okPressedStart() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        
+        self.inicialDateTextField.text = formatter.string(from: datePickerStart.date)
+        self.view.endEditing(true)
+    }
+    
+    let datePickerEnd = UIDatePicker()
+    private func createDatePickerEnd() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let okButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(okPressedEnd))
+        toolbar.setItems([okButton], animated: true)
+        
+        self.endDateTextField.inputAccessoryView = toolbar
+        self.endDateTextField.inputView = datePickerEnd
+        datePickerEnd.datePickerMode = .dateAndTime
+        datePickerEnd.preferredDatePickerStyle = .wheels
+    }
+    
+    @objc func okPressedEnd() {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        
+        self.endDateTextField.text = formatter.string(from: datePickerEnd.date)
+        self.view.endEditing(true)
     }
     
     private func setupTapLabelUpdateLocation() {
