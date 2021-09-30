@@ -31,6 +31,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Eventos" image="glass-cheers" id="Yf0-Sx-68d"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="Qts-lc-6f4" id="ssL-BH-UZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
