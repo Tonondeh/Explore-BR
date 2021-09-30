@@ -8,16 +8,19 @@
 import UIKit
 
 class LocationDetailsViewController: UIViewController {
-
-    @IBOutlet weak var detailsView: UIView!
-    @IBOutlet weak var evalueteButton: UIButton!    
-    @IBOutlet weak var loadPhotoButton: UIButton!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
-        self.configButton()
-        self.configView()
+        self.configTableView()
+    }
+    
+    private func configTableView(){
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.register(LocationDetailsTableViewCell.nib(), forCellReuseIdentifier: LocationDetailsTableViewCell.identifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,17 +49,22 @@ class LocationDetailsViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
     }
-    
-    private func configButton() {
-        self.evalueteButton.applyGradient(colors: [blueLightButton, blueDarkButton])
-        self.loadPhotoButton.applyGradient(colors: [blueLightButton, blueDarkButton])
-        
-        self.evalueteButton.layer.cornerRadius = 6.0
-        self.loadPhotoButton.layer.cornerRadius = 6.0
-    }
-    
-    private func configView() {
-        self.detailsView.layer.cornerRadius = 20.0
-    }
 
+}
+
+extension LocationDetailsViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell:LocationDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: LocationDetailsTableViewCell.identifier, for: indexPath) as? LocationDetailsTableViewCell else{ return UITableViewCell() }
+        
+        let placeDetail = PlaceDetail(photo:UIImage(named:"location-detail") ?? UIImage(), name: "Parque Serra do Curral", description: "Localizado em uma área aproximada de 400 mil metros quadrados, o Parque possui 10 mirantes distribuídos por seus quatro mil metros de extensão, de onde o visitante pode identificar pontos turísticos da cidade e aspectos naturais de seu entorno, como a Lagoa da Pampulha, o Parque Municipal Américo Renné Giannetti, a Avenida Afonso Pena, o Estádio Mineirão, o Museu de História Natural e o Jardim Botânico da UFMG, o Pico do Itabirito, a Serra da Piedade, o Morro do Pires, o Morro do Elefante, o Parque Estadual da Serra do Rola-Moça, entre outros.", quantityEvaluations: 390)
+        
+        cell.setupCell(place:placeDetail)
+        
+        return cell
+    }
 }
