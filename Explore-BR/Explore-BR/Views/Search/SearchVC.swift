@@ -10,7 +10,7 @@ import UIKit
 class SearchVC: UIViewController {
     
     @IBOutlet var searchBar: UISearchBar!
-    
+    @IBOutlet weak var recentSearchLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var searchTableView: UITableView!
@@ -18,9 +18,20 @@ class SearchVC: UIViewController {
     
     var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true, id: "1"),Place(name: "Restaurantes", placeButtonEnable: false, id: "2"), Place(name: "Shopping", placeButtonEnable: false, id: "3"), Place(name: "Cinema", placeButtonEnable: false, id: "4"), Place(name: "Zoologico", placeButtonEnable: false, id: "5")]
     
-    var placeList:[LocalList] = [LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]), LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5]),LocalList(image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: [1,2,3,4,5])]
+    var placeList:[Place] = [
+        Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
+        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
+        Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
+    ]
     
-//    var placesSearch:[PlacesSearch] = []
+    let searchRecents: [Place] = [
+        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
+        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
+        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
+    ]
+    
+    var resultPlaceSearch:[Place] = []
+    var newData: [Place] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +55,7 @@ class SearchVC: UIViewController {
         self.searchTableView.separatorStyle = .none
         self.searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
         self.searchTableView.register(EmptyStateTableViewCell.nib(), forCellReuseIdentifier: EmptyStateTableViewCell.identifier)
+        self.searchTableView.register(LocationSearchTableViewCell.nib(), forCellReuseIdentifier: LocationSearchTableViewCell.identifier)
     }
     
     func configCollectionView(){
@@ -70,6 +82,7 @@ class SearchVC: UIViewController {
         searchBar.searchTextField.layer.borderColor = UIColor.white.cgColor
         searchBar.searchTextField.layer.borderWidth = 1.5
         searchBar.layer.shadowOpacity = 0.40
+        searchBar.delegate = self
         searchBar.layer.shadowOffset = CGSize(width: 0, height: 4)
         searchBar.layer.shadowRadius = 5
     }
@@ -155,6 +168,23 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
         
     }
     
+    func searchPlace(searchText: String) {
+        let searchLower = searchText.lowercased()
+        
+        newData = self.placeList.filter {
+            let filterBy = $0.name?.lowercased()
+            return filterBy?.lowercased().contains(searchLower) ?? true
+        }
+
+        print("newData", newData)
+        
+        resultPlaceSearch = newData
+        
+        print("resultPlaceSearch", resultPlaceSearch)
+        
+        self.searchTableView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 127, height: 33)
     }
@@ -163,33 +193,64 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
 
 extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.placeList.isEmpty{
-            return 1
+        
+        let searchText = searchBar.searchTextField.text ?? ""
+        
+        if searchText.isEmpty {
+            return self.searchRecents.count
+        } else {
+            
+            if self.resultPlaceSearch.isEmpty {
+                return 1
+            } else {
+                return self.resultPlaceSearch.count
+            }
         }
-        return self.placeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if self.placeList.isEmpty{
-            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+        let searchText: String = self.searchBar.searchTextField.text ?? ""
+        
+        if searchText.isEmpty {
+            let cell = tableView.dequeueReusableCell(withIdentifier: LocationSearchTableViewCell.identifier, for: indexPath) as? LocationSearchTableViewCell
+            
+            cell?.setUpCell(data: self.searchRecents[indexPath.row])
             
             return cell ?? UITableViewCell()
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+        } else {
             
-            cell?.delegate(delegate: self)
-            cell?.index = indexPath
-            
-            cell?.setupCell(data: self.placeList[indexPath.row])
-            
-            return cell ?? UITableViewCell()
+            if self.resultPlaceSearch.isEmpty{
+                let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+                
+                return cell ?? UITableViewCell()
+            }else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+                
+                cell?.delegate(delegate: self)
+                cell?.index = indexPath
+                
+                if newData.isEmpty {
+                    cell?.setupCell(data: self.placeList[indexPath.row])
+                } else {
+                    cell?.setupCell(data: self.newData[indexPath.row])
+                }
+                
+                return cell ?? UITableViewCell()
+                
+            }
             
         }
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let searchText = searchBar.searchTextField.text ?? ""
+        
+        if searchText.isEmpty {
+            return 92
+        }
+        
         return 414
     }
     
@@ -198,9 +259,9 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
 
 extension SearchVC: SearchTableViewCellDelegate {
     func changeHeartState(index: Int) {
-        self.placeList[index].heartIconEnable = !self.placeList[index].heartIconEnable
+        self.placeList[index].heartIconEnable = !(self.placeList[index].heartIconEnable ?? false)
         
-        let isHeartEnabled: Bool = self.placeList[index].heartIconEnable
+        let isHeartEnabled: Bool = self.placeList[index].heartIconEnable ?? false
         
         if isHeartEnabled {
             self.placeList[index].heartIcon = UIImage(systemName: "heart.fill") ?? UIImage()
@@ -209,6 +270,14 @@ extension SearchVC: SearchTableViewCellDelegate {
         }
         
         self.searchTableView.reloadData()
+    }
+    
+}
+
+extension SearchVC: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchPlace(searchText: searchText)
     }
     
 }

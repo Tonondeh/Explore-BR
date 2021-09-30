@@ -9,6 +9,9 @@ import UIKit
 
 class LocationSearchTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var placeNameLabel: UILabel!
+    @IBOutlet weak var placeAddressLabel: UILabel!
+    
     static let identifier:String = "LocationSearchTableViewCell"
     
     static func nib()-> UINib{
@@ -17,7 +20,13 @@ class LocationSearchTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.selectionStyle = .none
+    }
+    
+    public func setUpCell(data: Place) {
+        self.placeNameLabel.text = data.name
+        self.placeAddressLabel.text = data.address
     }
     
 }

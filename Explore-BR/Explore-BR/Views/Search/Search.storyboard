@@ -16,9 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pesquisas recentes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3u-mM-whs">
+                                <rect key="frame" x="24" y="128" width="184" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="79g-Xm-otY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="jcb-76-zGy"/>
                                 </constraints>
@@ -31,25 +37,28 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sV4-wQ-6g5">
-                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="186.5" width="414" height="675.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sV4-wQ-6g5" secondAttribute="trailing" id="0Dc-nz-mxj"/>
                             <constraint firstItem="sV4-wQ-6g5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2M4-e2-xXN"/>
                             <constraint firstItem="79g-Xm-otY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3Qe-En-9WZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="sV4-wQ-6g5" secondAttribute="bottom" id="3hU-g2-NTd"/>
+                            <constraint firstItem="J3u-mM-whs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="5YL-tW-KSC"/>
+                            <constraint firstItem="J3u-mM-whs" firstAttribute="top" secondItem="79g-Xm-otY" secondAttribute="bottom" constant="24" id="Epw-ov-SOS"/>
+                            <constraint firstItem="sV4-wQ-6g5" firstAttribute="top" secondItem="J3u-mM-whs" secondAttribute="bottom" constant="32" id="Kex-g7-KE4"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="79g-Xm-otY" secondAttribute="trailing" id="T0q-XQ-X8f"/>
                             <constraint firstItem="79g-Xm-otY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="mSw-hE-rxH"/>
-                            <constraint firstItem="sV4-wQ-6g5" firstAttribute="top" secondItem="79g-Xm-otY" secondAttribute="bottom" id="tAu-zH-mH3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3Kh-7D-UnC"/>
                     <connections>
                         <outlet property="collectionView" destination="79g-Xm-otY" id="gqY-s1-FJc"/>
+                        <outlet property="recentSearchLabel" destination="J3u-mM-whs" id="7iZ-u4-ejl"/>
                         <outlet property="searchBar" destination="WiZ-md-a8R" id="4d0-Gi-K1u"/>
                         <outlet property="searchTableView" destination="sV4-wQ-6g5" id="LGY-88-8SF"/>
                     </connections>

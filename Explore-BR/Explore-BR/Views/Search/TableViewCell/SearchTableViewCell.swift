@@ -71,14 +71,16 @@ class SearchTableViewCell: UITableViewCell {
         self.backgroundHeartView.layer.shadowRadius = 5
     }
 
-    public func setupCell(data:LocalList){
+    public func setupCell(data:Place){
         self.cardImageView.image = data.image
         self.localTypeLabel.text = data.localType
-        self.localLabel.text = data.local
+        self.localLabel.text = data.name
         self.descriptionLabel.text = data.description
         self.heartButton.setImage(data.heartIcon, for: .normal)
         
-        if data.heartIconEnable {
+        guard let isHeartEnabled = data.heartIconEnable else { return }
+        
+        if isHeartEnabled {
             self.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
             self.heartButton.tintColor = .red
         } else {
