@@ -21,7 +21,7 @@ class SearchVC: UIViewController {
     
     var placeList:[Place] = [
         Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "wwwwww", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
-        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
+        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "restaurantes", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
         Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
     ]
     
@@ -34,19 +34,17 @@ class SearchVC: UIViewController {
     var resultPlaceSearch:[Place] = []
     var newData: [Place] = []
     
-    var data: [Place] = []
-    
     func selectItem(name: String) {
         let searchLower = name.lowercased()
         
-        data = self.placeList.filter {
+        newData = self.placeList.filter {
             let filterBy = $0.localType?.lowercased()
             return filterBy?.lowercased().contains(searchLower) ?? true
         }
         
-        print("data", data)
+        print("data", newData)
         
-        resultPlaceSearch = data
+        resultPlaceSearch = newData
         
         print("resultPlaceSearch", resultPlaceSearch)
         
@@ -230,24 +228,23 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         
         let searchText = searchBar.searchTextField.text ?? ""
         
-//        if searchText.isEmpty {
-//            return self.searchRecents.count
-//        } else {
-//
-//            if self.resultPlaceSearch.isEmpty {
-//                return 1
-//            } else {
-//                return self.resultPlaceSearch.count
-//            }
-            return self.resultPlaceSearch.count
-//        }
+        if searchText.isEmpty && self.resultPlaceSearch.isEmpty && self.newData.isEmpty {
+            return self.searchRecents.count
+        } else {
+
+            if self.resultPlaceSearch.isEmpty {
+                return 1
+            } else {
+                return self.resultPlaceSearch.count
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let searchText: String = self.searchBar.searchTextField.text ?? ""
         
-        if searchText.isEmpty {
+        if searchText.isEmpty && self.resultPlaceSearch.isEmpty && self.newData.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: LocationSearchTableViewCell.identifier, for: indexPath) as? LocationSearchTableViewCell
             
             cell?.setUpCell(data: self.searchRecents[indexPath.row])
@@ -265,7 +262,7 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
                 cell?.delegate(delegate: self)
                 cell?.index = indexPath
                 
-                if newData.isEmpty {
+                if newData.isEmpty && resultPlaceSearch.isEmpty {
                     cell?.setupCell(data: self.placeList[indexPath.row])
                 } else {
                     cell?.setupCell(data: self.newData[indexPath.row])
@@ -282,7 +279,7 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let searchText = searchBar.searchTextField.text ?? ""
         
-        if searchText.isEmpty {
+        if searchText.isEmpty && self.resultPlaceSearch.isEmpty {
             return 92
         }
         
