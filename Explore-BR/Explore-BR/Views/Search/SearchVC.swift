@@ -41,17 +41,16 @@ class SearchVC: UIViewController {
         self.searchTableView.dataSource = self
         self.searchTableView.separatorStyle = .none
         self.searchTableView.register(SearchTableViewCell.nib(), forCellReuseIdentifier: SearchTableViewCell.identifier)
+        self.searchTableView.register(EmptyStateTableViewCell.nib(), forCellReuseIdentifier: EmptyStateTableViewCell.identifier)
     }
     
     func configCollectionView(){
-        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.backgroundColor = .systemGray6
         if let layout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
-            
             self.collectionView.register(PlacesCollectionViewCell.nib(), forCellWithReuseIdentifier: PlacesCollectionViewCell.identifier)
         }
         
@@ -133,11 +132,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        //        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell else { return UICollectionViewCell ()}
-        //
-        //
-        //        return cell
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PlacesCollectionViewCell.identifier, for: indexPath) as? PlacesCollectionViewCell
         
         if _selectedIndexPath == indexPath{
@@ -150,7 +144,6 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             // If the cell is not selected
             cell?.isSelected=false
             cell?.backgroundColor = UIColor.systemGray6
-            
             
         }
         
@@ -168,19 +161,30 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
 
 extension SearchVC:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.placeList.isEmpty{
+            return 1
+        }
         return self.placeList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+        if self.placeList.isEmpty{
+            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyStateTableViewCell.identifier, for: indexPath) as? EmptyStateTableViewCell
+            
+            return cell ?? UITableViewCell()
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell
+            
+            cell?.delegate(delegate: self)
+            cell?.index = indexPath
+            
+            cell?.setupCell(data: self.placeList[indexPath.row])
+            
+            return cell ?? UITableViewCell()
+            
+        }
         
-        cell?.delegate(delegate: self)
-        cell?.index = indexPath
-        
-        cell?.setupCell(data: self.placeList[indexPath.row])
-        
-        return cell ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -206,4 +210,3 @@ extension SearchVC: SearchTableViewCellDelegate {
     }
     
 }
-
