@@ -15,23 +15,43 @@ class SearchVC: UIViewController {
     
     @IBOutlet weak var searchTableView: UITableView!
     
+    var tableViewData: [Place] = []
     
     var placesArray: [Place] = [Place(name: "Parques", placeButtonEnable: true, id: "1"),Place(name: "Restaurantes", placeButtonEnable: false, id: "2"), Place(name: "Shopping", placeButtonEnable: false, id: "3"), Place(name: "Cinema", placeButtonEnable: false, id: "4"), Place(name: "Zoologico", placeButtonEnable: false, id: "5")]
     
     var placeList:[Place] = [
-        Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
-        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
-        Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
+        Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "wwwwww", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
+        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
+        Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
     ]
     
     let searchRecents: [Place] = [
-        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
-        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
-        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parque", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
+        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
+        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
+        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
     ]
     
     var resultPlaceSearch:[Place] = []
     var newData: [Place] = []
+    
+    var data: [Place] = []
+    
+    func selectItem(name: String) {
+        let searchLower = name.lowercased()
+        
+        data = self.placeList.filter {
+            let filterBy = $0.localType?.lowercased()
+            return filterBy?.lowercased().contains(searchLower) ?? true
+        }
+        
+        print("data", data)
+        
+        resultPlaceSearch = data
+        
+        print("resultPlaceSearch", resultPlaceSearch)
+        
+        self.searchTableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,37 +129,51 @@ var _selectedIndexPath : IndexPath? = nil
 
 extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.placesArray[indexPath.row].placeButtonEnable = !(self.placesArray[indexPath.row].placeButtonEnable ?? false)
-        self.collectionView.reloadItems(at: [indexPath])
+    func collectionView(_ collectionView: UICollectionView,
+      didSelectItemAt indexPath: IndexPath) {
+        self.selectItem(name: self.placesArray[indexPath.row].name ?? "")
         
-        if ((_selectedIndexPath) != nil){
-            
-            if indexPath.compare(_selectedIndexPath!) == ComparisonResult.orderedSame {
-                
-                //if the user tap the same cell that was selected previously deselect it.
-                
-                _selectedIndexPath = nil;
-            }
-            else
-            {
-                // save the currently selected indexPath
-                
-                _selectedIndexPath = indexPath
-                
-            }
-        }
-        else{
-            
-            // else, savee the indexpath for future reference if we don't have previous selected cell
-            
-            _selectedIndexPath = indexPath;
-        }
+//        self.searchTableView.reloadData()
         
-        // and now only reload only the visible cells
-        
-        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
-    }
+        print("Cell \(indexPath.row + 1) clicked")
+        let cell = PlacesCollectionViewCell()
+        cell.cellBackground = UIColor.green
+      }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//
+//        self.selectItem(name: self.placesArray[indexPath.row].name ?? "")
+//
+//        self.placesArray[indexPath.row].placeButtonEnable = !(self.placesArray[indexPath.row].placeButtonEnable ?? false)
+//        self.collectionView.reloadItems(at: [indexPath])
+//
+//        if ((_selectedIndexPath) != nil){
+//
+//            if indexPath.compare(_selectedIndexPath!) == ComparisonResult.orderedSame {
+//
+//                //if the user tap the same cell that was selected previously deselect it.
+//
+//                _selectedIndexPath = nil;
+//            }
+//            else
+//            {
+//                // save the currently selected indexPath
+//
+//                _selectedIndexPath = indexPath
+//
+//            }
+//        }
+//        else{
+//
+//            // else, savee the indexpath for future reference if we don't have previous selected cell
+//
+//            _selectedIndexPath = indexPath;
+//        }
+//
+//        // and now only reload only the visible cells
+//
+//        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.placesArray.count
@@ -175,7 +209,7 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColl
             let filterBy = $0.name?.lowercased()
             return filterBy?.lowercased().contains(searchLower) ?? true
         }
-
+        
         print("newData", newData)
         
         resultPlaceSearch = newData
@@ -196,16 +230,17 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         
         let searchText = searchBar.searchTextField.text ?? ""
         
-        if searchText.isEmpty {
-            return self.searchRecents.count
-        } else {
-            
-            if self.resultPlaceSearch.isEmpty {
-                return 1
-            } else {
-                return self.resultPlaceSearch.count
-            }
-        }
+//        if searchText.isEmpty {
+//            return self.searchRecents.count
+//        } else {
+//
+//            if self.resultPlaceSearch.isEmpty {
+//                return 1
+//            } else {
+//                return self.resultPlaceSearch.count
+//            }
+            return self.resultPlaceSearch.count
+//        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
