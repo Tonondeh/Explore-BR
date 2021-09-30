@@ -42,6 +42,18 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    private func setupTapLabelUpdateLocation() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedUpdateLocation(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.updateLocationView.addGestureRecognizer(tapGesture)
+        self.updateLocationView.isUserInteractionEnabled = true
+    }
+    
+    @objc func tappedUpdateLocation(_ sender: UITapGestureRecognizer) {
+        self.setLocationEventOnMap(latitude: -30.0392981, longitude: -51.2146267)
+    }
+    
     private func configureLocation() {
         self.setLocationEventOnMap(latitude: -30.0392981, longitude: -51.2146267)
         self.setAddressEventWithCoordinates(latitude: -30.0392981, longitude: -51.2146267)
@@ -86,6 +98,8 @@ class NewEventViewController: UIViewController {
         
         self.createEventButton.layer.cornerRadius = 3.0
         self.createEventButton.applyGradient(colors: [blueDarkButton,blueLightButton])
+        
+        self.setupTapLabelUpdateLocation()
     }
     
     private func setStyleViewButton(uiView: UIView) {
