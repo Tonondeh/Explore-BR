@@ -19,3 +19,4 @@ struct Event {
     let imageUrl: String
 }
 
+let event01: Event = Event(id: "1", name: "Festa de Natal", latitude: -30.0654496, longitude: -51.2380487, dateStart: Date(), dateEnd: Date(), description: "Festa na noite de Natal", imageUrl: "https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2020/06/0.jpg")

@@ -28,6 +28,7 @@ class NewEventViewController: UIViewController {
         self.configNavigationBar()
         self.configTextField()
         self.configureUI()
+        self.setLocationEventOnMap(latitude: 53.554438, longitude: 9.9629445)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +40,16 @@ class NewEventViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    private func setLocationEventOnMap(latitude: Double, longitude: Double) {
+        let center = CLLocationCoordinate2DMake(latitude, longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006)
+        let region = MKCoordinateRegion(center: center, span: span)
+        self.eventMapView.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = center
+        self.eventMapView.addAnnotation(annotation)
     }
     
     private func configureUI() {
