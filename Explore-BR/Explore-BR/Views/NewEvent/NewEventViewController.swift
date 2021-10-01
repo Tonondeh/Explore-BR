@@ -50,14 +50,43 @@ class NewEventViewController: UIViewController {
     }
     
     @IBAction func tappedCreateEventButton(_ sender: UIButton) {
-        if let message: String? = self.validateFields() {
-            
+        let eventModel: Event = Event(id: "2", name: self.eventNameTextField.text ?? "", latitude: -30.0392981, longitude: -51.2146267, dateStart: Date(), dateEnd: Date(), description: self.descriptionTextView.text ?? "", imageUrl: "https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2020/06/0.jpg")
+        if let message: String = self.validateFields() {
+            let alert = UIAlertController(title: "Erro", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            let alert = UIAlertController(title: "Novo Evento", message: "Evento criado com sucesso.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { _ in
+                let center = CLLocationCoordinate2DMake(0.0, 0.0)
+                let span = MKCoordinateSpan(latitudeDelta: 0.0, longitudeDelta: 0.0)
+                let region = MKCoordinateRegion(center: center, span: span)
+                self.eventMapView.setRegion(region, animated: true)
+                self.eventNameTextField.text = ""
+                self.inicialDateTextField.text = ""
+                self.endDateTextField.text = ""
+                self.descriptionTextView.text = ""
+                self.photoEventImageView.image = UIImage(named: "image-default")
+                
+                print(eventModel)
+            }))
+            self.present(alert, animated: true)
         }
     }
     
     private func validateFields() -> String? {
         if self.eventMapView.isUserLocationVisible {
-            return "É necessário informar as coordenadas de latidude e longitude "
+            return "É necessário informar as coordenadas de latidude e longitude"
+        } else if self.eventNameTextField.text == "" {
+            return "O campo Nome do Evento é obrigatório."
+        } else if self.inicialDateTextField.text == "" {
+            return "O campo Data de Início é obrigatório."
+        } else if self.endDateTextField.text == "" {
+            return "O campo Data de Fim é obrigatório."
+        } else if self.descriptionTextView.text == "" {
+            return "O campo Data de Fim é obrigatório."
+        } else if self.photoEventImageView.image == UIImage(named: "image-default")  {
+            return "O campo Data de Fim é obrigatório."
         }
         return nil
     }
@@ -118,7 +147,7 @@ class NewEventViewController: UIViewController {
         self.inicialDateTextField.inputView = datePickerStart
         
         datePickerStart.datePickerMode = .dateAndTime
-        datePickerStart.preferredDatePickerStyle = .wheels
+        datePickerStart.preferredDatePickerStyle = .inline
     }
     
     @objc func okPressedStart() {
@@ -140,7 +169,7 @@ class NewEventViewController: UIViewController {
         self.endDateTextField.inputAccessoryView = toolbar
         self.endDateTextField.inputView = datePickerEnd
         datePickerEnd.datePickerMode = .dateAndTime
-        datePickerEnd.preferredDatePickerStyle = .wheels
+        datePickerEnd.preferredDatePickerStyle = .inline
     }
     
     @objc func okPressedEnd() {
@@ -161,12 +190,12 @@ class NewEventViewController: UIViewController {
     }
     
     @objc func tappedUpdateLocation(_ sender: UITapGestureRecognizer) {
-        self.setLocationEventOnMap(latitude: -30.0392981, longitude: -51.2146267)
+        self.setLocationEventOnMap(latitude: -23.4506179, longitude: -46.5675225)
     }
     
     private func configureLocation() {
-        self.setLocationEventOnMap(latitude: -30.0392981, longitude: -51.2146267)
-        self.setAddressEventWithCoordinates(latitude: -30.0392981, longitude: -51.2146267)
+        self.setLocationEventOnMap(latitude: -23.4506179, longitude: -46.5675225)
+        self.setAddressEventWithCoordinates(latitude: -23.4506179, longitude: -46.5675225)
     }
     
     private func setLocationEventOnMap(latitude: Double, longitude: Double) {
