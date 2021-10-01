@@ -27,7 +27,6 @@ class EventsVC: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        locationManager.requestWhenInUseAuthorization()
         self.location()
     }
     
@@ -81,11 +80,32 @@ extension EventsVC: MKMapViewDelegate, CLLocationManagerDelegate{
         self.mapView.setRegion(region, animated: true)
 
         let pin = MKPointAnnotation()
+        pin.title = ""
+        pin.subtitle = ""
         pin.coordinate = coordinate
         self.mapView.addAnnotation(pin)
-
-
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        var annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "custom")
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "custom")
+            
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView?.annotation = annotation
+        }
+        
+        annotationView?.image = UIImage(named: "locked")
+        
+        return annotationView
+    }
+    
     
 }
 

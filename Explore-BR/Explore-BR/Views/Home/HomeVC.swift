@@ -7,6 +7,8 @@
 
 import UIKit
 import FloatingPanel
+import MapKit
+import CoreLocation
 
 class HomeVC: UIViewController, UITextFieldDelegate {
     
@@ -14,8 +16,10 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var wrapSearchBarView: UIView!
     @IBOutlet weak var avatarProfileButton: UIButton!
     @IBOutlet weak var searchLabel: UILabel!
+    @IBOutlet weak var homeMapView: MKMapView!
     
     var fpc: FloatingPanelController?
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +29,12 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.configFloatingPanelUI()
         self.configSearchLabel()
         self.setupLabelTap()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationManager.requestWhenInUseAuthorization()
+        self.location()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -100,6 +110,13 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         return textField.resignFirstResponder()
     }
     
+    func location(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
 }
 
 extension HomeVC: UIViewControllerTransitioningDelegate {
@@ -107,3 +124,32 @@ extension HomeVC: UIViewControllerTransitioningDelegate {
         ModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
 }
+    
+    
+    extension HomeVC: CLLocationManagerDelegate{
+        
+        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+            
+            if let location = locations.first {
+                self.locationManager.stopUpdatingLocation()
+                
+                render(location)
+                }
+        }
+        
+        func render(_ location: CLLocation){
+            
+            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            let region = MKCoordinateRegion(center: coordinate, span: span)
+           
+            self.homeMapView.setRegion(region, animated: true)
+            
+            let pin = MKPointAnnotation()
+            pin.title = ""
+            pin.subtitle = ""
+            pin.coordinate = coordinate
+            self.homeMapView.addAnnotation(pin)
+
+        }
+    }
