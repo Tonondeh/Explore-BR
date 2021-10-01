@@ -49,6 +49,23 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    private func setupTapViewTakePhotoCamera() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedTakePhotoCamera(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.takePhotoCameraView.addGestureRecognizer(tapGesture)
+        self.takePhotoCameraView.isUserInteractionEnabled = true
+    }
+    
+    @objc func tappedTakePhotoCamera(_ sender: UITapGestureRecognizer) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            self.imagePicker.sourceType = .camera
+        } else {
+            self.imagePicker.sourceType = .photoLibrary
+        }
+        self.present(self.imagePicker, animated: true, completion: nil)
+    }
+    
     private func setupTapViewSelectPhotoLibrary() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedSelectPhotoLibrary(_:)))
         tapGesture.numberOfTapsRequired = 1
@@ -174,6 +191,7 @@ class NewEventViewController: UIViewController {
         
         self.setupTapLabelUpdateLocation()
         self.setupTapViewSelectPhotoLibrary()
+        self.setupTapViewTakePhotoCamera()
     }
     
     private func setStyleViewButton(uiView: UIView) {
