@@ -23,6 +23,10 @@ class NewEventViewController: UIViewController {
     @IBOutlet weak var takePhotoCameraView: UIView!
     @IBOutlet weak var createEventButton: UIButton!
     
+    var imagePicker: UIImagePickerController = UIImagePickerController()
+    let datePickerStart = UIDatePicker()
+    let datePickerEnd = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configNavigationBar()
@@ -31,6 +35,7 @@ class NewEventViewController: UIViewController {
         self.configureLocation()
         self.createDatePickerStart()
         self.createDatePickerEnd()
+        self.configImagePicker()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,7 +49,27 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
-    let datePickerStart = UIDatePicker()
+    private func setupTapViewSelectPhotoLibrary() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedSelectPhotoLibrary(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        self.selectPhotoView.addGestureRecognizer(tapGesture)
+        self.selectPhotoView.isUserInteractionEnabled = true
+    }
+    
+    @objc func tappedSelectPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            self.imagePicker.sourceType = .photoLibrary
+        } else {
+            self.imagePicker.sourceType = .camera
+        }
+        self.present(self.imagePicker, animated: true, completion: nil)
+    }
+    
+    private func configImagePicker() {
+        self.imagePicker.delegate = self
+    }
+    
     private func createDatePickerStart() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -68,7 +93,6 @@ class NewEventViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    let datePickerEnd = UIDatePicker()
     private func createDatePickerEnd() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
@@ -149,6 +173,7 @@ class NewEventViewController: UIViewController {
         self.createEventButton.applyGradient(colors: [blueDarkButton,blueLightButton])
         
         self.setupTapLabelUpdateLocation()
+        self.setupTapViewSelectPhotoLibrary()
     }
     
     private func setStyleViewButton(uiView: UIView) {
@@ -201,4 +226,11 @@ class NewEventViewController: UIViewController {
     
 }
 
-
+extension NewEventViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let imageReceived = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        self.photoEventImageView.contentMode = .scaleAspectFill
+        self.photoEventImageView.image = imageReceived
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
