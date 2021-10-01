@@ -105,7 +105,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="HNQ-Pd-dn0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -155,9 +155,7 @@
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WAD-N6-8E5"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="leading" secondItem="3m8-PX-gid" secondAttribute="leading" id="bae-Mt-Py2"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="centerY" secondItem="frC-sF-gxg" secondAttribute="centerY" id="cE7-kK-a2w"/>
-                            <constraint firstItem="ZeY-FV-d0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="din-2m-t9d"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="leading" secondItem="frC-sF-gxg" secondAttribute="leading" constant="15" id="fDw-i6-0g6"/>
-                            <constraint firstAttribute="trailing" secondItem="ZeY-FV-d0A" secondAttribute="trailing" constant="24" id="gjn-gd-6yv"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="top" secondItem="3m8-PX-gid" secondAttribute="bottom" constant="23" id="hFR-vP-TVG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SVT-zl-hJz" secondAttribute="bottom" constant="30" id="hsJ-p8-mZi"/>
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lA5-gG-PJX"/>
