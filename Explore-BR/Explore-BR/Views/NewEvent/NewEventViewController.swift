@@ -49,38 +49,45 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    enum viewSelected: Int {
+        case camera = 10
+        case photoLibrary = 20
+    }
+    
     private func setupTapViewTakePhotoCamera() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedTakePhotoCamera(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
+        self.takePhotoCameraView.tag = viewSelected.camera.rawValue
         self.takePhotoCameraView.addGestureRecognizer(tapGesture)
         self.takePhotoCameraView.isUserInteractionEnabled = true
     }
     
-    @objc func tappedTakePhotoCamera(_ sender: UITapGestureRecognizer) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            self.imagePicker.sourceType = .camera
-        } else {
-            self.imagePicker.sourceType = .photoLibrary
-        }
-        self.present(self.imagePicker, animated: true, completion: nil)
-    }
-    
     private func setupTapViewSelectPhotoLibrary() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tappedSelectPhotoLibrary(_:)))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTapGesture(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
+        self.selectPhotoView.tag = viewSelected.photoLibrary.rawValue
         self.selectPhotoView.addGestureRecognizer(tapGesture)
         self.selectPhotoView.isUserInteractionEnabled = true
     }
     
-    @objc func tappedSelectPhotoLibrary(_ sender: UITapGestureRecognizer) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+    @objc private func handleTapGesture(_ gesture: UITapGestureRecognizer) {
+        guard let viewGestureReceived = gesture.view else { return }
+        let view = viewGestureReceived
+        let tag: viewSelected = viewSelected(rawValue: view.tag) ?? .photoLibrary
+        
+        switch tag {
+        case .photoLibrary:
+            UIImagePickerController.isSourceTypeAvailable(.photoLibrary)
             self.imagePicker.sourceType = .photoLibrary
-        } else {
+            self.present(self.imagePicker, animated: true, completion: nil)
+            
+        case .camera:
+            UIImagePickerController.isSourceTypeAvailable(.camera)
             self.imagePicker.sourceType = .camera
+            self.present(self.imagePicker, animated: true, completion: nil)
         }
-        self.present(self.imagePicker, animated: true, completion: nil)
     }
     
     private func configImagePicker() {
