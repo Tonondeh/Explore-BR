@@ -28,6 +28,10 @@ class RegisterViewController: UIViewController {
         self.alert = Alert(viewController: self)
     }
     
+    @IBAction func loginBackButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
         self.registerUser(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "")
     }

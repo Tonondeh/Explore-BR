@@ -21,6 +21,8 @@ class ChangePasswordViewController: UIViewController {
         
         self.configTextField()
         self.configNavigationBar()
+        
+        self.saveButton.layer.cornerRadius = 6
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {

@@ -20,10 +20,12 @@ class PlacesCollectionViewCell: UICollectionViewCell {
         
     }
     
+    var cellBackground: UIColor?
+    
     override var isSelected: Bool {
         willSet {
             super.isSelected = newValue
-            
+
             if newValue {
                 self.placesLabel.textColor = .white
                 self.placesView.backgroundColor = .blue

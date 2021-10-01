@@ -79,6 +79,7 @@
                     <navigationItem key="navigationItem" id="Z7b-Y8-azq"/>
                     <connections>
                         <outlet property="avatarProfileButton" destination="MDx-wQ-wNF" id="1Sl-KS-g6n"/>
+                        <outlet property="homeMapView" destination="Mk8-g4-hQe" id="bAD-XG-9Ru"/>
                         <outlet property="searchLabel" destination="M1e-Pe-vmA" id="otl-1p-zks"/>
                         <outlet property="statusBackgroundView" destination="qLh-cP-pfn" id="2VF-fH-ifi"/>
                         <outlet property="wrapSearchBarView" destination="Jcy-fL-CAG" id="kuW-Lp-Wog"/>
