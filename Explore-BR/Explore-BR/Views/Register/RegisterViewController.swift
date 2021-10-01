@@ -34,10 +34,7 @@ class RegisterViewController: UIViewController {
     
     func configUI(){
         self.registerButton.layer.cornerRadius = 3.0
-        self.registerButton.applyGradient(colors: [blueLightButton,blueDarkButton])
-        
-        
-        
+        self.registerButton.applyGradient(colors: [blueDarkButton, blueLightButton])
     }
     
     func configTextFieldDelegates(delegate: UITextFieldDelegate?) {

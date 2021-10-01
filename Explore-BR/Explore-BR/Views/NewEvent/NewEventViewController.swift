@@ -49,6 +49,19 @@ class NewEventViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    @IBAction func tappedCreateEventButton(_ sender: UIButton) {
+        if let message: String? = self.validateFields() {
+            
+        }
+    }
+    
+    private func validateFields() -> String? {
+        if self.eventMapView.isUserLocationVisible {
+            return "É necessário informar as coordenadas de latidude e longitude "
+        }
+        return nil
+    }
+    
     enum viewSelected: Int {
         case camera = 10
         case photoLibrary = 20

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -156,9 +157,7 @@
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WAD-N6-8E5"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="leading" secondItem="3m8-PX-gid" secondAttribute="leading" id="bae-Mt-Py2"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="centerY" secondItem="frC-sF-gxg" secondAttribute="centerY" id="cE7-kK-a2w"/>
-                            <constraint firstItem="ZeY-FV-d0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="din-2m-t9d"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="leading" secondItem="frC-sF-gxg" secondAttribute="leading" constant="15" id="fDw-i6-0g6"/>
-                            <constraint firstAttribute="trailing" secondItem="ZeY-FV-d0A" secondAttribute="trailing" constant="24" id="gjn-gd-6yv"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="top" secondItem="3m8-PX-gid" secondAttribute="bottom" constant="23" id="hFR-vP-TVG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SVT-zl-hJz" secondAttribute="bottom" constant="30" id="hsJ-p8-mZi"/>
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lA5-gG-PJX"/>
