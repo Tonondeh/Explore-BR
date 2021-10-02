@@ -25,6 +25,8 @@ class ReviewTableViewCell: UITableViewCell {
     }
     
     public func setupCell(review:PlaceReview){
+        print("DEBUG")
+        print(review)
         self.reviewImageView.image = review.reviewImage
         self.reviewNameLabel.text = review.name
         self.titleLabel.text = review.title
