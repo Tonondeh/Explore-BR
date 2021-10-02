@@ -68,6 +68,7 @@ class NewEventViewController: UIViewController {
                 self.descriptionTextView.text = ""
                 self.photoEventImageView.image = UIImage(named: "image-default")
                 
+                self.tabBarController?.selectedIndex = 0
                 print(eventModel)
             }))
             self.present(alert, animated: true)
@@ -274,31 +275,22 @@ class NewEventViewController: UIViewController {
         self.descriptionTextView.layer.borderColor = UIColor.systemGray.cgColor
         
         if let imageIcon: UIImage = UIImage(named: "nameEventImage.png") {
-            
             self.eventNameTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Qual o nome do evento")
-            
         }
         
         if let imageCalendar: UIImage = UIImage(named: "calendarImage.png"){
-            
             self.inicialDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de inicio")
-            
             self.endDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de fim")
-            
         }
         
         if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png") {
             self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton)
         }
         
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
-//        imageView.image = UIImage(named: "descriptionImage.png")
-//        self.descriptionTextView.addSubview(imageView)
-//        self.descriptionTextView.leftViewMode = .always
-        
-//        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png") {
-//            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
-//        }
+        let arbitraryValue: Int = 15
+        if let newPosition = self.descriptionTextView.position(from: self.descriptionTextView.beginningOfDocument, offset: arbitraryValue) {
+            self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)
+        }
     }
     
 }
