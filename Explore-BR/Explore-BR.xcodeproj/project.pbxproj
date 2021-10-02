@@ -76,6 +76,8 @@
 		8222CFAF27057576006F90AD /* PlaceReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222CFAE27057576006F90AD /* PlaceReview.swift */; };
 		8222CFB427058531006F90AD /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222CFB227058531006F90AD /* ReviewTableViewCell.swift */; };
 		8222CFB527058531006F90AD /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8222CFB327058531006F90AD /* ReviewTableViewCell.xib */; };
+		82B4DC3F2708F11E0040A69E /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B4DC3E2708F11E0040A69E /* Review.storyboard */; };
+		82B4DC422708F1490040A69E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4DC412708F1490040A69E /* ReviewViewController.swift */; };
 		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
 		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
 		82FD52092702C393007EEFA7 /* LocationDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD52072702C393007EEFA7 /* LocationDetailsTableViewCell.swift */; };
@@ -161,6 +163,8 @@
 		8222CFAE27057576006F90AD /* PlaceReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceReview.swift; sourceTree = "<group>"; };
 		8222CFB227058531006F90AD /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		8222CFB327058531006F90AD /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		82B4DC3E2708F11E0040A69E /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
+		82B4DC412708F1490040A69E /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		82FD52072702C393007EEFA7 /* LocationDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsTableViewCell.swift; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 		6293350226FBE64E00E12B50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8222CFAA27056690006F90AD /* PlaceDetail.swift */,
+				8222CFAE27057576006F90AD /* PlaceReview.swift */,
 				6293350326FBE65B00E12B50 /* User.swift */,
 			);
 			path = Model;
@@ -439,15 +445,6 @@
 			path = "Explore-BR";
 			sourceTree = "<group>";
 		};
-		8222CFA92705667B006F90AD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8222CFAA27056690006F90AD /* PlaceDetail.swift */,
-				8222CFAE27057576006F90AD /* PlaceReview.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		8222CFB127058508006F90AD /* ReviewTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -457,11 +454,20 @@
 			path = ReviewTableViewCell;
 			sourceTree = "<group>";
 		};
+		82B4DC3D2708F0EB0040A69E /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				82B4DC3E2708F11E0040A69E /* Review.storyboard */,
+				82B4DC412708F1490040A69E /* ReviewViewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
 		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
 			isa = PBXGroup;
 			children = (
+				82B4DC3D2708F0EB0040A69E /* Review */,
 				8222CFB127058508006F90AD /* ReviewTableViewCell */,
-				8222CFA92705667B006F90AD /* Model */,
 				82FD52052702C058007EEFA7 /* LocationDetailsTableViewCell */,
 				82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */,
 				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
@@ -584,6 +590,7 @@
 				137C7A4826DC5069001B3CE1 /* NewEvent.storyboard in Resources */,
 				0496A01D26D863E4005CA626 /* ChangePassword.storyboard in Resources */,
 				1357495D26D73415009E6233 /* Search.storyboard in Resources */,
+				82B4DC3F2708F11E0040A69E /* Review.storyboard in Resources */,
 				627EF23226D6FCA30053B7F1 /* SF-Pro-Text-LightItalic.otf in Resources */,
 				627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */,
 				627EF22B26D6FCA30053B7F1 /* SF-Pro-Text-Bold.otf in Resources */,
@@ -660,6 +667,7 @@
 			files = (
 				0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */,
 				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
+				82B4DC422708F1490040A69E /* ReviewViewController.swift in Sources */,
 				82FD52092702C393007EEFA7 /* LocationDetailsTableViewCell.swift in Sources */,
 				137C7A4526DC502D001B3CE1 /* NewEventViewController.swift in Sources */,
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,

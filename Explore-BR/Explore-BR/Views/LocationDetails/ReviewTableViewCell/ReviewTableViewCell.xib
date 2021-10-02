@@ -90,6 +90,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="reviewContentView" destination="H2p-sc-9uM" id="V2M-JR-OCV"/>
                 <outlet property="reviewImageView" destination="ctc-7Y-S6W" id="Zjf-mg-fLg"/>
                 <outlet property="reviewLabel" destination="UMW-Lx-AQ4" id="7ra-gm-fBe"/>
                 <outlet property="reviewNameLabel" destination="rqN-BJ-jaD" id="Fzx-tK-Aeo"/>

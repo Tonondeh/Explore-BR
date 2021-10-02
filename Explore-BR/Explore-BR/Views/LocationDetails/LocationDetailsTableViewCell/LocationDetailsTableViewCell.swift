@@ -17,7 +17,9 @@ class LocationDetailsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var evalueteButton: UIButton!
-    @IBOutlet weak var loadPhotoButton: UIButton!
+    
+    var placeDetail:PlaceDetail?
+    var currentNavigation:UINavigationController?
     
     static let identifier:String = "LocationDetailsTableViewCell"
         
@@ -32,18 +34,27 @@ class LocationDetailsTableViewCell: UITableViewCell {
     }
     
     private func configButtons() {
-        self.evalueteButton.applyGradient(colors: [blueLightButton, blueDarkButton])
-        self.loadPhotoButton.applyGradient(colors: [blueLightButton, blueDarkButton])
-        
+        self.evalueteButton.applyGradient(colors: [blueDarkButton, blueLightButton])
         self.evalueteButton.layer.cornerRadius = 6.0
-        self.loadPhotoButton.layer.cornerRadius = 6.0
+    }
+    
+    @IBAction func tappedEvalueteButton(_ sender: UIButton) {
+        let storyboard =  UIStoryboard(name: "Review", bundle: nil)
+
+        let vc = storyboard.instantiateViewController(withIdentifier: "Review") as? ReviewViewController
+
+        vc?.placeDetail = self.placeDetail
+        
+        self.currentNavigation?.present(vc ?? UIViewController(), animated: true, completion: nil)
     }
     
     private func configView() {
+        //self.contentLocationDetailView.applyGradientInView(colors: [linearBackgroundWhite, linearBackgroundGray])
         self.detailsView.layer.cornerRadius = 20.0
     }
     
     public func setupCell(place: PlaceDetail){
+        self.placeDetail = place
         self.photoImageView.image = place.photo
         self.nameLabel.text = place.name
         self.descriptionLabel.text = place.description

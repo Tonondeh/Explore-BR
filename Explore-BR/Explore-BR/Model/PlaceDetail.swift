@@ -8,6 +8,7 @@
 import UIKit
 
 struct PlaceDetail {
+    var placeIid:String
     var photo:UIImage
     var name:String
     var description:String

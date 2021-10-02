@@ -9,6 +9,7 @@ import UIKit
 
 class ReviewTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var reviewContentView: UIView!
     @IBOutlet weak var reviewLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var reviewNameLabel: UILabel!
@@ -22,11 +23,10 @@ class ReviewTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
     }
     
     public func setupCell(review:PlaceReview){
-        print("DEBUG")
-        print(review)
         self.reviewImageView.image = review.reviewImage
         self.reviewNameLabel.text = review.name
         self.titleLabel.text = review.title

@@ -12,7 +12,7 @@ class LocationDetailsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // Detalhes do local
-    var placeDetail = PlaceDetail(photo:UIImage(named:"location-detail") ?? UIImage(), name: "Parque Serra do Curral", description: "Localizado em uma área aproximada de 400 mil metros quadrados, o Parque possui 10 mirantes distribuídos por seus quatro mil metros de extensão, de onde o visitante pode identificar pontos turísticos da cidade e aspectos naturais de seu entorno, como a Lagoa da Pampulha, o Parque Municipal Américo Renné Giannetti, a Avenida Afonso Pena, o Estádio Mineirão, o Museu de História Natural e o Jardim Botânico da UFMG, o Pico do Itabirito, a Serra da Piedade, o Morro do Pires, o Morro do Elefante, o Parque Estadual da Serra do Rola-Moça, entre outros.", quantityEvaluations: 1234)
+    var placeDetail = PlaceDetail(placeIid: "1", photo:UIImage(named:"location-detail") ?? UIImage(), name: "Parque Serra do Curral", description: "Localizado em uma área aproximada de 400 mil metros quadrados, o Parque possui 10 mirantes distribuídos por seus quatro mil metros de extensão, de onde o visitante pode identificar pontos turísticos da cidade e aspectos naturais de seu entorno, como a Lagoa da Pampulha, o Parque Municipal Américo Renné Giannetti, a Avenida Afonso Pena, o Estádio Mineirão, o Museu de História Natural e o Jardim Botânico da UFMG, o Pico do Itabirito, a Serra da Piedade, o Morro do Pires, o Morro do Elefante, o Parque Estadual da Serra do Rola-Moça, entre outros.", quantityEvaluations: 1234)
     
     // Avaliações do local
     var listReviews:[PlaceReview] = []
@@ -90,6 +90,7 @@ extension LocationDetailsViewController:UITableViewDelegate,UITableViewDataSourc
             guard let cell:LocationDetailsTableViewCell = tableView.dequeueReusableCell(withIdentifier: LocationDetailsTableViewCell.identifier, for: indexPath) as? LocationDetailsTableViewCell else{ return UITableViewCell() }
             
             let placeDetail = self.placeDetail
+            cell.currentNavigation = self.navigationController
             cell.setupCell(place:placeDetail)
             
             return cell
