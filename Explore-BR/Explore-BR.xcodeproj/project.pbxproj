@@ -32,6 +32,7 @@
 		3A58728726FB6F8600ECED4A /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */; };
 		3A58728826FB6F8600ECED4A /* PlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */; };
 		626702142704D1350048A178 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626702132704D1350048A178 /* Event.swift */; };
+		627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627152B8270916F5006EC085 /* UIViewController+TextField.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
 		627EF22426D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */; };
 		627EF22526D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */; };
@@ -117,6 +118,7 @@
 		3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacesCollectionViewCell.xib; sourceTree = "<group>"; };
 		626702132704D1350048A178 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		627152B8270916F5006EC085 /* UIViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TextField.swift"; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
 		627EF21226D6FCA30053B7F1 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		627EF21326D6FCA30053B7F1 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */,
 				629334FB26FBB2BB00E12B50 /* Alert.swift */,
 				62EC6D312703C935004646D1 /* UIColor+Hex.swift */,
+				627152B8270916F5006EC085 /* UIViewController+TextField.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				65C18F1C27029FF9007E240E /* Place.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
+				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,
 				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,

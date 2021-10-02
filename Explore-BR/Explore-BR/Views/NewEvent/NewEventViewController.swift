@@ -241,6 +241,8 @@ class NewEventViewController: UIViewController {
         self.setupTapLabelUpdateLocation()
         self.setupTapViewSelectPhotoLibrary()
         self.setupTapViewTakePhotoCamera()
+        
+        hideKeyboardOnTap()
     }
     
     private func setStyleViewButton(uiView: UIView) {
@@ -285,10 +287,18 @@ class NewEventViewController: UIViewController {
             
         }
         
-        //        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png"){
-        //
-        //            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
-        //        }
+        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png") {
+            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton)
+        }
+        
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+//        imageView.image = UIImage(named: "descriptionImage.png")
+//        self.descriptionTextView.addSubview(imageView)
+//        self.descriptionTextView.leftViewMode = .always
+        
+//        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png") {
+//            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
+//        }
     }
     
 }
