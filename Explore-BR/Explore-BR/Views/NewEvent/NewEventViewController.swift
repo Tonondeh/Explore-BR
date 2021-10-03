@@ -67,7 +67,7 @@ class NewEventViewController: UIViewController {
                 self.endDateTextField.text = ""
                 self.descriptionTextView.text = ""
                 self.photoEventImageView.image = UIImage(named: "image-default")
-                
+                self.photoEventImageView.contentMode = .center
                 self.tabBarController?.selectedIndex = 0
                 print(eventModel)
             }))
@@ -84,12 +84,26 @@ class NewEventViewController: UIViewController {
             return "O campo Data de Início é obrigatório."
         } else if self.endDateTextField.text == "" {
             return "O campo Data de Fim é obrigatório."
+        } else if convertDate(date: self.inicialDateTextField.text) > convertDate(date: self.endDateTextField.text) {
+            return "A Data Inicial não pode ser maior que a Data Final"
         } else if self.descriptionTextView.text == "" {
             return "O campo Data de Fim é obrigatório."
         } else if self.photoEventImageView.image == UIImage(named: "image-default")  {
             return "O campo Data de Fim é obrigatório."
         }
         return nil
+    }
+    
+    private func convertDate(date: String?) -> Date {
+        guard let date = date else { return Date() }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        if let convertToDate = formatter.date(from: date) {
+            return convertToDate
+        } else {
+            return Date()
+        }
     }
     
     enum viewSelected: Int {
