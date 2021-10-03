@@ -21,20 +21,32 @@ class ChangePasswordViewController: UIViewController {
         
         self.configTextField()
         self.configNavigationBar()
+        
+        self.saveButton.layer.cornerRadius = 6
     }
     
     @IBAction func tappedSaveButton(_ sender: UIButton) {
     }
     
+    private func configTextFieldDelegates(delegate: UITextFieldDelegate?) {
+        self.currentPasswordTextField.delegate = delegate
+        self.newPasswordTextField.delegate = delegate
+        self.confirmPasswordTextField.delegate = delegate
+    }
+    
     private func configTextField() {
+        self.configTextFieldDelegates(delegate: self)
         self.currentPasswordTextField.layer.borderWidth = 1
         self.currentPasswordTextField.layer.borderColor = UIColor.systemGray.cgColor
+        self.currentPasswordTextField.isSecureTextEntry = true
         
         self.newPasswordTextField.layer.borderWidth = 1
         self.newPasswordTextField.layer.borderColor = UIColor.systemGray.cgColor
+        self.newPasswordTextField.isSecureTextEntry = true
         
         self.confirmPasswordTextField.layer.borderWidth = 1
         self.confirmPasswordTextField.layer.borderColor = UIColor.systemGray.cgColor
+        self.confirmPasswordTextField.isSecureTextEntry = true
         
         if let imageIcon: UIImage = UIImage(named: "locked.png") {
             
@@ -70,4 +82,22 @@ class ChangePasswordViewController: UIViewController {
         
     }
     
+}
+
+extension ChangePasswordViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == self.currentPasswordTextField {
+            self.newPasswordTextField.becomeFirstResponder()
+        }
+        
+        if textField == self.newPasswordTextField {
+            self.confirmPasswordTextField.becomeFirstResponder()
+        }
+        
+        if textField == confirmPasswordTextField {
+            textField.resignFirstResponder()
+        }
+        
+        return true
+    }
 }

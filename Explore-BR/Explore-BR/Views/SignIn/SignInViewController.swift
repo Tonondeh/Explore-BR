@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignInViewController: UIViewController {
     
@@ -14,18 +15,24 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var auth: Auth?
+    var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
-        
+        self.auth = Auth.auth()
+        self.alert = Alert(viewController: self)
     }
     
     func configTextField(){
         self.emailTextField.delegate = self
         self.emailTextField.keyboardType = .emailAddress
         self.passwordTextField.delegate = self
-        
+        self.passwordTextField.isSecureTextEntry = true
+        self.passwordTextField.autocapitalizationType = .none
+        self.passwordTextField.autocorrectionType = .no
     }
     
     
@@ -34,14 +41,39 @@ class SignInViewController: UIViewController {
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
     }
     
+    func checkButtonEnabled(_ isButtonEnabled: Bool) {
+        if isButtonEnabled {
+            self.signInButton.setTitleColor(.white, for: .normal)
+            self.signInButton.isEnabled = true
+        } else {
+            self.signInButton.setTitleColor(.lightGray, for: .normal)
+            self.signInButton.isEnabled = false
+        }
+    }
     
-    
+    private func handleLogin() {
+        let email: String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
+        
+        guard !email.isEmpty else { return self.emailTextField.shake() }
+        guard !password.isEmpty else { return self.passwordTextField.shake() }
+        
+        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
+            if let error = error {
+                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
+                
+                print("Error", error)
+            } else {
+                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+                
+                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+            }
+        })
+    }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-        let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
-        
-        navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+        self.handleLogin()
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
@@ -70,7 +102,13 @@ class SignInViewController: UIViewController {
 extension SignInViewController:UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        
+        if textField == self.emailTextField {
+            self.passwordTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+
         return true
     }
     

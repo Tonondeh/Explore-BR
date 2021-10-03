@@ -10,7 +10,7 @@ import  UIKit
 extension UITextField{
     func shake() {
         let animation = CABasicAnimation(keyPath: "position")
-        animation.duration = 0.10
+        animation.duration = 0.07
         animation.repeatCount = 3
         animation.autoreverses = true
         animation.fromValue = CGPoint(x: self.center.x - 12.0, y: self.center.y)

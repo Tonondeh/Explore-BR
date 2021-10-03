@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="-5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-dW-IUw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" tag="-5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Jdc-dW-IUw">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore BR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9O-TY-phP">
@@ -26,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-zl-hJz">
-                                <rect key="frame" x="83.666666666666686" y="718" width="208" height="30"/>
+                                <rect key="frame" x="96.666666666666686" y="718" width="182" height="30"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Já possui cadastro?">
@@ -41,7 +42,7 @@
                                                 <font key="NSFont" metaFont="system" size="15"/>
                                             </attributes>
                                         </fragment>
-                                        <fragment content="Cadastrar">
+                                        <fragment content="Entrar">
                                             <attributes>
                                                 <color key="NSColor" red="0.10588235294117647" green="0.77254901960784317" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" metaFont="system" size="15"/>
@@ -49,12 +50,14 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="loginBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sWT-vt-z3R"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu nome" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="frC-sF-gxg">
                                 <rect key="frame" x="24" y="234.33333333333337" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="VMy-My-ZtN"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="iOm-Ka-nZi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -62,7 +65,6 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite seu email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nRo-Ql-o0V">
                                 <rect key="frame" x="24" y="305.33333333333331" width="327" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="U4i-9P-Pgs"/>
                                     <constraint firstAttribute="height" constant="48" id="Vi1-eL-FdF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -72,7 +74,6 @@
                                 <rect key="frame" x="24" y="376.33333333333331" width="327" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="OPQ-Qa-X57"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="oZf-fC-urf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -84,10 +85,9 @@
                                     <constraint firstAttribute="width" constant="26" id="QAx-BT-ChR"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jI-ud6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirme sua senha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-jI-ud6">
                                 <rect key="frame" x="24" y="447.33333333333331" width="327" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="eTD-uu-Hl8"/>
                                     <constraint firstAttribute="height" constant="48" id="w5u-Cg-wEA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -106,10 +106,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="HNQ-Pd-dn0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="R29-7W-ggi"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locked" translatesAutoresizingMaskIntoConstraints="NO" id="cnZ-ad-2ND">
                                 <rect key="frame" x="39" y="458.33333333333331" width="26" height="26"/>
@@ -153,9 +156,7 @@
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="WAD-N6-8E5"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="leading" secondItem="3m8-PX-gid" secondAttribute="leading" id="bae-Mt-Py2"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="centerY" secondItem="frC-sF-gxg" secondAttribute="centerY" id="cE7-kK-a2w"/>
-                            <constraint firstItem="ZeY-FV-d0A" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="din-2m-t9d"/>
                             <constraint firstItem="UM0-dt-d9v" firstAttribute="leading" secondItem="frC-sF-gxg" secondAttribute="leading" constant="15" id="fDw-i6-0g6"/>
-                            <constraint firstAttribute="trailing" secondItem="ZeY-FV-d0A" secondAttribute="trailing" constant="24" id="gjn-gd-6yv"/>
                             <constraint firstItem="Y6c-jI-ud6" firstAttribute="top" secondItem="3m8-PX-gid" secondAttribute="bottom" constant="23" id="hFR-vP-TVG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SVT-zl-hJz" secondAttribute="bottom" constant="30" id="hsJ-p8-mZi"/>
                             <constraint firstItem="Jdc-dW-IUw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="lA5-gG-PJX"/>
@@ -168,6 +169,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmPasswordTextField" destination="Y6c-jI-ud6" id="Hed-5O-0qz"/>
+                        <outlet property="emailTextField" destination="nRo-Ql-o0V" id="c8V-ev-qGv"/>
+                        <outlet property="nameTextField" destination="frC-sF-gxg" id="mgY-jR-JYL"/>
+                        <outlet property="passwordTextField" destination="3m8-PX-gid" id="BJK-kr-LUY"/>
                         <outlet property="registerButton" destination="ZeY-FV-d0A" id="PsV-VI-Ovu"/>
                     </connections>
                 </viewController>
