@@ -24,6 +24,15 @@ class ReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.configTextField()
+    }
+    
+    func configTextField(){
+        self.titleReviewTextField.layer.borderWidth = 1
+        self.titleReviewTextField.layer.borderColor = UIColor.systemGray.cgColor
+        
+        self.reviewTextView.layer.borderWidth = 1
+        self.reviewTextView.layer.borderColor = UIColor.systemGray.cgColor
     }
     
     func uncheckStars(){
@@ -32,6 +41,15 @@ class ReviewViewController: UIViewController {
         self.starThree.setBackgroundImage(UIImage(named: "StarImageCinza"), for: .normal)
         self.starFour.setBackgroundImage(UIImage(named: "StarImageCinza"), for: .normal)
         self.starFive.setBackgroundImage(UIImage(named: "StarImageCinza"), for: .normal)
+    }
+    
+    private func validateFields() -> String? {
+        if self.titleReviewTextField.text == "" {
+            return "O Título da Avaliação é obrigatório."
+        } else if self.reviewTextView.text == "" {
+            return "O campo Avaliação é obrigatório."
+        }
+        return nil
     }
     
     @IBAction func tappedStarOne(_ sender: UIButton) {
@@ -60,7 +78,6 @@ class ReviewViewController: UIViewController {
         self.starFour.setBackgroundImage(UIImage(named: "starImage"), for: .normal)
     }
     
-    
     @IBAction func tappedStarFive(_ sender: UIButton) {
         self.uncheckStars()
         self.starOne.setBackgroundImage(UIImage(named: "starImage"), for: .normal)
@@ -71,7 +88,15 @@ class ReviewViewController: UIViewController {
     }
     
     @IBAction func tappedSubmitButton(_ sender: UIButton) {
-        print(self.placeDetail)
-        self.dismiss(animated: true, completion: nil)
+        
+        if let message: String = self.validateFields() {
+            let alert = UIAlertController(title: "Erro", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+        } else {
+            self.titleReviewTextField.text = ""
+            self.reviewTextView.text = ""
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }

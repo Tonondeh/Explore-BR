@@ -84,7 +84,7 @@ class NewEventViewController: UIViewController {
         } else if self.endDateTextField.text == "" {
             return "O campo Data de Fim é obrigatório."
         } else if self.descriptionTextView.text == "" {
-            return "O campo Data de Fim é obrigatório."
+            return "O campo Descrição do Evento é obrigatório."
         } else if self.photoEventImageView.image == UIImage(named: "image-default")  {
             return "O campo Data de Fim é obrigatório."
         }

@@ -52,7 +52,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Conte mais sobre a sua visita a este local." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-pg-NYY">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fza-pg-NYY">
                                         <rect key="frame" x="24" y="290.5" width="366" height="160"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
