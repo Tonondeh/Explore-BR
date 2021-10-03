@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="ReviewTableViewCell" customModule="Explore_BR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location-detail-1" translatesAutoresizingMaskIntoConstraints="NO" id="ctc-7Y-S6W">
+                        <rect key="frame" x="24" y="0.0" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="48" id="K1X-gX-NqO"/>
+                            <constraint firstAttribute="width" constant="48" id="jfE-sj-XfM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hermione Granger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqN-BJ-jaD">
+                        <rect key="frame" x="82" y="5" width="208" height="16"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="13"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-active" translatesAutoresizingMaskIntoConstraints="NO" id="myV-NB-nvI">
+                        <rect key="frame" x="82" y="26" width="11" height="12"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-active" translatesAutoresizingMaskIntoConstraints="NO" id="Ws7-Zt-KLv">
+                        <rect key="frame" x="103" y="26" width="11" height="12"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-active" translatesAutoresizingMaskIntoConstraints="NO" id="U6e-tf-0gm">
+                        <rect key="frame" x="124" y="26" width="11" height="12"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-active" translatesAutoresizingMaskIntoConstraints="NO" id="8IM-5V-aUa">
+                        <rect key="frame" x="145" y="26" width="11" height="12"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star-active" translatesAutoresizingMaskIntoConstraints="NO" id="gZq-Zm-9SA">
+                        <rect key="frame" x="166" y="26" width="11" height="12"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foi ótimo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cce-Hc-ef1">
+                        <rect key="frame" x="82" y="43" width="208" height="15"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMW-Lx-AQ4">
+                        <rect key="frame" x="82" y="63" width="192" height="14"/>
+                        <string key="text">Local maravilhoso!
+Ótimo passeio com a família.</string>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="11"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="U6e-tf-0gm" firstAttribute="leading" secondItem="Ws7-Zt-KLv" secondAttribute="trailing" constant="10" id="3Ij-CD-5bq"/>
+                    <constraint firstItem="Cce-Hc-ef1" firstAttribute="leading" secondItem="rqN-BJ-jaD" secondAttribute="leading" id="93Z-qZ-cW0"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="UMW-Lx-AQ4" secondAttribute="trailing" constant="10" id="FnA-L6-cGK"/>
+                    <constraint firstAttribute="trailing" secondItem="Cce-Hc-ef1" secondAttribute="trailing" constant="10" id="Ivz-2o-YJc"/>
+                    <constraint firstItem="UMW-Lx-AQ4" firstAttribute="top" secondItem="Cce-Hc-ef1" secondAttribute="bottom" constant="5" id="Oxz-fO-GYJ"/>
+                    <constraint firstItem="ctc-7Y-S6W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Qtx-75-sgs"/>
+                    <constraint firstItem="8IM-5V-aUa" firstAttribute="leading" secondItem="U6e-tf-0gm" secondAttribute="trailing" constant="10" id="TDb-Fv-XnQ"/>
+                    <constraint firstItem="Ws7-Zt-KLv" firstAttribute="top" secondItem="rqN-BJ-jaD" secondAttribute="bottom" constant="5" id="Tae-DY-cfL"/>
+                    <constraint firstItem="Cce-Hc-ef1" firstAttribute="top" secondItem="myV-NB-nvI" secondAttribute="bottom" constant="5" id="XJB-gP-x55"/>
+                    <constraint firstItem="U6e-tf-0gm" firstAttribute="top" secondItem="rqN-BJ-jaD" secondAttribute="bottom" constant="5" id="dlJ-QR-y02"/>
+                    <constraint firstItem="myV-NB-nvI" firstAttribute="leading" secondItem="ctc-7Y-S6W" secondAttribute="trailing" constant="10" id="e9M-9j-s4e"/>
+                    <constraint firstItem="gZq-Zm-9SA" firstAttribute="leading" secondItem="8IM-5V-aUa" secondAttribute="trailing" constant="10" id="eFP-fG-75q"/>
+                    <constraint firstItem="rqN-BJ-jaD" firstAttribute="leading" secondItem="ctc-7Y-S6W" secondAttribute="trailing" constant="10" id="gdr-rF-XwT"/>
+                    <constraint firstItem="myV-NB-nvI" firstAttribute="top" secondItem="rqN-BJ-jaD" secondAttribute="bottom" constant="5" id="gs5-fX-kL7"/>
+                    <constraint firstItem="UMW-Lx-AQ4" firstAttribute="leading" secondItem="rqN-BJ-jaD" secondAttribute="leading" id="hd5-b8-4yw"/>
+                    <constraint firstItem="Ws7-Zt-KLv" firstAttribute="leading" secondItem="myV-NB-nvI" secondAttribute="trailing" constant="10" id="iWA-uN-cxf"/>
+                    <constraint firstItem="ctc-7Y-S6W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rh8-88-xit"/>
+                    <constraint firstItem="gZq-Zm-9SA" firstAttribute="top" secondItem="rqN-BJ-jaD" secondAttribute="bottom" constant="5" id="tio-cA-VzP"/>
+                    <constraint firstAttribute="trailing" secondItem="rqN-BJ-jaD" secondAttribute="trailing" constant="10" id="xi9-vp-qfm"/>
+                    <constraint firstItem="8IM-5V-aUa" firstAttribute="top" secondItem="rqN-BJ-jaD" secondAttribute="bottom" constant="5" id="zLl-RD-ewn"/>
+                    <constraint firstItem="rqN-BJ-jaD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ziW-Ld-H11"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="reviewContentView" destination="H2p-sc-9uM" id="V2M-JR-OCV"/>
+                <outlet property="reviewImageView" destination="ctc-7Y-S6W" id="Zjf-mg-fLg"/>
+                <outlet property="reviewLabel" destination="UMW-Lx-AQ4" id="7ra-gm-fBe"/>
+                <outlet property="reviewNameLabel" destination="rqN-BJ-jaD" id="Fzx-tK-Aeo"/>
+                <outlet property="titleLabel" destination="Cce-Hc-ef1" id="KOZ-ZS-9gt"/>
+            </connections>
+            <point key="canvasLocation" x="-160.86956521739131" y="82.366071428571431"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="location-detail-1" width="48" height="48"/>
+        <image name="star-active" width="11" height="12"/>
+    </resources>
+</document>
