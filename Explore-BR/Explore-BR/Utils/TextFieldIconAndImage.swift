@@ -24,3 +24,13 @@ extension UITextField {
     }
 
 }
+
+extension UITextView {
+    func setTextIconAndPlaceholder(icon: UIImage) {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.image = icon
+        imageView.frame = CGRect(x: 24, y: 6, width: 21, height: 27)
+        self.addSubview(imageView)
+    }
+
+}

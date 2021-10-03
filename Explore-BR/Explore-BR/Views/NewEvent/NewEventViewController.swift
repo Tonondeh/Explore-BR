@@ -67,7 +67,8 @@ class NewEventViewController: UIViewController {
                 self.endDateTextField.text = ""
                 self.descriptionTextView.text = ""
                 self.photoEventImageView.image = UIImage(named: "image-default")
-                
+                self.photoEventImageView.contentMode = .center
+                self.tabBarController?.selectedIndex = 0
                 print(eventModel)
             }))
             self.present(alert, animated: true)
@@ -83,12 +84,26 @@ class NewEventViewController: UIViewController {
             return "O campo Data de Início é obrigatório."
         } else if self.endDateTextField.text == "" {
             return "O campo Data de Fim é obrigatório."
+        } else if convertDate(date: self.inicialDateTextField.text) > convertDate(date: self.endDateTextField.text) {
+            return "A Data Inicial não pode ser maior que a Data Final"
         } else if self.descriptionTextView.text == "" {
             return "O campo Descrição do Evento é obrigatório."
         } else if self.photoEventImageView.image == UIImage(named: "image-default")  {
             return "O campo Data de Fim é obrigatório."
         }
         return nil
+    }
+    
+    private func convertDate(date: String?) -> Date {
+        guard let date = date else { return Date() }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+        if let convertToDate = formatter.date(from: date) {
+            return convertToDate
+        } else {
+            return Date()
+        }
     }
     
     enum viewSelected: Int {
@@ -241,6 +256,8 @@ class NewEventViewController: UIViewController {
         self.setupTapLabelUpdateLocation()
         self.setupTapViewSelectPhotoLibrary()
         self.setupTapViewTakePhotoCamera()
+        
+        hideKeyboardOnTap()
     }
     
     private func setStyleViewButton(uiView: UIView) {
@@ -272,23 +289,22 @@ class NewEventViewController: UIViewController {
         self.descriptionTextView.layer.borderColor = UIColor.systemGray.cgColor
         
         if let imageIcon: UIImage = UIImage(named: "nameEventImage.png") {
-            
             self.eventNameTextField.setTextIconAndPlaceholder(icon: imageIcon, placeholder: "Qual o nome do evento")
-            
         }
         
         if let imageCalendar: UIImage = UIImage(named: "calendarImage.png"){
-            
             self.inicialDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de inicio")
-            
             self.endDateTextField.setTextIconAndPlaceholder(icon: imageCalendar, placeholder: "Data de fim")
-            
         }
         
-        //        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png"){
-        //
-        //            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton, placeholder: "Dê uma breve descrição para o evento")
-        //        }
+        if let imageDescripiton: UIImage = UIImage(named: "descriptionImage.png") {
+            self.descriptionTextView.setTextIconAndPlaceholder(icon: imageDescripiton)
+        }
+        
+        let arbitraryValue: Int = 15
+        if let newPosition = self.descriptionTextView.position(from: self.descriptionTextView.beginningOfDocument, offset: arbitraryValue) {
+            self.descriptionTextView.selectedTextRange = self.descriptionTextView.textRange(from: newPosition, to: newPosition)
+        }
     }
     
 }
