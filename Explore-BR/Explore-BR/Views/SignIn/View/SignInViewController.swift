@@ -18,6 +18,8 @@ class SignInViewController: UIViewController {
     var auth: Auth?
     var alert: Alert?
     
+    private var controller:SignInController = SignInController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configUI()

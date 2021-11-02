@@ -75,6 +75,7 @@
 		65C18F0A27029E4C007E240E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65C18F0927029E4B007E240E /* GoogleService-Info.plist */; };
 		65C18F1A27029FEB007E240E /* LocalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C18F1927029FEB007E240E /* LocalList.swift */; };
 		65C18F1C27029FF9007E240E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C18F1B27029FF9007E240E /* Place.swift */; };
+		65DC7D3D2731E44300A969A8 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DC7D3C2731E44300A969A8 /* SignInController.swift */; };
 		65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */; };
 		65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */; };
 		65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FB99C226D5B63B00A9F670 /* ViewController.swift */; };
@@ -169,6 +170,7 @@
 		65C18F0927029E4B007E240E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65C18F1927029FEB007E240E /* LocalList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalList.swift; sourceTree = "<group>"; };
 		65C18F1B27029FF9007E240E /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		65DC7D3C2731E44300A969A8 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		65FB99BB26D5B63B00A9F670 /* Explore-BR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Explore-BR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65FB99BE26D5B63B00A9F670 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65FB99C026D5B63B00A9F670 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -354,8 +356,8 @@
 		627EF23F26D6FD210053B7F1 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				627EF24026D6FD210053B7F1 /* SignIn.storyboard */,
-				627EF24126D6FD210053B7F1 /* SignInViewController.swift */,
+				65DC7D3B2731D91000A969A8 /* View */,
+				65DC7D3A2731D8FF00A969A8 /* Controller */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -452,6 +454,23 @@
 				6578949B2704BEE70010BF10 /* PlacesSearch.swift */,
 			);
 			path = ModelSearch;
+			sourceTree = "<group>";
+		};
+		65DC7D3A2731D8FF00A969A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				65DC7D3C2731E44300A969A8 /* SignInController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		65DC7D3B2731D91000A969A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				627EF24126D6FD210053B7F1 /* SignInViewController.swift */,
+				627EF24026D6FD210053B7F1 /* SignIn.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		65FB99B226D5B63B00A9F670 = {
@@ -756,6 +775,7 @@
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,
 				A075CF3827027892009FC270 /* EventMapPanelViewController.swift in Sources */,
+				65DC7D3D2731E44300A969A8 /* SignInController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
