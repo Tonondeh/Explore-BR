@@ -26,6 +26,7 @@ class SignInViewController: UIViewController {
         self.configTextField()
         self.auth = Auth.auth()
         self.alert = Alert(viewController: self)
+        self.controller.delegate(delegate: self)
     }
     
     func configTextField(){
@@ -53,29 +54,22 @@ class SignInViewController: UIViewController {
         }
     }
     
-    private func handleLogin() {
-        let email: String = self.emailTextField.text ?? ""
-        let password: String = self.passwordTextField.text ?? ""
-        
-        guard !email.isEmpty else { return self.emailTextField.shake() }
-        guard !password.isEmpty else { return self.passwordTextField.shake() }
-        
-        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
-            if let error = error {
-                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
-                
-                print("Error", error)
-            } else {
-                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
-                
-                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
-            }
-        })
-    }
+//        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
+//            if let error = error {
+//                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
+//
+//                print("Error", error)
+//            } else {
+//                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+//                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+//
+//                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+//            }
+//        })
+//    }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-        self.handleLogin()
+        self.controller.handleLogin(email: emailTextField.text, password: passwordTextField.text)
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
@@ -113,5 +107,18 @@ extension SignInViewController:UITextFieldDelegate{
 
         return true
     }
+    
+}
+
+extension SignInViewController:SignInControllerDelegate{
+    func errorTextField(field: Fields) {
+        switch field {
+        case .email:
+            self.emailTextField.shake()
+        case .password:
+            self.passwordTextField.shake()
+        }
+    }
+    
     
 }

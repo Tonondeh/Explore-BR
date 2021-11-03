@@ -70,6 +70,7 @@
 		6578949C2704BEE70010BF10 /* PlacesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578949B2704BEE70010BF10 /* PlacesSearch.swift */; };
 		657894A02704D8FB0010BF10 /* LocationSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6578949E2704D8FB0010BF10 /* LocationSearchTableViewCell.swift */; };
 		657894A12704D8FB0010BF10 /* LocationSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6578949F2704D8FB0010BF10 /* LocationSearchTableViewCell.xib */; };
+		65A37242273319D30027B1C7 /* SignInWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A37241273319D30027B1C7 /* SignInWorker.swift */; };
 		65B6E09926D6C2B700A54D6C /* ResetPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */; };
 		65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */; };
 		65C18F0A27029E4C007E240E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65C18F0927029E4B007E240E /* GoogleService-Info.plist */; };
@@ -165,6 +166,7 @@
 		6578949B2704BEE70010BF10 /* PlacesSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearch.swift; sourceTree = "<group>"; };
 		6578949E2704D8FB0010BF10 /* LocationSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewCell.swift; sourceTree = "<group>"; };
 		6578949F2704D8FB0010BF10 /* LocationSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchTableViewCell.xib; sourceTree = "<group>"; };
+		65A37241273319D30027B1C7 /* SignInWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWorker.swift; sourceTree = "<group>"; };
 		65B6E09826D6C2B700A54D6C /* ResetPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPassword.storyboard; sourceTree = "<group>"; };
 		65B6E09A26D6C2EF00A54D6C /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		65C18F0927029E4B007E240E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -356,6 +358,8 @@
 		627EF23F26D6FD210053B7F1 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				65A3724027330EAC0027B1C7 /* Network */,
+				65A3723F27330EA50027B1C7 /* Model */,
 				65DC7D3B2731D91000A969A8 /* View */,
 				65DC7D3A2731D8FF00A969A8 /* Controller */,
 			);
@@ -383,7 +387,6 @@
 			children = (
 				8270081D27092B04009DBE62 /* PlaceDetail.swift */,
 				8270081E27092B04009DBE62 /* PlaceReview.swift */,
-				6293350326FBE65B00E12B50 /* User.swift */,
 				626702132704D1350048A178 /* Event.swift */,
 			);
 			path = Model;
@@ -435,6 +438,22 @@
 				6578949F2704D8FB0010BF10 /* LocationSearchTableViewCell.xib */,
 			);
 			path = LocationSearchCell;
+			sourceTree = "<group>";
+		};
+		65A3723F27330EA50027B1C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6293350326FBE65B00E12B50 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		65A3724027330EAC0027B1C7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				65A37241273319D30027B1C7 /* SignInWorker.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		65B6E09726D6C29000A54D6C /* ResetPassword */ = {
@@ -737,6 +756,7 @@
 				627EF24326D6FD210053B7F1 /* SignInViewController.swift in Sources */,
 				8270081F27092B04009DBE62 /* PlaceDetail.swift in Sources */,
 				6293350426FBE65B00E12B50 /* User.swift in Sources */,
+				65A37242273319D30027B1C7 /* SignInWorker.swift in Sources */,
 				0496A01C26D863E4005CA626 /* ChangePasswordViewController.swift in Sources */,
 				0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */,
 				3A58728026FB6F4100ECED4A /* BestReview.swift in Sources */,
