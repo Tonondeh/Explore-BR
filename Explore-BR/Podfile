@@ -9,10 +9,18 @@ target 'Explore-BR' do
 
 pod 'FloatingPanel', '~> 2.4'
 
-pod 'Firebase/Core'
+pod 'FirebaseCore', '~> 8.9'
 
-pod 'Firebase/Auth'
+pod 'FirebaseAuth', '~> 8.9'
 
 pod 'GoogleSignIn'
+
+pod 'FirebaseFirestore', '~> 8.9'
+
+pod 'FirebaseAnalytics', '~> 8.9'
+
+pod 'FirebaseStorage', '~> 8.9'
+
+pod 'FirebaseFirestoreSwift', '8.9.0-beta'
 
 end

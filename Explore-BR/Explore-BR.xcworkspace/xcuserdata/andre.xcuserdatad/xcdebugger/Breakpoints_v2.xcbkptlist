@@ -3,4 +3,118 @@
    uuid = "694EF7A0-B143-4761-8B59-4B41B55EE31F"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6066DE71-8E5C-46F5-96EA-284D164F7C3A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Explore-BR/Views/SignIn/Network/SignInWorker.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "signInEmailFirebase(withEmail:password:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6066DE71-8E5C-46F5-96EA-284D164F7C3A - 611741b44b4a0b9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Explore_BR.SignInWorker.signInEmailFirebase(withEmail: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Explore_BR.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Explore-BR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andre/Explore-BR/Explore-BR/Explore-BR/Views/SignIn/Network/SignInWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "62">
+               </Location>
+               <Location
+                  uuid = "6066DE71-8E5C-46F5-96EA-284D164F7C3A - 63701502316a126e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Explore_BR.SignInWorker.signInEmailFirebase(withEmail: Swift.String, password: Swift.String, completion: (Swift.Optional&lt;Explore_BR.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Explore-BR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andre/Explore-BR/Explore-BR/Explore-BR/Views/SignIn/Network/SignInWorker.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "199">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ACCC57FA-3679-428D-9639-3B065964F179"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Explore-BR/Views/SignIn/Controller/SignInController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "handleLogin(email:password:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "ACCC57FA-3679-428D-9639-3B065964F179 - 120234e6fdb1bdec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Explore_BR.SignInController.handleLogin(email: Swift.Optional&lt;Swift.String&gt;, password: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Explore-BR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andre/Explore-BR/Explore-BR/Explore-BR/Views/SignIn/Controller/SignInController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "740">
+               </Location>
+               <Location
+                  uuid = "ACCC57FA-3679-428D-9639-3B065964F179 - d70638bc89f6cdef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Explore_BR.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Explore_BR.SignInController.handleLogin(email: Swift.Optional&lt;Swift.String&gt;, password: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "Explore-BR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andre/Explore-BR/Explore-BR/Explore-BR/Views/SignIn/Controller/SignInController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0777582-A7CB-4848-80B1-A72832CF657D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Explore-BR/Views/SignIn/View/SignInViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "tappedSignInButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

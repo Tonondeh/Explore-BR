@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
@@ -69,7 +69,7 @@ class SignInViewController: UIViewController {
 //    }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-        self.controller.handleLogin(email: emailTextField.text, password: passwordTextField.text)
+            self.controller.handleLogin(email: self.emailTextField.text, password: self.passwordTextField.text)
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {

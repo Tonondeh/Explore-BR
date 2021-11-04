@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 enum Fields:String {
     case email = "email"
@@ -26,29 +27,22 @@ class SignInController {
     
     public func handleLogin(email:String? = "" , password:String? = "") {
         
-        guard email != "" else {
+        guard let email = email, email != "" else {
             self.delegate?.errorTextField(field: .email)
             return
         }
         
-        guard password != "" else {
+        guard let password = password, password != "" else {
             self.delegate?.errorTextField(field: .password)
             return
         }
         
-//        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
-//            if let error = error {
-//                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
-//
-//                print("Error", error)
-//            } else {
-//                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-//                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
-//
-//                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
-//            }
-//        })
+        SignInWorker().signInEmailFirebase(withEmail: email, password: password) { user, error in
+             
+            
+        }
+        
+    
+        
     }
-    
-    
 }

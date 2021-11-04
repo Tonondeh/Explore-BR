@@ -6,13 +6,23 @@
 //
 
 import Foundation
-import UIKit
+import FirebaseFirestoreSwift
 
-struct User {
-    let name: String
-    let email: String
-    let password: String
-    let avatar: UIImage
-    let latitude: Double
-    let longitude: Double
+struct User:Codable {
+    let id:String
+    let name: String?
+    let email: String?
+//    let password: String?
+//    let latitude: Double?
+//    let longitude: Double?
+    
+    enum CodingKeys:String,CodingKey{
+        case id
+        case name
+        case email
+//        case password
+//        case latitude
+//        case longitude
+    }
+    
 }
