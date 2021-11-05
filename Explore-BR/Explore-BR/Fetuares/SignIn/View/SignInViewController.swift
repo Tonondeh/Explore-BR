@@ -14,7 +14,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     var auth: Auth?
     var alert: Alert?
@@ -43,9 +42,6 @@ class SignInViewController: UIViewController {
     func configUI(){
         self.signInButton.layer.cornerRadius = 3.0
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
-        
-        self.loadingActivityIndicator.hidesWhenStopped = true
-        self.loadingActivityIndicator.layer.cornerRadius = 9.0
     }
     
     func checkButtonEnabled(_ isButtonEnabled: Bool) {
@@ -102,15 +98,11 @@ extension SignInViewController:UITextFieldDelegate{
 
 extension SignInViewController:SignInControllerDelegate {
     func startLoading() {
-        print(#function)
-//        self.loadingActivityIndicator?.startAnimating()
-//        self.showSpinner()
+        self.showSpinner()
     }
     
     func stopLoading() {
-        print(#function)
-//        self.loadingActivityIndicator?.stopAnimating()
-//        self.removeSpinner()
+        self.removeSpinner()
     }
     
     func successSignIn(user: User) {

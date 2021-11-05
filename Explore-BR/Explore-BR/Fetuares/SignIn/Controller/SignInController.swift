@@ -40,8 +40,9 @@ class SignInController {
             return
         }
         
+        self.delegate?.startLoading()
+        
         SignInWorker().signInEmailFirebase(withEmail: email, password: password) { user, error in
-            self.delegate?.startLoading()
             if let _error = error {
                 self.delegate?.failureSignIn(error: _error)
                 self.delegate?.stopLoading()

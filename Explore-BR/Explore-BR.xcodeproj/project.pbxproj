@@ -63,7 +63,7 @@
 		6293350426FBE65B00E12B50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6293350326FBE65B00E12B50 /* User.swift */; };
 		62D4638727357D7400625F9A /* AuthErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D4638627357D7400625F9A /* AuthErrors.swift */; };
 		62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6D312703C935004646D1 /* UIColor+Hex.swift */; };
-		62FBAB142735ABFE00CA737A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB132735ABFE00CA737A /* BaseViewController.swift */; };
+		62FBAB142735ABFE00CA737A /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */; };
 		62FBAB162735B9AF00CA737A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB152735B9AF00CA737A /* AuthManager.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
@@ -162,7 +162,7 @@
 		6293350326FBE65B00E12B50 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		62D4638627357D7400625F9A /* AuthErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrors.swift; sourceTree = "<group>"; };
 		62EC6D312703C935004646D1 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		62FBAB132735ABFE00CA737A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		62FBAB152735B9AF00CA737A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 				62EC6D312703C935004646D1 /* UIColor+Hex.swift */,
 				650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */,
 				13E16C3726D739D60054C017 /* NavigationBarGradient.swift */,
-				62FBAB132735ABFE00CA737A /* BaseViewController.swift */,
+				62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -793,7 +793,7 @@
 				65C18F1A27029FEB007E240E /* LocalList.swift in Sources */,
 				0496A01826D85379005CA626 /* HomeVC.swift in Sources */,
 				627EF23E26D6FD080053B7F1 /* ProfileViewController.swift in Sources */,
-				62FBAB142735ABFE00CA737A /* BaseViewController.swift in Sources */,
+				62FBAB142735ABFE00CA737A /* UIViewController+Loading.swift in Sources */,
 				8270083727092BC6009DBE62 /* ReviewViewController.swift in Sources */,
 				8270083127092B98009DBE62 /* ReviewTableViewCell.swift in Sources */,
 				62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */,
