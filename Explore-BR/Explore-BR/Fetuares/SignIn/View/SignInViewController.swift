@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
     
     var auth: Auth?
     var alert: Alert?
@@ -42,6 +43,9 @@ class SignInViewController: UIViewController {
     func configUI(){
         self.signInButton.layer.cornerRadius = 3.0
         self.signInButton.applyGradient(colors: [blueDarkButton,blueLightButton])
+        
+        self.loadingActivityIndicator.hidesWhenStopped = true
+        self.loadingActivityIndicator.layer.cornerRadius = 9.0
     }
     
     func checkButtonEnabled(_ isButtonEnabled: Bool) {
@@ -53,20 +57,6 @@ class SignInViewController: UIViewController {
             self.signInButton.isEnabled = false
         }
     }
-    
-//        self.auth?.signIn(withEmail: email, password: password, completion: { result, error in
-//            if let error = error {
-//                self.alert?.showAlert(title: "Erro", message: "Erro ao realizar login, dados inválidos", completion: nil)
-//
-//                print("Error", error)
-//            } else {
-//                let storyboard =  UIStoryboard(name: "Home", bundle: nil)
-//                let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
-//
-//                self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
-//            }
-//        })
-//    }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
             self.controller.handleLogin(email: self.emailTextField.text, password: self.passwordTextField.text)
@@ -110,7 +100,19 @@ extension SignInViewController:UITextFieldDelegate{
     
 }
 
-extension SignInViewController:SignInControllerDelegate{
+extension SignInViewController:SignInControllerDelegate {
+    func startLoading() {
+        print(#function)
+//        self.loadingActivityIndicator?.startAnimating()
+//        self.showSpinner()
+    }
+    
+    func stopLoading() {
+        print(#function)
+//        self.loadingActivityIndicator?.stopAnimating()
+//        self.removeSpinner()
+    }
+    
     func successSignIn(user: User) {
         let storyboard =  UIStoryboard(name: "Home", bundle: nil)
         let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)

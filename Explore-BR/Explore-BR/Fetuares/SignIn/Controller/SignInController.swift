@@ -16,6 +16,8 @@ protocol SignInControllerDelegate:AnyObject{
     func errorTextField(field:Fields)
     func successSignIn(user: User)
     func failureSignIn(error: AuthErrors)
+    func startLoading()
+    func stopLoading()
 }
 
 class SignInController {
@@ -39,16 +41,20 @@ class SignInController {
         }
         
         SignInWorker().signInEmailFirebase(withEmail: email, password: password) { user, error in
+            self.delegate?.startLoading()
             if let _error = error {
                 self.delegate?.failureSignIn(error: _error)
+                self.delegate?.stopLoading()
                 return
             }
             
             if let _user = user {
+                AuthManager.shared.cacheUser(id: _user.id)
                 self.delegate?.successSignIn(user: _user)
             } else {
                 self.delegate?.failureSignIn(error: .userNotExists)
             }
+            self.delegate?.stopLoading()
         }
     }
 }
