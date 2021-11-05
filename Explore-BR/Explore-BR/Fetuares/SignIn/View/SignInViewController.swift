@@ -111,6 +111,29 @@ extension SignInViewController:UITextFieldDelegate{
 }
 
 extension SignInViewController:SignInControllerDelegate{
+    func successSignIn(user: User) {
+        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+        let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+        
+        self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
+    }
+    
+    func failureSignIn(error: AuthErrors) {
+        var msgError: String = ""
+        switch error {
+        case .userNotExists:
+            msgError = "Usuário não existe"
+        case .invalidData:
+            msgError = "Dados inválidos"
+        case .errorServer:
+            msgError = "Erro ao buscar os dados. Tente novamente."
+        case .errorSignin:
+            msgError = "Erro ao logar. Tente novamente."
+        }
+        
+        self.alert?.showAlert(title: "Erro", message: msgError, completion: nil)
+    }
+    
     func errorTextField(field: Fields) {
         switch field {
         case .email:

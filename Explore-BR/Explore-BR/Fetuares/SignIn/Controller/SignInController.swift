@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 enum Fields:String {
     case email = "email"
@@ -15,6 +14,8 @@ enum Fields:String {
 
 protocol SignInControllerDelegate:AnyObject{
     func errorTextField(field:Fields)
+    func successSignIn(user: User)
+    func failureSignIn(error: AuthErrors)
 }
 
 class SignInController {
@@ -38,11 +39,16 @@ class SignInController {
         }
         
         SignInWorker().signInEmailFirebase(withEmail: email, password: password) { user, error in
-             
+            if let _error = error {
+                self.delegate?.failureSignIn(error: _error)
+                return
+            }
             
+            if let _user = user {
+                self.delegate?.successSignIn(user: _user)
+            } else {
+                self.delegate?.failureSignIn(error: .userNotExists)
+            }
         }
-        
-    
-        
     }
 }
