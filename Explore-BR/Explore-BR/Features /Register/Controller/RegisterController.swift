@@ -18,6 +18,7 @@ protocol RegisterControllerDelegate: AnyObject{
     func errorTextField(field:FieldsRegister)
     func successRegister(user: UserRegister)
     func failureRegister(error: AuthErrors)
+    func errorConfirmPassword()
     func startLoading()
     func stopLoading()
 }
@@ -53,22 +54,30 @@ class RegisterController {
             return
         }
         
+        guard _confirmPassword == _password else {
+            self.delegate?.errorConfirmPassword()
+            return
+        }
         
+        self.delegate?.startLoading()
         
-//        } else {
-//            self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
-//                
-//                if let error = error {
-//                    self.alert?.showAlert(title: "Erro", message: "Verifique os dados inseridos", completion: nil)
-//                    
-//                    print("error =", error)
-//                } else {
-//                    self.alert?.showAlert(title: "Sucesso!", message: "Usuário cadastrado com sucesso!") {
-//                        self.navigationController?.popViewController(animated: true)
-//                    }
-//                }
-//                
-//            })
-//        }
+        RegisterWorker().createUserFirebase(name:_name, email:_email, password:_password) { user , error in
+            
+            if let _error = error {
+                self.delegate?.failureRegister(error: _error)
+                self.delegate?.stopLoading()
+                return
+            }
+            
+            if let _user = user {
+                AuthManager.shared.cacheUser(id: _user.id)
+                self.delegate?.successRegister(user: _user)
+            }else{
+                self.delegate?.failureRegister(error: .userNotExists)
+            }
+            
+            self.delegate?.stopLoading()
+            
+        }
     }
 }

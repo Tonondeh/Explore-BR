@@ -57,7 +57,6 @@ class RegisterViewController: UIViewController {
         
         self.passwordTextField.isSecureTextEntry = true
         self.confirmPasswordTextField.isSecureTextEntry = true
-        
         self.emailTextField.keyboardType = .emailAddress
     }
     
@@ -135,6 +134,11 @@ extension RegisterViewController: UITextFieldDelegate {
 }
 
 extension RegisterViewController: RegisterControllerDelegate {
+    func errorConfirmPassword() {
+        self.alert?.showAlert(title: "Erro", message: "Senhas diferentes, favor verificar", completion: nil)
+        self.confirmPasswordTextField.shake()
+    }
+    
     func errorTextField(field: FieldsRegister) {
         switch field {
         case .name:
@@ -145,23 +149,42 @@ extension RegisterViewController: RegisterControllerDelegate {
             self.passwordTextField.shake()
         case .confirmPassword:
             self.confirmPasswordTextField.shake()
+        
         }
     }
     
+    
+    
     func successRegister(user: UserRegister) {
-        
+        let storyboard =  UIStoryboard(name: "Home", bundle: nil)
+        let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
+//        enviar usuario recebido na success register pra HomeController 
+        self.navigationController?.pushViewController(tabbar ?? UITabBarController(), animated: true)
     }
     
     func failureRegister(error: AuthErrors) {
+        var msgError: String = ""
+        switch error {
+        case .userNotExists:
+            msgError = "Usuário não existe"
+        case .invalidData:
+            msgError = "Dados inválidos"
+        case .errorServer:
+            msgError = "Erro ao buscar os dados. Tente novamente."
+        case .errorSignin:
+            msgError = "Erro ao Criar. Tente novamente."
+        }
         
+        self.alert?.showAlert(title: "Erro", message: msgError, completion: nil)
     }
     
+    
     func startLoading() {
-        
+        self.showSpinner()
     }
     
     func stopLoading() {
-        
+        self.removeSpinner()
     }
     
     
