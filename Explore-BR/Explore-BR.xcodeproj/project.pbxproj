@@ -392,7 +392,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6293350526FBE6D900E12B50 /* Fetuares */ = {
+		6293350526FBE6D900E12B50 /* Features  */ = {
 			isa = PBXGroup;
 			children = (
 				0496A01926D863E4005CA626 /* ChangePassword */,
@@ -410,7 +410,7 @@
 				65FB99C426D5B63B00A9F670 /* Main.storyboard */,
 				65FB99C926D5B63E00A9F670 /* LaunchScreen.storyboard */,
 			);
-			path = Fetuares;
+			path = "Features ";
 			sourceTree = "<group>";
 		};
 		62D4638527357CDE00625F9A /* Errors */ = {
@@ -545,7 +545,7 @@
 				62FBAB122735ABDA00CA737A /* Extensions */,
 				62D4638527357CDE00625F9A /* Errors */,
 				6293350226FBE64E00E12B50 /* Model */,
-				6293350526FBE6D900E12B50 /* Fetuares */,
+				6293350526FBE6D900E12B50 /* Features  */,
 				65FB99CC26D5B63E00A9F670 /* Info.plist */,
 			);
 			path = "Explore-BR";
