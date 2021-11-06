@@ -65,6 +65,7 @@
 		62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6D312703C935004646D1 /* UIColor+Hex.swift */; };
 		62FBAB142735ABFE00CA737A /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */; };
 		62FBAB162735B9AF00CA737A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB152735B9AF00CA737A /* AuthManager.swift */; };
+		62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1B273607A200CA737A /* UserRegister.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
@@ -164,6 +165,7 @@
 		62EC6D312703C935004646D1 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		62FBAB152735B9AF00CA737A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		62FBAB1B273607A200CA737A /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -436,6 +438,35 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		62FBAB17273606EF00CA737A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		62FBAB18273606FE00CA737A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62FBAB192736070A00CA737A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62FBAB1A2736071A00CA737A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62FBAB1B273607A200CA737A /* UserRegister.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6525095626FD20B50080B792 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +644,10 @@
 		FE6980A726D804A70011272E /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				62FBAB1A2736071A00CA737A /* Model */,
+				62FBAB192736070A00CA737A /* View */,
+				62FBAB18273606FE00CA737A /* Controller */,
+				62FBAB17273606EF00CA737A /* Network */,
 				FE6980A826D804BB0011272E /* Register.storyboard */,
 				FE6980AA26D804D10011272E /* RegisterViewController.swift */,
 			);
@@ -807,6 +842,7 @@
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,
+				62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */,
 				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
