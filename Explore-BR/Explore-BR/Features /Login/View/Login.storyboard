@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svp-MW-bNE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svp-MW-bNE">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,25 +33,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJf-rb-0LH">
-                                <rect key="frame" x="24" y="342" width="366" height="48"/>
-                                <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="UTw-Hh-5fr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="21"/>
-                                <color key="tintColor" red="0.98431372549019602" green="0.99607843137254903" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="imageEdgeInsets" minX="-64" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Continue com Apple">
-                                    <imageReference key="image" image="applelogo" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="tappedLoginAppleButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uFc-QR-8JM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ea3-S5-bJ3">
-                                <rect key="frame" x="24" y="422" width="366" height="48"/>
+                                <rect key="frame" x="24" y="372" width="366" height="48"/>
                                 <color key="backgroundColor" red="0.90588235294117647" green="0.11372549019607843" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="PzF-Wf-6eC"/>
@@ -69,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gif-wE-fnD">
-                                <rect key="frame" x="24" y="502" width="366" height="48"/>
+                                <rect key="frame" x="24" y="452" width="366" height="48"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="xhS-f6-lY4"/>
@@ -88,26 +70,22 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="leading" secondItem="zJf-rb-0LH" secondAttribute="leading" id="01y-8z-seg"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3LN-Nx-SLI"/>
                             <constraint firstItem="gif-wE-fnD" firstAttribute="top" secondItem="ea3-S5-bJ3" secondAttribute="bottom" constant="32" id="5M8-cT-XPu"/>
-                            <constraint firstItem="zJf-rb-0LH" firstAttribute="top" secondItem="K7m-Ub-nwe" secondAttribute="bottom" constant="120" id="F3N-JW-Ocs"/>
+                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="A1n-b2-pmz"/>
                             <constraint firstItem="gif-wE-fnD" firstAttribute="trailing" secondItem="ea3-S5-bJ3" secondAttribute="trailing" id="GSR-Ah-zJ5"/>
-                            <constraint firstItem="zJf-rb-0LH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Qzm-FF-QYZ"/>
+                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="centerX" secondItem="K7m-Ub-nwe" secondAttribute="centerX" id="QJD-pj-0XM"/>
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="120" id="Sug-4u-TaL"/>
-                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="trailing" secondItem="zJf-rb-0LH" secondAttribute="trailing" id="ayw-IL-ZGJ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zJf-rb-0LH" secondAttribute="trailing" constant="24" id="czN-3c-VZo"/>
-                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="top" secondItem="zJf-rb-0LH" secondAttribute="bottom" constant="32" id="e1Q-rf-cF7"/>
                             <constraint firstItem="K7m-Ub-nwe" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ipA-Ob-D7u"/>
                             <constraint firstAttribute="bottom" secondItem="YGx-AI-ncR" secondAttribute="bottom" id="iuI-Uv-8zU"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="j9z-Bb-7w4"/>
                             <constraint firstItem="gif-wE-fnD" firstAttribute="leading" secondItem="ea3-S5-bJ3" secondAttribute="leading" id="n1h-HE-zkF"/>
+                            <constraint firstItem="ea3-S5-bJ3" firstAttribute="top" secondItem="K7m-Ub-nwe" secondAttribute="bottom" constant="150" id="uQW-bF-sjS"/>
                             <constraint firstItem="YGx-AI-ncR" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="zx9-Co-BWZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yiI-nG-e4J"/>
                     <connections>
-                        <outlet property="loginAppleButton" destination="zJf-rb-0LH" id="YJv-0h-MJV"/>
                         <outlet property="loginEmailButton" destination="gif-wE-fnD" id="44h-ZR-EW9"/>
                         <outlet property="loginGoogleButton" destination="ea3-S5-bJ3" id="4qY-wL-O8q"/>
                         <segue destination="97O-DY-Rsz" kind="show" identifier="SignIn" id="wDE-mN-AlW"/>
@@ -144,7 +122,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="applelogo" catalog="system" width="103" height="128"/>
         <image name="background" width="414" height="896"/>
         <image name="logo-google" width="33" height="33"/>
         <image name="mail-white" width="29.666666030883789" height="23"/>
