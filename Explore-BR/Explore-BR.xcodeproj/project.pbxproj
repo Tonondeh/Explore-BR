@@ -66,6 +66,8 @@
 		62FBAB142735ABFE00CA737A /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */; };
 		62FBAB162735B9AF00CA737A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB152735B9AF00CA737A /* AuthManager.swift */; };
 		62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1B273607A200CA737A /* UserRegister.swift */; };
+		62FBAB1E2736085B00CA737A /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1D2736085B00CA737A /* RegisterController.swift */; };
+		62FBAB202736087400CA737A /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1F2736087400CA737A /* RegisterWorker.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
@@ -166,6 +168,8 @@
 		62FBAB132735ABFE00CA737A /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		62FBAB152735B9AF00CA737A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		62FBAB1B273607A200CA737A /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
+		62FBAB1D2736085B00CA737A /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		62FBAB1F2736087400CA737A /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -441,6 +445,7 @@
 		62FBAB17273606EF00CA737A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				62FBAB1F2736087400CA737A /* RegisterWorker.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 		62FBAB18273606FE00CA737A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				62FBAB1D2736085B00CA737A /* RegisterController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -455,6 +461,8 @@
 		62FBAB192736070A00CA737A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE6980A826D804BB0011272E /* Register.storyboard */,
+				FE6980AA26D804D10011272E /* RegisterViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,8 +656,6 @@
 				62FBAB192736070A00CA737A /* View */,
 				62FBAB18273606FE00CA737A /* Controller */,
 				62FBAB17273606EF00CA737A /* Network */,
-				FE6980A826D804BB0011272E /* Register.storyboard */,
-				FE6980AA26D804D10011272E /* RegisterViewController.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -839,6 +845,7 @@
 				3A58727E26FB6F4100ECED4A /* CardCollectionViewCell.swift in Sources */,
 				8270082527092B50009DBE62 /* LocationDetailsTableViewCell.swift in Sources */,
 				65C18F1C27029FF9007E240E /* Place.swift in Sources */,
+				62FBAB202736087400CA737A /* RegisterWorker.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,
@@ -849,6 +856,7 @@
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */,
 				629334FC26FBB2BB00E12B50 /* Alert.swift in Sources */,
+				62FBAB1E2736085B00CA737A /* RegisterController.swift in Sources */,
 				626702142704D1350048A178 /* Event.swift in Sources */,
 				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,

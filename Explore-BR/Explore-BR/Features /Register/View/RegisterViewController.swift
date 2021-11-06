@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import FirebaseCore
-import FirebaseAuth
+//import FirebaseCore
+//import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     
@@ -17,7 +17,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
-    var auth: Auth?
+//    var auth: Auth?
+    
+    private var controller: RegisterController = RegisterController()
     var alert: Alert?
     
     override func viewDidLoad() {
@@ -25,8 +27,9 @@ class RegisterViewController: UIViewController {
         self.configUI()
         self.checkButtonEnabled(false)
         self.configTextField()
-        self.auth = Auth.auth()
+//        self.auth = Auth.auth()
         self.alert = Alert(viewController: self)
+        self.controller.delegate(delegate: self)
     }
     
     @IBAction func loginBackButton(_ sender: UIButton) {
@@ -34,7 +37,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {
-        self.registerUser(email: self.emailTextField.text ?? "", password: self.passwordTextField.text ?? "")
+        self.controller.registerUser(name: self.nameTextField.text, email: self.emailTextField.text, password: self.passwordTextField.text, confirmPassword: self.confirmPasswordTextField.text)
     }
     
     func configUI(){
@@ -81,25 +84,25 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    private func registerUser(email: String, password: String) {
-        if self.passwordTextField.text != self.confirmPasswordTextField.text {
-            self.alert?.showAlert(title: "Ops", message: "As senha estão diferentes, digite novamente por favor", completion: nil)
-        } else {
-            self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
-                
-                if let error = error {
-                    self.alert?.showAlert(title: "Erro", message: "Verifique os dados inseridos", completion: nil)
-                    
-                    print("error =", error)
-                } else {
-                    self.alert?.showAlert(title: "Sucesso!", message: "Usuário cadastrado com sucesso!") {
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }
-                
-            })
-        }
-    }
+//    private func registerUser(email: String, password: String) {
+//        if self.passwordTextField.text != self.confirmPasswordTextField.text {
+//            self.alert?.showAlert(title: "Ops", message: "As senha estão diferentes, digite novamente por favor", completion: nil)
+//        } else {
+//            self.auth?.createUser(withEmail: email, password: password, completion: { result, error in
+//
+//                if let error = error {
+//                    self.alert?.showAlert(title: "Erro", message: "Verifique os dados inseridos", completion: nil)
+//
+//                    print("error =", error)
+//                } else {
+//                    self.alert?.showAlert(title: "Sucesso!", message: "Usuário cadastrado com sucesso!") {
+//                        self.navigationController?.popViewController(animated: true)
+//                    }
+//                }
+//
+//            })
+//        }
+//    }
     
 }
 
@@ -128,5 +131,38 @@ extension RegisterViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.validateTextFields()
     }
+    
+}
+
+extension RegisterViewController: RegisterControllerDelegate {
+    func errorTextField(field: FieldsRegister) {
+        switch field {
+        case .name:
+            self.nameTextField.shake()
+        case .email:
+            self.emailTextField.shake()
+        case .password:
+            self.passwordTextField.shake()
+        case .confirmPassword:
+            self.confirmPasswordTextField.shake()
+        }
+    }
+    
+    func successRegister(user: UserRegister) {
+        
+    }
+    
+    func failureRegister(error: AuthErrors) {
+        
+    }
+    
+    func startLoading() {
+        
+    }
+    
+    func stopLoading() {
+        
+    }
+    
     
 }
