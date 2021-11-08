@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+protocol Profile:AnyObject{
+    
+}
 
 class ProfileViewController: UIViewController {
     
@@ -14,6 +19,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     
+    private var controller: ProfileController = ProfileController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +28,7 @@ class ProfileViewController: UIViewController {
         self.configImageView()
 //        self.configNavigationBar()
         self.configBackgroundGradient()
+        self.controller.delegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,7 +41,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedSignOutButton(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
+        self.controller.handleLogOut()
     }
     
     private func configButton() {
@@ -93,4 +101,16 @@ class ProfileViewController: UIViewController {
         
     }
     
+}
+
+extension ProfileViewController: ProfileDelegate{
+    func signOut() {
+        let loginVC:LoginVC? = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginVC
+        if let _loginVC = loginVC{
+            _loginVC.modalPresentationStyle = .fullScreen
+            self.present(_loginVC, animated: true, completion: nil)
+        }
+
+    }
+
 }
