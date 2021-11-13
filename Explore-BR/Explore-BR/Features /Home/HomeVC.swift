@@ -119,13 +119,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
 }
 
-extension HomeVC: UIViewControllerTransitioningDelegate {
-    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        ModalPresentationController(presentedViewController: presented, presenting: presenting)
-    }
-}
-    
-    
+        
     extension HomeVC: CLLocationManagerDelegate{
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
