@@ -41,7 +41,7 @@ class ResetPasswordViewController: UIViewController {
     
     
     @IBAction func tappedCancelButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func tappedRegisterButton(_ sender: UIButton) {

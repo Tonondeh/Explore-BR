@@ -105,12 +105,21 @@ class ProfileViewController: UIViewController {
 
 extension ProfileViewController: ProfileDelegate{
     func signOut() {
-        let loginVC:LoginVC? = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginVC
-        if let _loginVC = loginVC{
-            _loginVC.modalPresentationStyle = .fullScreen
-            self.present(_loginVC, animated: true, completion: nil)
-        }
+//        let loginVC:LoginVC? = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "Login") as? LoginVC
+//        if let _loginVC = loginVC{
+//            _loginVC.modalPresentationStyle = .fullScreen
+//            self.present(_loginVC, animated: true, completion: nil)
+//        }
 
+        let rootViewController = self.view.window?.rootViewController as? UINavigationController
+
+        rootViewController?.setViewControllers([rootViewController!.viewControllers.first!],
+        animated: true)
+
+//        rootViewController?.dismiss(animated: true, completion: nil)
+
+        rootViewController?.popToRootViewController(animated: true)
+        
     }
 
 }
