@@ -21,12 +21,26 @@ class SearchController {
         Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
     ]
     
+    let searchRecents: [Place] = [
+        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
+        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
+        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
+    ]
+    
     public func numberOfPlaces() -> Int {
         return self.placeTypes.count
     }
     
+    public func numberOfRecentSearches() -> Int {
+        return self.searchRecents.count
+    }
+    
     public func indexPathOfPlaces(indexPath: IndexPath) -> Place {
         return self.placeTypes[indexPath.row]
+    }
+    
+    public func indexPathOfRecentSearches(indexPath: IndexPath) -> Place {
+        return self.searchRecents[indexPath.row]
     }
     
     public func indexPathOfPlaceList(indexPath: IndexPath) -> Place {

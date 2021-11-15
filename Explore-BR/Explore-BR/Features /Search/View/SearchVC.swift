@@ -19,12 +19,6 @@ class SearchVC: UIViewController {
     
     var tableViewData: [Place] = []
     
-    let searchRecents: [Place] = [
-        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
-        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
-        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
-    ]
-    
     var resultPlaceSearch:[Place] = []
     var newData: [Place] = []
     
@@ -152,7 +146,7 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         let searchText = searchBar.searchTextField.text ?? ""
         
         if searchText.isEmpty && self.resultPlaceSearch.isEmpty && self.newData.isEmpty {
-            return self.searchRecents.count
+            return self.controller.numberOfRecentSearches()
         } else {
             
             if self.resultPlaceSearch.isEmpty {
@@ -170,7 +164,7 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
         if searchText.isEmpty && self.resultPlaceSearch.isEmpty && self.newData.isEmpty {
             let cell = tableView.dequeueReusableCell(withIdentifier: LocationSearchTableViewCell.identifier, for: indexPath) as? LocationSearchTableViewCell
             
-            cell?.setUpCell(data: self.searchRecents[indexPath.row])
+            cell?.setUpCell(data: self.controller.indexPathOfRecentSearches(indexPath: indexPath))
             
             return cell ?? UITableViewCell()
         } else {
