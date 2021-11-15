@@ -23,4 +23,6 @@ pod 'FirebaseStorage', '~> 8.9'
 
 pod 'FirebaseFirestoreSwift', '8.9.0-beta'
 
+pod 'Alamofire', '~> 5.4'
+
 end
