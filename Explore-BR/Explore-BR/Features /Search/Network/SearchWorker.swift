@@ -11,7 +11,9 @@ import CoreLocation
 
 class SearchWorker {
     
-    func search(by: String, completion: @escaping(_ place: PlaceGoogleResponse?, _ error: Error? ) -> Void) {
+    static let shared = SearchWorker()
+    
+    func search(by: String, completion: @escaping(_ place: PlaceGoogleResponse?, _ error: Error?) -> Void) {
 //        let parameters = ["location": "-19.9695407,-44.0509203", "radius": "20000"]
         
         let baseUrl = "\(API.baseUrl)nearbysearch/json?location=-19.9695407,-44.0509203&radius=20000"
