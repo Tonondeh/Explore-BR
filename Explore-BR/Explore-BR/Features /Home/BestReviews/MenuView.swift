@@ -40,6 +40,10 @@ class MenuView: UIView {
         self.addSubview(self.bestReviewsTableView)
     }
     
+    public func reloadData() {
+        self.bestReviewsTableView.reloadData()
+    }
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             

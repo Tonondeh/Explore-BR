@@ -5,12 +5,12 @@
 //  Created by Paulo Rodrigues on 18/09/21.
 //
 
-import UIKit
+import Foundation
 
-struct BestReview {
-    let image: UIImage
-    let title: String
-    let type: String
-    let region: String
-    let stars: [Double]
+struct BestReview: Codable {
+    var image: String?
+    var title: String?
+    var type: String?
+    var region: String?
+    var stars: [Int]?
 }

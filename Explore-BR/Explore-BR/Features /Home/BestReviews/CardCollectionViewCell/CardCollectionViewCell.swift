@@ -65,7 +65,7 @@ class CardCollectionViewCell: UICollectionViewCell {
        }
     
     public func setupCell(data: BestReview) {
-        self.cardImage.image = data.image
+        self.cardImage.image = UIImage(named: data.image ?? "")
         self.cardTitleLabel.text = data.title
         self.cardLocalTypeLabel.text = data.type
         self.cardRegionLabel.text = data.region

@@ -37,14 +37,6 @@ class BestReviewsTableViewCell: UITableViewCell {
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.collectionViewLayout = layout
     }
-    
-//    public func setupCell(data: BestReview) {
-//        self.bestReviewsImage.image = data.image
-//        self.nameLabel.text = data.title
-//        self.localTypeLabel.text = data.type
-//        self.localLabel.text = data.region
-//    }
-    
 }
 
 extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
