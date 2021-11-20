@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum ReviewErrors: Error {
+enum BestReviewErrors: Error {
     case failGetRequestServer
     case failsLoadList
 }
 
-class ReviewWorker {
+class BestReviewWorker {
     private var mockListReviews: [BestReview] = [
         BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1]),
         BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1]),
@@ -20,7 +20,7 @@ class ReviewWorker {
         BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1])
     ]
     
-    func loadReviews(completion: @escaping (_ bestReview: [BestReview]?, _ error: ReviewErrors?) -> Void) {
+    func loadReviews(completion: @escaping (_ bestReview: [BestReview]?, _ error: BestReviewErrors?) -> Void) {
         let result = true
         
         if result {

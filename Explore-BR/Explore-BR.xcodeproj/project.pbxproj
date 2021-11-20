@@ -23,13 +23,13 @@
 		3A58727C26FB6F4100ECED4A /* BestReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58727326FB6F4100ECED4A /* BestReviewsTableViewCell.xib */; };
 		3A58727D26FB6F4100ECED4A /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58727526FB6F4100ECED4A /* CardCollectionViewCell.xib */; };
 		3A58727E26FB6F4100ECED4A /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727626FB6F4100ECED4A /* CardCollectionViewCell.swift */; };
-		3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727726FB6F4100ECED4A /* BestReviewsViewController.swift */; };
+		3A58727F26FB6F4100ECED4A /* ContentPanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727726FB6F4100ECED4A /* ContentPanelVC.swift */; };
 		3A58728026FB6F4100ECED4A /* BestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727926FB6F4100ECED4A /* BestReview.swift */; };
 		3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727A26FB6F4100ECED4A /* MenuView.swift */; };
 		3A58728726FB6F8600ECED4A /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */; };
 		3A58728826FB6F8600ECED4A /* PlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */; };
-		6234D69D2742EDB9006DEE2A /* BestReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234D69C2742EDB9006DEE2A /* BestReviewController.swift */; };
-		6234D69F2742EF3F006DEE2A /* ReviewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234D69E2742EF3F006DEE2A /* ReviewWorker.swift */; };
+		6234D69D2742EDB9006DEE2A /* ContentPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234D69C2742EDB9006DEE2A /* ContentPanelController.swift */; };
+		6234D69F2742EF3F006DEE2A /* BestReviewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6234D69E2742EF3F006DEE2A /* BestReviewWorker.swift */; };
 		626702142704D1350048A178 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 626702132704D1350048A178 /* Event.swift */; };
 		627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627152B8270916F5006EC085 /* UIViewController+TextField.swift */; };
 		627EF22326D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */; };
@@ -126,13 +126,13 @@
 		3A58727326FB6F4100ECED4A /* BestReviewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestReviewsTableViewCell.xib; sourceTree = "<group>"; };
 		3A58727526FB6F4100ECED4A /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		3A58727626FB6F4100ECED4A /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		3A58727726FB6F4100ECED4A /* BestReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestReviewsViewController.swift; sourceTree = "<group>"; };
+		3A58727726FB6F4100ECED4A /* ContentPanelVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPanelVC.swift; sourceTree = "<group>"; };
 		3A58727926FB6F4100ECED4A /* BestReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BestReview.swift; sourceTree = "<group>"; };
 		3A58727A26FB6F4100ECED4A /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacesCollectionViewCell.xib; sourceTree = "<group>"; };
-		6234D69C2742EDB9006DEE2A /* BestReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestReviewController.swift; sourceTree = "<group>"; };
-		6234D69E2742EF3F006DEE2A /* ReviewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWorker.swift; sourceTree = "<group>"; };
+		6234D69C2742EDB9006DEE2A /* ContentPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPanelController.swift; sourceTree = "<group>"; };
+		6234D69E2742EF3F006DEE2A /* BestReviewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestReviewWorker.swift; sourceTree = "<group>"; };
 		626702132704D1350048A178 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		627152B8270916F5006EC085 /* UIViewController+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TextField.swift"; sourceTree = "<group>"; };
 		627EF21126D6FCA30053B7F1 /* SF-Pro-Text-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-UltralightItalic.otf"; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 			children = (
 				3A58727126FB6F4100ECED4A /* BestReviewsTableViewCell */,
 				3A58727426FB6F4100ECED4A /* CardCollectionViewCell */,
-				3A58727726FB6F4100ECED4A /* BestReviewsViewController.swift */,
+				3A58727726FB6F4100ECED4A /* ContentPanelVC.swift */,
 				3A58727A26FB6F4100ECED4A /* MenuView.swift */,
 			);
 			path = BestReviews;
@@ -344,7 +344,7 @@
 		6234D69B2742ED9F006DEE2A /* BestReviews */ = {
 			isa = PBXGroup;
 			children = (
-				6234D69C2742EDB9006DEE2A /* BestReviewController.swift */,
+				6234D69C2742EDB9006DEE2A /* ContentPanelController.swift */,
 			);
 			path = BestReviews;
 			sourceTree = "<group>";
@@ -352,7 +352,7 @@
 		6234D6A02742EF44006DEE2A /* BestReviews */ = {
 			isa = PBXGroup;
 			children = (
-				6234D69E2742EF3F006DEE2A /* ReviewWorker.swift */,
+				6234D69E2742EF3F006DEE2A /* BestReviewWorker.swift */,
 			);
 			path = BestReviews;
 			sourceTree = "<group>";
@@ -857,7 +857,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6234D69D2742EDB9006DEE2A /* BestReviewController.swift in Sources */,
+				6234D69D2742EDB9006DEE2A /* ContentPanelController.swift in Sources */,
 				0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */,
 				82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */,
 				137C7A4526DC502D001B3CE1 /* NewEventViewController.swift in Sources */,
@@ -880,7 +880,7 @@
 				8270083727092BC6009DBE62 /* ReviewViewController.swift in Sources */,
 				8270083127092B98009DBE62 /* ReviewTableViewCell.swift in Sources */,
 				62EC6D322703C935004646D1 /* UIColor+Hex.swift in Sources */,
-				6234D69F2742EF3F006DEE2A /* ReviewWorker.swift in Sources */,
+				6234D69F2742EF3F006DEE2A /* BestReviewWorker.swift in Sources */,
 				62FAF160274986E60037F03B /* HomeController.swift in Sources */,
 				0496A01F26D863F8005CA626 /* TextFieldIconAndImage.swift in Sources */,
 				657894A02704D8FB0010BF10 /* LocationSearchTableViewCell.swift in Sources */,
@@ -894,7 +894,7 @@
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,
 				62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */,
-				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
+				3A58727F26FB6F4100ECED4A /* ContentPanelVC.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
 				6501A26027403DD90084AC73 /* Card.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,

@@ -7,11 +7,11 @@
 
 import UIKit
 
-class BestReviewsViewController: UIViewController {
+class ContentPanelVC: UIViewController {
     
     var tableView: MenuView?
     var alert: Alert?
-    private var controller: BestReviewController = BestReviewController()
+    private var controller: ContentPanelController = ContentPanelController()
     
     override func loadView() {
         self.tableView = MenuView()
@@ -30,7 +30,7 @@ class BestReviewsViewController: UIViewController {
 
 }
 
-extension BestReviewsViewController: UITableViewDelegate, UITableViewDataSource {
+extension ContentPanelVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.controller.getCountElement()
@@ -55,8 +55,8 @@ extension BestReviewsViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 
-extension BestReviewsViewController: BestReviewControllerDelegate {
-    func failureRequest(error: ReviewErrors) {
+extension ContentPanelVC: ContentPanelControllerDelegate {
+    func failureRequest(error: BestReviewErrors) {
         var msgError: String = ""
         switch error {
         case .failGetRequestServer:

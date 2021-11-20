@@ -7,23 +7,23 @@
 
 import Foundation
 
-private enum HeightCellBestReview: Float {
+private enum HeightCellContentPanel: Float {
     case normalCell = 260
 }
 
-protocol BestReviewControllerDelegate: AnyObject {
-    func failureRequest(error: ReviewErrors)
+protocol ContentPanelControllerDelegate: AnyObject {
+    func failureRequest(error: BestReviewErrors)
     func successRequest()
     func startLoading()
     func stopLoading()
 }
 
-class BestReviewController {
+class ContentPanelController {
     private var listBestReviews: [BestReview]?
     
-    private weak var delegate: BestReviewControllerDelegate?
+    private weak var delegate: ContentPanelControllerDelegate?
     
-    public func delegate(delegate: BestReviewControllerDelegate?) {
+    public func delegate(delegate: ContentPanelControllerDelegate?) {
         self.delegate = delegate
     }
     
@@ -32,7 +32,7 @@ class BestReviewController {
     }
     
     public func getHeightCell() -> Float {
-        return HeightCellBestReview.normalCell.rawValue
+        return HeightCellContentPanel.normalCell.rawValue
     }
     
     public func getCountElement() -> Int {
@@ -41,7 +41,7 @@ class BestReviewController {
     
     public func loadReviews() {
         self.delegate?.startLoading()
-        ReviewWorker().loadReviews { bestReview, error in
+        BestReviewWorker().loadReviews { bestReview, error in
             if let _error = error {
                 self.delegate?.failureRequest(error: _error)
                 self.delegate?.stopLoading()

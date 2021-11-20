@@ -61,7 +61,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
-        let bestReviewsViewController = BestReviewsViewController()
+        let bestReviewsViewController = ContentPanelVC()
         fpc?.set(contentViewController: bestReviewsViewController)
         fpc?.addPanel(toParent: self)
     }
