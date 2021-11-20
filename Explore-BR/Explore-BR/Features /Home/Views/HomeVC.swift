@@ -10,7 +10,7 @@ import FloatingPanel
 import MapKit
 import CoreLocation
 
-class HomeVC: UIViewController, UITextFieldDelegate {
+class HomeVC: UIViewController {
     
     @IBOutlet weak var statusBackgroundView: UIView!
     @IBOutlet weak var wrapSearchBarView: UIView!
@@ -34,8 +34,8 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        locationManager.requestWhenInUseAuthorization()
-        self.location()
+        self.locationManager.requestWhenInUseAuthorization()
+        self.configLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +48,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
-    func setupLabelTap() {
+    private func setupLabelTap() {
         let labelTap = UITapGestureRecognizer(target: self, action: #selector(self.tappedLabel(_:)))
         self.searchLabel.isUserInteractionEnabled = true
         self.searchLabel.addGestureRecognizer(labelTap)
@@ -75,7 +75,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         fpc?.surfaceView.grabberHandleSize = .init(width: 56.0, height: 2.0)
     }
     
-    func configureUI() {
+    private func configureUI() {
         self.statusBackgroundView.applyGradientInView(colors: [blueDarkButton,blueLightButton])
         
         self.wrapSearchBarView.layer.cornerRadius = self.wrapSearchBarView.frame.size.height/2
@@ -96,31 +96,26 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.searchLabel.textColor = UIColor.placeholderText
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return textField.resignFirstResponder()
-    }
-    
-    func location(){
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+    private func configLocation() {
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.startUpdatingLocation()
     }
     
 }
         
 extension HomeVC: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-
         if let location = locations.first {
             self.locationManager.stopUpdatingLocation()
-
             render(location)
         }
     }
     
-    func render(_ location: CLLocation){
-
+    func render(_ location: CLLocation) {
+        self.controller.setLocationUser(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: coordinate, span: span)
@@ -133,5 +128,11 @@ extension HomeVC: CLLocationManagerDelegate{
         pin.coordinate = coordinate
         self.homeMapView.addAnnotation(pin)
 
+    }
+}
+
+extension HomeVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
     }
 }

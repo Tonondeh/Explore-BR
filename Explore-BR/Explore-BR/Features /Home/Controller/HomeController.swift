@@ -32,6 +32,7 @@ class HomeController {
     }
     
     public func setLocationUser(latitude: Double, longitude: Double) {
-        
+        print("HomeController >> latitude ", latitude)
+        print("HomeController >> longitude ", longitude)
     }
 }
