@@ -14,9 +14,24 @@ protocol HomeControllerDelegate: AnyObject {
 
 class HomeController {
     
+    private var contentPanelVC: ContentPanelVC?
+    
     private weak var delegate: HomeControllerDelegate?
     
     public func delegate(delegate: HomeControllerDelegate?) {
         self.delegate = delegate
+    }
+    
+    public func createContentPanelVC() -> ContentPanelVC {
+        self.contentPanelVC = ContentPanelVC()
+        if let _contentPavelVC = self.contentPanelVC {
+            return _contentPavelVC
+        } else {
+            return ContentPanelVC()
+        }
+    }
+    
+    public func setLocationUser(latitude: Double, longitude: Double) {
+        
     }
 }

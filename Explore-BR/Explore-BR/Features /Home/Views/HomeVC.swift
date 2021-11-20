@@ -18,8 +18,9 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var searchLabel: UILabel!
     @IBOutlet weak var homeMapView: MKMapView!
     
-    var fpc: FloatingPanelController?
-    let locationManager = CLLocationManager()
+    private var fpc: FloatingPanelController?
+    private let locationManager = CLLocationManager()
+    private var controller: HomeController = HomeController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,8 +62,8 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
-        let bestReviewsViewController = ContentPanelVC()
-        fpc?.set(contentViewController: bestReviewsViewController)
+        let contentPanel = controller.createContentPanelVC()
+        fpc?.set(contentViewController: contentPanel)
         fpc?.addPanel(toParent: self)
     }
     
