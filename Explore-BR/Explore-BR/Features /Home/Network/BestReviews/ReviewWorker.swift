@@ -15,6 +15,8 @@ enum ReviewErrors: Error {
 class ReviewWorker {
     private var mockListReviews: [BestReview] = [
         BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1]),
+        BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1]),
+        BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1]),
         BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1])
     ]
     

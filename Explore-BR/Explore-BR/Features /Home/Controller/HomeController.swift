@@ -1,0 +1,22 @@
+//
+//  HomeController.swift
+//  Explore-BR
+//
+//  Created by Samuel Brehm on 20/11/21.
+//
+
+import Foundation
+
+protocol HomeControllerDelegate: AnyObject {
+    func startLoading()
+    func stopLoading()
+}
+
+class HomeController {
+    
+    private weak var delegate: HomeControllerDelegate?
+    
+    public func delegate(delegate: HomeControllerDelegate?) {
+        self.delegate = delegate
+    }
+}

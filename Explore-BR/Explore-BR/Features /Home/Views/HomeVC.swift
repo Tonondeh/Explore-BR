@@ -61,26 +61,15 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     private func configFloatingPanel() {
         fpc = FloatingPanelController()
-        
-        //        fpc?.delegate = self // Optional
-        
-        // Set a content view controller.
         let bestReviewsViewController = BestReviewsViewController()
-        
         fpc?.set(contentViewController: bestReviewsViewController)
-        
-        // Add and show the views managed by the `FloatingPanelController` object to self.view.
         fpc?.addPanel(toParent: self)
     }
     
-    
     private func configFloatingPanelUI() {
         let appearance = SurfaceAppearance()
-        
         appearance.cornerRadius = 18.0
-        
         fpc?.surfaceView.appearance = appearance
-        
         fpc?.surfaceView.grabberHandlePadding = 10.0
         fpc?.surfaceView.grabberHandleSize = .init(width: 56.0, height: 2.0)
     }
@@ -118,32 +107,30 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     }
     
 }
+        
+extension HomeVC: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
 
-        
-    extension HomeVC: CLLocationManagerDelegate{
-        
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
-            
-            if let location = locations.first {
-                self.locationManager.stopUpdatingLocation()
-                
-                render(location)
-                }
-        }
-        
-        func render(_ location: CLLocation){
-            
-            let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-            let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-            let region = MKCoordinateRegion(center: coordinate, span: span)
-           
-            self.homeMapView.setRegion(region, animated: true)
-            
-            let pin = MKPointAnnotation()
-            pin.title = ""
-            pin.subtitle = ""
-            pin.coordinate = coordinate
-            self.homeMapView.addAnnotation(pin)
+        if let location = locations.first {
+            self.locationManager.stopUpdatingLocation()
 
+            render(location)
         }
     }
+    
+    func render(_ location: CLLocation){
+
+        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+
+        self.homeMapView.setRegion(region, animated: true)
+
+        let pin = MKPointAnnotation()
+        pin.title = ""
+        pin.subtitle = ""
+        pin.coordinate = coordinate
+        self.homeMapView.addAnnotation(pin)
+
+    }
+}
