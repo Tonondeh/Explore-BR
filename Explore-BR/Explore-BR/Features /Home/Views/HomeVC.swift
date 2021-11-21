@@ -8,7 +8,7 @@
 import UIKit
 import FloatingPanel
 import MapKit
-import CoreLocation
+//import CoreLocation
 
 class HomeVC: UIViewController {
     

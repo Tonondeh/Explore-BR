@@ -9,8 +9,10 @@ import UIKit
 
 class ContentPanelVC: UIViewController {
     
-    var tableView: MenuView?
-    var alert: Alert?
+    private var tableView: MenuView?
+    private var alert: Alert?
+    private var latitude: Double?
+    private var longitude: Double?
     private var controller: ContentPanelController = ContentPanelController()
     
     override func loadView() {
@@ -21,13 +23,21 @@ class ContentPanelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.controller.delegate(delegate: self)
-        self.controller.loadReviews()
+        self.loadReviews()
     }
     
     private func configTableView() {
         self.tableView?.configTableViewProtocols(delegate: self, dataSource: self)
     }
-
+    
+    private func loadReviews() {
+        self.controller.loadReviews(latitude: self.latitude ?? 0, longitude: self.longitude ?? 0)
+    }
+    
+    public func setLocationUser(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 }
 
 extension ContentPanelVC: UITableViewDelegate, UITableViewDataSource {

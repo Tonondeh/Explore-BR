@@ -14,13 +14,13 @@ enum BestReviewErrors: Error {
 
 class BestReviewWorker {
     private var mockListReviews: [BestReview] = [
-        BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1]),
-        BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1]),
-        BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1]),
-        BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1])
+        BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1], latitude: -22.9035393, longitude: -43.2095869),
+        BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1], latitude: -22.9035393, longitude: -43.2095869),
+        BestReview(image: "location-detail", title: "Pernambuco", type: "Cidade", region: "Região 1", stars: [2, 5, 2, 4, 1], latitude: -22.9035393, longitude: -43.2095869),
+        BestReview(image: "location-detail", title: "Guarujá", type: "Praia", region: "Regiao 2", stars: [2, 5, 2, 4, 1], latitude: -22.9035393, longitude: -43.2095869)
     ]
     
-    func loadReviews(completion: @escaping (_ bestReview: [BestReview]?, _ error: BestReviewErrors?) -> Void) {
+    func loadReviews(latitude: Double, longitude: Double, completion: @escaping (_ bestReview: [BestReview]?, _ error: BestReviewErrors?) -> Void) {
         let result = true
         
         if result {

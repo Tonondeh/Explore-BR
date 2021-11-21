@@ -13,4 +13,6 @@ struct BestReview: Codable {
     var type: String?
     var region: String?
     var stars: [Int]?
+    var latitude: Double?
+    var longitude: Double?
 }

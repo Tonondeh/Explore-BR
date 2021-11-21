@@ -32,6 +32,7 @@ class HomeController {
     }
     
     public func setLocationUser(latitude: Double, longitude: Double) {
+        self.contentPanelVC?.setLocationUser(latitude: latitude, longitude: longitude)
         print("HomeController >> latitude ", latitude)
         print("HomeController >> longitude ", longitude)
     }

@@ -39,9 +39,9 @@ class ContentPanelController {
         return self.listBestReviews?.count ?? 0
     }
     
-    public func loadReviews() {
+    public func loadReviews(latitude: Double, longitude: Double) {
         self.delegate?.startLoading()
-        BestReviewWorker().loadReviews { bestReview, error in
+        BestReviewWorker().loadReviews(latitude: latitude, longitude: longitude) { bestReview, error in
             if let _error = error {
                 self.delegate?.failureRequest(error: _error)
                 self.delegate?.stopLoading()
