@@ -19,7 +19,8 @@ protocol ContentPanelControllerDelegate: AnyObject {
 }
 
 class ContentPanelController {
-    private var listBestReviews: [BestReview]?
+    private var listBestReviews: [Review]?
+    private var listMoreLiked: [Review]?
     
     private weak var delegate: ContentPanelControllerDelegate?
     
@@ -27,21 +28,21 @@ class ContentPanelController {
         self.delegate = delegate
     }
     
-    public func getListBestReviews() -> [BestReview] {
-        return self.listBestReviews ?? [BestReview()]
+    public func getListBestReviews() -> [Review] {
+        return self.listMoreLiked ?? [Review()]
+    }
+    
+    public func getListMoreLiked() -> [Review] {
+        return self.listBestReviews ?? [Review()]
     }
     
     public func getHeightCell() -> Float {
         return HeightCellContentPanel.normalCell.rawValue
     }
     
-    public func getCountElement() -> Int {
-        return self.listBestReviews?.count ?? 0
-    }
-    
-    public func loadReviews(latitude: Double, longitude: Double) {
+    public func loadBestReviews(latitude: Double, longitude: Double) {
         self.delegate?.startLoading()
-        BestReviewWorker().loadReviews(latitude: latitude, longitude: longitude) { bestReview, error in
+        ReviewsWorker().loadBestReviews(latitude: latitude, longitude: longitude) { bestReview, error in
             if let _error = error {
                 self.delegate?.failureRequest(error: _error)
                 self.delegate?.stopLoading()
@@ -50,6 +51,26 @@ class ContentPanelController {
             
             if let _bestReview = bestReview {
                 self.listBestReviews = _bestReview
+                self.delegate?.successRequest()
+            } else {
+                self.delegate?.failureRequest(error: .failsLoadList)
+            }
+            
+            self.delegate?.stopLoading()
+        }
+    }
+    
+    public func loadMoreLiked(latitude: Double, longitude: Double) {
+        self.delegate?.startLoading()
+        ReviewsWorker().loadMoreLiked(latitude: latitude, longitude: longitude) { bestReview, error in
+            if let _error = error {
+                self.delegate?.failureRequest(error: _error)
+                self.delegate?.stopLoading()
+                return
+            }
+            
+            if let _bestReview = bestReview {
+                self.listMoreLiked = _bestReview
                 self.delegate?.successRequest()
             } else {
                 self.delegate?.failureRequest(error: .failsLoadList)

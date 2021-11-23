@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BestReview: Codable {
+struct Review: Codable {
     var image: String?
     var title: String?
     var type: String?

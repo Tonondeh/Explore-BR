@@ -15,7 +15,7 @@ class MenuView: UIView {
         
         tableView.separatorStyle = .none
         
-        tableView.register(BestReviewsTableViewCell.nib(), forCellReuseIdentifier: BestReviewsTableViewCell.identifier)
+        tableView.register(ReviewsTableViewCell.nib(), forCellReuseIdentifier: ReviewsTableViewCell.identifier)
         
         return tableView
     }()

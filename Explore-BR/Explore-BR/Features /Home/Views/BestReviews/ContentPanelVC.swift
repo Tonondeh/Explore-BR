@@ -31,7 +31,8 @@ class ContentPanelVC: UIViewController {
     }
     
     private func loadReviews() {
-        self.controller.loadReviews(latitude: self.latitude ?? 0, longitude: self.longitude ?? 0)
+        self.controller.loadBestReviews(latitude: self.latitude ?? 0, longitude: self.longitude ?? 0)
+        self.controller.loadMoreLiked(latitude: self.latitude ?? 0, longitude: self.longitude ?? 0)
     }
     
     public func setLocationUser(latitude: Double, longitude: Double) {
@@ -43,20 +44,21 @@ class ContentPanelVC: UIViewController {
 extension ContentPanelVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.controller.getCountElement()
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: BestReviewsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: BestReviewsTableViewCell.identifier, for: indexPath) as? BestReviewsTableViewCell
-        
-        if indexPath.row == 1 {
-            cell?.cardHeaderLabel.text = "Mais curtidos"
-        }
-        
-        cell?.setupCell(cardList: self.controller.getListBestReviews())
+        let cell: ReviewsTableViewCell? = tableView.dequeueReusableCell(withIdentifier: ReviewsTableViewCell.identifier, for: indexPath) as? ReviewsTableViewCell
         cell?.setCurrentNavigationController(navigation: self.navigationController)
         
-        return cell ?? UITableViewCell()
+        if indexPath.row == 1 {
+            cell?.setupCell(typeReview: .moreLiked, cardList: self.controller.getListMoreLiked())
+            return cell ?? UITableViewCell()
+        } else {
+            cell?.setupCell(typeReview: .bestReview, cardList: self.controller.getListBestReviews())
+            return cell ?? UITableViewCell()
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -86,10 +88,10 @@ extension ContentPanelVC: ContentPanelControllerDelegate {
     }
     
     func startLoading() {
-        self.showSpinner()
+        
     }
     
     func stopLoading() {
-        self.removeSpinner()
+        
     }
 }
