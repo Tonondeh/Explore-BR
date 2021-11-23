@@ -13,19 +13,19 @@ class SearchController {
     var newData: [Place] = []
     var resultPlaceSearch: [Place] = []
     
-    var placeTypes: [Place] = [Place(name: "Parques", placeButtonEnable: true, id: "1"),Place(name: "Restaurantes", placeButtonEnable: false, id: "2"), Place(name: "Shopping", placeButtonEnable: false, id: "3"), Place(name: "Cinema", placeButtonEnable: false, id: "4"), Place(name: "Zoologico", placeButtonEnable: false, id: "5")]
+    var placeTypes: [Place] = []
     
     var placeList:[Place] = [
-        Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "wwwwww", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
-        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "restaurantes", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
-        Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
+        
+//        PlaceGoogleResponse(businessStatus: "", icon: <#T##String?#>, iconBackgroundColor: <#T##String?#>, iconMaskBaseURI: <#T##String?#>, name: <#T##String?#>, photos: <#T##[String]?#>, placeID: <#T##String?#>, rating: <#T##Double?#>, reference: <#T##String?#>, types: <#T##[String]?#>, userRatingsTotal: <#T##Int?#>, vicinity: <#T##String?#>)
+        
+        
+//        Place(name: "cascata do osvaldo", image: UIImage(named: "location-detail") ?? UIImage(), localType: "wwwwww", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, id: "1"),
+//        Place(name: "cascata do caracol",image: UIImage(named: "location-detail") ?? UIImage(), localType: "restaurantes", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, id: "2"),
+//        Place(name: "cachoeira", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3"),Place(name: "lalalalal", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, id: "3")
     ]
     
-    let searchRecents: [Place] = [
-        Place(name: "Praça X", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 4.4, address: "Endereço abcdefg", id: "1"),
-        Place(name: "Praça Y", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 2.5, address: "Endereço abcde", id: "2"),
-        Place(name: "Praça Z", image: UIImage(named: "location-detail") ?? UIImage(), localType: "Parques", local: "Foz", description: "Cachoeira", heartIconEnable: true, heartIcon: UIImage(systemName: "heart.fill") ?? UIImage(), star: 5.0, address: "Endereço abc", id: "3")
-    ]
+    let searchRecents: [Place] = []
     
     public func numberOfPlaces() -> Int {
         return self.placeTypes.count
@@ -54,28 +54,53 @@ class SearchController {
     func filterBy(name: String) {
         let searchLower = name.lowercased()
         
-        newData = self.placeList.filter {
-            let filterBy = $0.localType?.lowercased()
-            return filterBy?.lowercased().contains(searchLower) ?? true
-        }
-        
-        print("data", newData)
-        
-        resultPlaceSearch = newData
+//        newData = self.placeList.filter {
+//            let filterBy = $0.localType?.lowercased()
+//            return filterBy?.lowercased().contains(searchLower) ?? true
+//        }
+//
+//        print("data", newData)
+//
+//        resultPlaceSearch = newData
         
         print("resultPlaceSearch", resultPlaceSearch)
+    }
+    
+    func getPlaceWith(name: String) {
+        SearchWorker.shared.search(by: name) { place, error in
+            if let _error = error {
+                debugPrint(_error.localizedDescription)
+            } else {
+                guard let _place = place else { return }
+                
+                var placeFormatted: Place
+                
+                for value in _place.results {
+                    placeFormatted = Place(name: value.name, placeButtonEnable: true, image: UIImage(named: value.photos[0].photoReference) ?? UIImage(), localType: value.vicinity, local: value.vicinity, description: value.vicinity, heartIconEnable: true, heartIcon: UIImage(systemName: "heart") ?? UIImage(), star: 4.0, icon: UIImage(named: value.icon) ?? UIImage(), address: value.vicinity, id: value.placeID)
+                    
+                    debugPrint("place ==", placeFormatted)
+                    
+                    self.newData.append(placeFormatted)
+                    self.resultPlaceSearch.append(placeFormatted)
+                }
+            }
+        }
     }
     
     func searchPlaceWith(searchText: String) {
         let searchLower = searchText.lowercased()
         
-        newData = self.placeList.filter {
-            let filterBy = $0.name?.lowercased()
-            return filterBy?.lowercased().contains(searchLower) ?? true
-        }
+        if searchLower == "" { return }
+        
+        self.getPlaceWith(name: searchLower)
+        
+//        newData = self.placeList.filter {
+//            let filterBy = $0.name?.lowercased()
+//            return filterBy?.lowercased().contains(searchLower) ?? true
+//        }
         
         
-        resultPlaceSearch = newData
+//        resultPlaceSearch = newData
     }
     
 }

@@ -208,17 +208,13 @@ extension SearchVC:UITableViewDelegate,UITableViewDataSource{
 
 extension SearchVC: SearchTableViewCellDelegate {
     func changeHeartState(index: Int) {
-        self.controller.placeList[index].heartIconEnable = !(self.controller.placeList[index].heartIconEnable ?? false)
-        
-        let isHeartEnabled: Bool = self.controller.placeList[index].heartIconEnable ?? false
-        
-        if isHeartEnabled {
-            self.controller.placeList[index].heartIcon = UIImage(systemName: "heart.fill") ?? UIImage()
-        } else {
-            self.controller.placeList[index].heartIcon = UIImage(systemName: "heart") ?? UIImage()
-        }
-        
-        self.searchTableView.reloadData()
+//        self.controller.placeList[index].heartIconEnable = !(self.controller.placeList[index].heartIconEnable ?? false)
+//
+//        let isHeartEnabled: Bool = self.controller.placeList[index].heartIconEnable ?? false
+//
+//        self.controller.placeList[index].heartIconEnable = isHeartEnabled
+//
+//        self.searchTableView.reloadData()
     }
     
 }

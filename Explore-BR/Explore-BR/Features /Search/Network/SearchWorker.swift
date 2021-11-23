@@ -13,40 +13,39 @@ class SearchWorker {
     
     static let shared = SearchWorker()
     
-    func search(by: String, completion: @escaping(_ place: PlaceGoogleResponse?, _ error: Error?) -> Void) {
-//        let parameters = ["location": "-19.9695407,-44.0509203", "radius": "20000"]
+    var photosArray: [String] = []
+    
+    func search(by: String, completion: @escaping(_ place: PlacesGoogle?, _ error: Error?) -> Void) {
+        let key = "AIzaSyDJQUubD6DQxsmwXi-JsuisstKvLWM4VY0"
         
-        let baseUrl = "\(API.baseUrl)nearbysearch/json?location=-19.9695407,-44.0509203&radius=20000"
+        let baseUrl = "\(API.baseUrl)nearbysearch/json?location=-19.9695407,-44.0509203&radius=20000&key=\(key)"
         
-        guard let url: URL = URL(string: baseUrl) else { return }
+        let url = URL(string: baseUrl)
+
         
-        var urlRequest:URLRequest = URLRequest(url: url as URL)
-        
-        urlRequest.httpMethod = "GET"
-        
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        AF.request(urlRequest).responseJSON { response in
-            if response.response?.statusCode == 200 {
-                
-                if let data = response.data {
-                    
-                    do {
-//                        let data = try JSONDecoder().decode(PlaceGoogleResponse.self, from: data)
-                        let dataJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                        guard let dataFormatted = dataJson as? PlaceGoogleResponse else { return }
-                        
-                        completion(dataFormatted, nil)
-                        
-                    } catch {
-                        
-                        debugPrint(error)
-                        completion(nil, error)
-                        
-                    }
-                    
+        AF.request(baseUrl).responseJSON { response in
+            
+            if let status = response.response?.statusCode {
+                switch(status) {
+                case 200:
+                    print("example success")
+                default:
+                    print("error with response status: \(status)")
                 }
+            }
+            
+            
+            guard let data = response.data else { return }
+            
+            
+            do {
+                let placeModel: PlacesGoogle = try JSONDecoder().decode(PlacesGoogle.self, from: data)
+                debugPrint("placeModel ====", placeModel)
                 
+                completion(placeModel, nil)
+            } catch {
+                debugPrint("Error =>", error)
+                completion(nil, error)
             }
         }
         
@@ -56,6 +55,7 @@ class SearchWorker {
 //        let location = CLLocation()
 //
 //        var locationObject: [String:Any]
+//        return locationObject as NSDictionary
 //
 ////        locationObject["latitude"] = location.coordinate.latitude as Double?
 //

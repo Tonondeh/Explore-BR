@@ -39,7 +39,8 @@ class PlacesCollectionViewCell: UICollectionViewCell {
     func setUpCell(data: Place){
         self.placesLabel.text = data.name
         
-        if let isPlaceButtonEnable = data.placeButtonEnable {
+        let isPlaceButtonEnable = data.placeButtonEnable
+//        {
             print("isPlaceButtonEnable", isPlaceButtonEnable)
 //            if isPlaceButtonEnable {
 //                
@@ -53,7 +54,7 @@ class PlacesCollectionViewCell: UICollectionViewCell {
 //                self.placesLabel.textColor = .black
 //                
 //            }
-        }
+//        }
     }
     
     override func awakeFromNib() {

@@ -72,21 +72,16 @@ class SearchTableViewCell: UITableViewCell {
     }
 
     public func setupCell(data:Place){
-        self.cardImageView.image = data.image
-        self.localTypeLabel.text = data.localType
-        self.localLabel.text = data.name
-        self.descriptionLabel.text = data.description
-        self.heartButton.setImage(data.heartIcon, for: .normal)
+//        self.cardImageView.image = data.photos[0]
+        self.localTypeLabel.text = data.name
+        self.localLabel.text = data.local
+        self.descriptionLabel.text = data.localType
+        self.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
         
-        guard let isHeartEnabled = data.heartIconEnable else { return }
         
-        if isHeartEnabled {
-            self.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-            self.heartButton.tintColor = .red
-        } else {
-            self.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
-            self.heartButton.tintColor = .red
-        }
+//        guard let isHeartEnabled = data.heartIconEnable else { return }
+//
+//        self.heartButton.setImage(UIImage(systemName: isHeartEnabled ? "heart.fill" : "heart"), for: .normal)
     }
     
     
