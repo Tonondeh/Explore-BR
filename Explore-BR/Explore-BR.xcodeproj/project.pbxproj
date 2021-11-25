@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0496A00D26D8534A005CA626 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A00C26D8534A005CA626 /* UIView+Gradient.swift */; };
-		0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0496A00F26D85379005CA626 /* FrameModalMenu.xib */; };
-		0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01026D85379005CA626 /* FrameModalMenu.swift */; };
 		0496A01626D85379005CA626 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496A01126D85379005CA626 /* Home.storyboard */; };
-		0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01226D85379005CA626 /* ModalPresentationController.swift */; };
 		0496A01826D85379005CA626 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01326D85379005CA626 /* HomeVC.swift */; };
 		0496A01C26D863E4005CA626 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0496A01A26D863E4005CA626 /* ChangePasswordViewController.swift */; };
 		0496A01D26D863E4005CA626 /* ChangePassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0496A01B26D863E4005CA626 /* ChangePassword.storyboard */; };
@@ -68,6 +65,7 @@
 		62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1B273607A200CA737A /* UserRegister.swift */; };
 		62FBAB1E2736085B00CA737A /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1D2736085B00CA737A /* RegisterController.swift */; };
 		62FBAB202736087400CA737A /* RegisterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FBAB1F2736087400CA737A /* RegisterWorker.swift */; };
+		6501A26027403DD90084AC73 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6501A25F27403DD90084AC73 /* Card.swift */; };
 		650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */; };
 		6525095926FD21040080B792 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6525095726FD21040080B792 /* SearchTableViewCell.swift */; };
 		6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6525095826FD21040080B792 /* SearchTableViewCell.xib */; };
@@ -112,10 +110,7 @@
 /* Begin PBXFileReference section */
 		0080C46BEAC5D534867E8E2E /* Pods_Explore_BR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Explore_BR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0496A00C26D8534A005CA626 /* UIView+Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
-		0496A00F26D85379005CA626 /* FrameModalMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FrameModalMenu.xib; sourceTree = "<group>"; };
-		0496A01026D85379005CA626 /* FrameModalMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameModalMenu.swift; sourceTree = "<group>"; };
 		0496A01126D85379005CA626 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		0496A01226D85379005CA626 /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalPresentationController.swift; sourceTree = "<group>"; };
 		0496A01326D85379005CA626 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		0496A01A26D863E4005CA626 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		0496A01B26D863E4005CA626 /* ChangePassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ChangePassword.storyboard; sourceTree = "<group>"; };
@@ -172,6 +167,7 @@
 		62FBAB1B273607A200CA737A /* UserRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegister.swift; sourceTree = "<group>"; };
 		62FBAB1D2736085B00CA737A /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		62FBAB1F2736087400CA737A /* RegisterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWorker.swift; sourceTree = "<group>"; };
+		6501A25F27403DD90084AC73 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		650B5A4626F6723E00CEB4E2 /* TextField+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Animation.swift"; sourceTree = "<group>"; };
 		6525095726FD21040080B792 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6525095826FD21040080B792 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -231,11 +227,9 @@
 		0496A00E26D85379005CA626 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3A58727826FB6F4100ECED4A /* Model */,
 				3A58727026FB6F4100ECED4A /* BestReviews */,
-				0496A00F26D85379005CA626 /* FrameModalMenu.xib */,
-				0496A01026D85379005CA626 /* FrameModalMenu.swift */,
 				0496A01126D85379005CA626 /* Home.storyboard */,
-				0496A01226D85379005CA626 /* ModalPresentationController.swift */,
 				0496A01326D85379005CA626 /* HomeVC.swift */,
 			);
 			path = Home;
@@ -287,7 +281,6 @@
 				3A58727126FB6F4100ECED4A /* BestReviewsTableViewCell */,
 				3A58727426FB6F4100ECED4A /* CardCollectionViewCell */,
 				3A58727726FB6F4100ECED4A /* BestReviewsViewController.swift */,
-				3A58727826FB6F4100ECED4A /* Model */,
 				3A58727A26FB6F4100ECED4A /* MenuView.swift */,
 			);
 			path = BestReviews;
@@ -315,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				3A58727926FB6F4100ECED4A /* BestReview.swift */,
+				6501A25F27403DD90084AC73 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -775,7 +769,6 @@
 				6578949A2704B47F0010BF10 /* EmptyStateTableViewCell.xib in Resources */,
 				3A58728826FB6F8600ECED4A /* PlacesCollectionViewCell.xib in Resources */,
 				627EF23926D6FCF50053B7F1 /* Login.storyboard in Resources */,
-				0496A01426D85379005CA626 /* FrameModalMenu.xib in Resources */,
 				627EF22826D6FCA30053B7F1 /* SF-Pro-Text-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,7 +831,6 @@
 				6293350426FBE65B00E12B50 /* User.swift in Sources */,
 				65A37242273319D30027B1C7 /* SignInWorker.swift in Sources */,
 				0496A01C26D863E4005CA626 /* ChangePasswordViewController.swift in Sources */,
-				0496A01526D85379005CA626 /* FrameModalMenu.swift in Sources */,
 				62D4638727357D7400625F9A /* AuthErrors.swift in Sources */,
 				3A58728026FB6F4100ECED4A /* BestReview.swift in Sources */,
 				3A58728726FB6F8600ECED4A /* PlacesCollectionViewCell.swift in Sources */,
@@ -867,6 +859,7 @@
 				62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */,
 				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
+				6501A26027403DD90084AC73 /* Card.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */,
@@ -874,7 +867,6 @@
 				A09A481427399F6A00A79EBA /* ProfileController.swift in Sources */,
 				62FBAB1E2736085B00CA737A /* RegisterController.swift in Sources */,
 				626702142704D1350048A178 /* Event.swift in Sources */,
-				0496A01726D85379005CA626 /* ModalPresentationController.swift in Sources */,
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				657894992704B47F0010BF10 /* EmptyStateTableViewCell.swift in Sources */,
