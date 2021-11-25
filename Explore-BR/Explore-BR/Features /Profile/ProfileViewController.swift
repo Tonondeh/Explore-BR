@@ -94,3 +94,16 @@ class ProfileViewController: UIViewController {
     }
     
 }
+
+extension ProfileViewController: ProfileDelegate{
+    func signOut() {
+
+
+        let rootViewController = self.view.window?.rootViewController as? UINavigationController
+        rootViewController?.setViewControllers([rootViewController?.viewControllers.first ?? UIViewController()],
+        animated: true)
+        rootViewController?.popToRootViewController(animated: true)
+        
+    }
+
+}
