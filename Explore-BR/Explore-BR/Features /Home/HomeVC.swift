@@ -9,6 +9,7 @@ import UIKit
 import FloatingPanel
 import MapKit
 import CoreLocation
+import FirebaseAuth
 
 class HomeVC: UIViewController, UITextFieldDelegate {
     
@@ -20,6 +21,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
     
     var fpc: FloatingPanelController?
     let locationManager = CLLocationManager()
+    private var auth = Auth.auth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,7 @@ class HomeVC: UIViewController, UITextFieldDelegate {
         self.configFloatingPanelUI()
         self.configSearchLabel()
         self.setupLabelTap()
+        print("Logado \(self.auth.tenantID)")
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -28,6 +28,8 @@
 		3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58727A26FB6F4100ECED4A /* MenuView.swift */; };
 		3A58728726FB6F8600ECED4A /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */; };
 		3A58728826FB6F8600ECED4A /* PlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */; };
+		3A88820D274F2C1800BD2D87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A88820C274F2C1800BD2D87 /* ProfileViewController.swift */; };
+		3A88820F274F2C2200BD2D87 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88820E274F2C2200BD2D87 /* Profile.storyboard */; };
 		3ABC2527274F247F00BE24AA /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC2526274F247F00BE24AA /* SearchController.swift */; };
 		3ABC252A274F251D00BE24AA /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC2529274F251D00BE24AA /* SearchWorker.swift */; };
 		3ABC252C274F262D00BE24AA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABC252B274F262D00BE24AA /* API.swift */; };
@@ -131,6 +133,8 @@
 		3A58727A26FB6F4100ECED4A /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		3A58728326FB6F8600ECED4A /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
 		3A58728426FB6F8600ECED4A /* PlacesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlacesCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A88820C274F2C1800BD2D87 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		3A88820E274F2C2200BD2D87 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		3ABC2526274F247F00BE24AA /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		3ABC2529274F251D00BE24AA /* SearchWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
 		3ABC252B274F262D00BE24AA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -380,6 +384,8 @@
 			isa = PBXGroup;
 			children = (
 				627EF23B26D6FD080053B7F1 /* Profile.storyboard */,
+				3A88820E274F2C2200BD2D87 /* Profile.storyboard */,
+				3A88820C274F2C1800BD2D87 /* ProfileViewController.swift */,
 				627EF23C26D6FD080053B7F1 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -772,6 +778,7 @@
 				6525095A26FD21040080B792 /* SearchTableViewCell.xib in Resources */,
 				3A58727C26FB6F4100ECED4A /* BestReviewsTableViewCell.xib in Resources */,
 				657894A12704D8FB0010BF10 /* LocationSearchTableViewCell.xib in Resources */,
+				3A88820F274F2C2200BD2D87 /* Profile.storyboard in Resources */,
 				3A58727D26FB6F4100ECED4A /* CardCollectionViewCell.xib in Resources */,
 				8270083827092BC6009DBE62 /* Review.storyboard in Resources */,
 				FE6980A926D804BB0011272E /* Register.storyboard in Resources */,
@@ -879,6 +886,7 @@
 				626702142704D1350048A178 /* Event.swift in Sources */,
 				3ABC252C274F262D00BE24AA /* API.swift in Sources */,
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,
+				3A88820D274F2C1800BD2D87 /* ProfileViewController.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				657894992704B47F0010BF10 /* EmptyStateTableViewCell.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
