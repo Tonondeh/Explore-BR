@@ -16,15 +16,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        if AuthManager.shared.getUserAuthenticated() == nil {
+        if AuthManager.shared.getUserAuthenticated() != nil {
             let storyboard =  UIStoryboard(name: "Home", bundle: nil)
             let tabbar: UITabBarController? = (storyboard.instantiateViewController(withIdentifier: "HomeTabBar") as? UITabBarController)
-            
             self.window?.rootViewController = tabbar
         } else {
             let storyboard =  UIStoryboard(name: "Login", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Login") as? LoginVC ?? UIViewController()
             let navVC = UINavigationController(rootViewController: vc)
+            navVC.navigationBar.isHidden = true
+//            navVC.setNavigationBarHidden(true, animated: true)
             self.window?.rootViewController = navVC
         }
         

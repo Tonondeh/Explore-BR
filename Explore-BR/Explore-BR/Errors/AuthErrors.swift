@@ -12,4 +12,5 @@ public enum AuthErrors: Error {
     case userNotExists
     case errorSignin
     case invalidData
+    case emptyIdUSer
 }

@@ -22,6 +22,8 @@ class HomeVC: UIViewController {
     private let locationManager = CLLocationManager()
     private var controller: HomeController = HomeController()
     
+    private var alert: Alert?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
@@ -30,6 +32,8 @@ class HomeVC: UIViewController {
         self.configFloatingPanelUI()
         self.configSearchLabel()
         self.setupLabelTap()
+        self.alert = Alert(viewController: self)
+        self.controller.delegate(delegate: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -55,9 +59,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func tappedAvatarProfile(_ sender: UIButton) {
-        let storyboard =  UIStoryboard(name: "Profile", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        self.controller.getUserAuthenticated()
     }
     
     private func configFloatingPanel() {
@@ -135,4 +137,42 @@ extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }
+}
+
+extension HomeVC: HomeControllerDelegate {
+    func successFindUser(user: User) {
+        let storyboard =  UIStoryboard(name: "Profile", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Profile") as? ProfileViewController
+        // aqui enviar o user recebido por parâmetro
+        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        print("User enviado profile >>>> ", user)
+    }
+    
+    func failureFindUser(error: AuthErrors) {
+        var msgError: String = ""
+        switch error {
+        case .userNotExists:
+            msgError = "Usuário não existe"
+        case .invalidData:
+            msgError = "Dados inválidos"
+        case .errorServer:
+            msgError = "Erro ao buscar os dados. Tente novamente."
+        case .errorSignin:
+            msgError = "Erro ao logar. Tente novamente."
+        case .emptyIdUSer:
+            msgError = "Erro ao logar. Tente novamente."
+        }
+        
+        self.alert?.showAlert(title: "Erro", message: msgError, completion: nil)
+    }
+    
+    func startLoading() {
+        self.showSpinner()
+    }
+    
+    func stopLoading() {
+        self.removeSpinner()
+    }
+    
+    
 }
