@@ -18,6 +18,7 @@ class LoginVC: UIViewController {
     
     var auth: Auth?
     var alert: Alert?
+    private var autenticate = Auth.auth()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -26,6 +26,7 @@ class ProfileController{
     public func handleLogOut(){
         do {
             try auth.signOut()
+            AuthManager.shared.removeUserAuthenticated()
             self.delegate?.signOut()
         } catch let signOutError as NSError {
             print("Error signing out", signOutError)

@@ -103,6 +103,7 @@
 		89B90C0726D888080078F617 /* EventMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89B90C0326D888070078F617 /* EventMap.storyboard */; };
 		A075CF3827027892009FC270 /* EventMapPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075CF3627027892009FC270 /* EventMapPanelViewController.swift */; };
 		A075CF3927027892009FC270 /* EventMapPanelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A075CF3727027892009FC270 /* EventMapPanelViewController.xib */; };
+		A076D77E274DD3C7007E947F /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A076D77D274DD3C7007E947F /* ProfileWorker.swift */; };
 		A09A481427399F6A00A79EBA /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A481327399F6900A79EBA /* ProfileController.swift */; };
 		FE6980A926D804BB0011272E /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6980A826D804BB0011272E /* Register.storyboard */; };
 		FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6980AA26D804D10011272E /* RegisterViewController.swift */; };
@@ -209,6 +210,7 @@
 		89B90C0326D888070078F617 /* EventMap.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventMap.storyboard; sourceTree = "<group>"; };
 		A075CF3627027892009FC270 /* EventMapPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapPanelViewController.swift; sourceTree = "<group>"; };
 		A075CF3727027892009FC270 /* EventMapPanelViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventMapPanelViewController.xib; sourceTree = "<group>"; };
+		A076D77D274DD3C7007E947F /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
 		A09A481327399F6900A79EBA /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		FE6980A826D804BB0011272E /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		FE6980AA26D804D10011272E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 				A09A481227399F2900A79EBA /* Controller */,
 				627EF23B26D6FD080053B7F1 /* Profile.storyboard */,
 				627EF23C26D6FD080053B7F1 /* ProfileViewController.swift */,
+				A076D77D274DD3C7007E947F /* ProfileWorker.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				8270082527092B50009DBE62 /* LocationDetailsTableViewCell.swift in Sources */,
 				65C18F1C27029FF9007E240E /* Place.swift in Sources */,
 				62FBAB202736087400CA737A /* RegisterWorker.swift in Sources */,
+				A076D77E274DD3C7007E947F /* ProfileWorker.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,

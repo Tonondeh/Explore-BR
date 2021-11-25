@@ -63,7 +63,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func tappedSocialSignInButton(_ sender: UIButton) {     
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     

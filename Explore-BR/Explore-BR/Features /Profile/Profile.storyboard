@@ -40,7 +40,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedChangePasswordButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="47g-7k-Xkf"/>
-                                    <segue destination="kWo-8x-J0B" kind="show" id="sf3-1E-jbX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oV6-Si-jDg">
@@ -55,7 +54,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tappedSignOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SuD-nI-chR"/>
-                                    <segue destination="Nx4-JO-qSN" kind="show" id="fbh-Zb-OE9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -84,6 +82,7 @@
                         <outlet property="nameLabel" destination="g6q-ZM-IAV" id="wea-lP-pZI"/>
                         <outlet property="profileImageView" destination="XY7-g1-32Y" id="l7U-hn-2t8"/>
                         <outlet property="signOutButton" destination="oV6-Si-jDg" id="6s9-5f-cQf"/>
+                        <segue destination="kWo-8x-J0B" kind="show" identifier="ChangePassword" id="dz7-HP-n7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -99,16 +98,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xH2-Jq-uTQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1683" y="64"/>
-        </scene>
-        <!--Login-->
-        <scene sceneID="r14-kT-3JH">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Login" storyboardName="Login" referencedIdentifier="Login" id="Nx4-JO-qSN" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="cXS-eS-iZ5"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m53-Ww-V3N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1560" y="158"/>
         </scene>
     </scenes>
     <resources>
