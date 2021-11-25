@@ -23,4 +23,8 @@ final class AuthManager {
     public func getUserAuthenticated() -> String? {
         return UserDefaults.standard.string(forKey: KeyUserDefaults.userAuthenticated.rawValue)
     }
+    
+    public func removeUserAuthenticated(){
+        UserDefaults.standard.removeObject(forKey: KeyUserDefaults.userAuthenticated.rawValue)
+    }
 }

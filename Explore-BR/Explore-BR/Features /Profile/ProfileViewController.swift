@@ -6,6 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
+
+protocol Profile:AnyObject{
+    
+}
 
 class ProfileViewController: UIViewController {
     
@@ -14,6 +19,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var changePasswordButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     
+    private var controller: ProfileController = ProfileController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +28,7 @@ class ProfileViewController: UIViewController {
         self.configImageView()
 //        self.configNavigationBar()
         self.configBackgroundGradient()
+        self.controller.delegate(delegate: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,11 +37,11 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func tappedChangePasswordButton(_ sender: UIButton) {
-        performSegue(withIdentifier: "goToChangePassword", sender: self)
+        performSegue(withIdentifier: "ChangePassword", sender: self)
     }
     
     @IBAction func tappedSignOutButton(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
+        self.controller.handleLogOut()
     }
     
     private func configButton() {
@@ -93,4 +101,17 @@ class ProfileViewController: UIViewController {
         
     }
     
+}
+
+extension ProfileViewController: ProfileDelegate{
+    func signOut() {
+
+
+        let rootViewController = self.view.window?.rootViewController as? UINavigationController
+        rootViewController?.setViewControllers([rootViewController!.viewControllers.first!],
+        animated: true)
+        rootViewController?.popToRootViewController(animated: true)
+        
+    }
+
 }
