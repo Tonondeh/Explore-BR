@@ -74,14 +74,14 @@ class SearchController {
                 
                 var placeFormatted: Place
                 
-                for value in _place.results {
-                    placeFormatted = Place(name: value.name, placeButtonEnable: true, image: UIImage(named: value.photos[0].photoReference) ?? UIImage(), localType: value.vicinity, local: value.vicinity, description: value.vicinity, heartIconEnable: true, heartIcon: UIImage(systemName: "heart") ?? UIImage(), star: 4.0, icon: UIImage(named: value.icon) ?? UIImage(), address: value.vicinity, id: value.placeID)
-                    
-                    debugPrint("place ==", placeFormatted)
-                    
-                    self.newData.append(placeFormatted)
-                    self.resultPlaceSearch.append(placeFormatted)
-                }
+//                for value in _place.results {
+//                    placeFormatted = Place(name: value.name, placeButtonEnable: true, image: UIImage(named: value.photos[0].photoReference) ?? UIImage(), localType: value.vicinity, local: value.vicinity, description: value.vicinity, heartIconEnable: true, heartIcon: UIImage(systemName: "heart") ?? UIImage(), star: 4.0, icon: UIImage(named: value.icon) ?? UIImage(), address: value.vicinity, id: value.placeID)
+//
+//                    debugPrint("place ==", placeFormatted)
+//
+//                    self.newData.append(placeFormatted)
+//                    self.resultPlaceSearch.append(placeFormatted)
+//                }
             }
         }
     }

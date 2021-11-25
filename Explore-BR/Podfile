@@ -17,6 +17,8 @@ pod 'GoogleSignIn'
 
 pod 'FirebaseFirestore', '~> 8.9'
 
+pod 'Alamofire', '~> 5.4'
+
 pod 'FirebaseAnalytics', '~> 8.9'
 
 pod 'FirebaseStorage', '~> 8.9'
