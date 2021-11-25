@@ -108,7 +108,7 @@ extension ProfileViewController: ProfileDelegate{
 
 
         let rootViewController = self.view.window?.rootViewController as? UINavigationController
-        rootViewController?.setViewControllers([rootViewController!.viewControllers.first!],
+        rootViewController?.setViewControllers([rootViewController?.viewControllers.first ?? UIViewController()],
         animated: true)
         rootViewController?.popToRootViewController(animated: true)
         
