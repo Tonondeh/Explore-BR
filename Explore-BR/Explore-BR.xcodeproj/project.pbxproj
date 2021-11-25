@@ -97,6 +97,10 @@
 		8270083127092B98009DBE62 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270082F27092B98009DBE62 /* ReviewTableViewCell.swift */; };
 		8270083727092BC6009DBE62 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270083527092BC6009DBE62 /* ReviewViewController.swift */; };
 		8270083827092BC6009DBE62 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8270083627092BC6009DBE62 /* Review.storyboard */; };
+		8285B0F227405F210072E5AA /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285B0F127405F210072E5AA /* ReviewController.swift */; };
+		8285B0F6274068CE0072E5AA /* ReviewWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8285B0F5274068CE0072E5AA /* ReviewWorker.swift */; };
+		829D88A3274F1FA900217890 /* LocationDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D88A2274F1FA900217890 /* LocationDetailsController.swift */; };
+		829D88A6274F222A00217890 /* LocationDetailsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829D88A5274F222A00217890 /* LocationDetailsWorker.swift */; };
 		82DAFA8326D7F81100D40CF8 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */; };
 		82DAFA8426D7F81100D40CF8 /* LocationDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */; };
 		89B90C0526D888080078F617 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B90C0126D888070078F617 /* EventsVC.swift */; };
@@ -201,6 +205,10 @@
 		8270082F27092B98009DBE62 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		8270083527092BC6009DBE62 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		8270083627092BC6009DBE62 /* Review.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
+		8285B0F127405F210072E5AA /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
+		8285B0F5274068CE0072E5AA /* ReviewWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewWorker.swift; sourceTree = "<group>"; };
+		829D88A2274F1FA900217890 /* LocationDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsController.swift; sourceTree = "<group>"; };
+		829D88A5274F222A00217890 /* LocationDetailsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailsWorker.swift; sourceTree = "<group>"; };
 		82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 		82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LocationDetails.storyboard; sourceTree = "<group>"; };
 		86986705019A7441BB86E5E5 /* Pods-Explore-BR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Explore-BR.release.xcconfig"; path = "Target Support Files/Pods-Explore-BR/Pods-Explore-BR.release.xcconfig"; sourceTree = "<group>"; };
@@ -391,8 +399,6 @@
 		6293350226FBE64E00E12B50 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8270081D27092B04009DBE62 /* PlaceDetail.swift */,
-				8270081E27092B04009DBE62 /* PlaceReview.swift */,
 				626702132704D1350048A178 /* Event.swift */,
 			);
 			path = Model;
@@ -617,14 +623,92 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
-		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
+		8285B0EA27405BD60072E5AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8270081D27092B04009DBE62 /* PlaceDetail.swift */,
+				8270081E27092B04009DBE62 /* PlaceReview.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8285B0EB27405BDE0072E5AA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				829D88A0274F1E8700217890 /* LocationDetails */,
+				8285B0F027405E640072E5AA /* Review */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8285B0ED27405BF50072E5AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				829D889F274F1E7A00217890 /* LocationDetails */,
+				8285B0EF27405E560072E5AA /* Review */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8285B0EE27405BFC0072E5AA /* View */ = {
 			isa = PBXGroup;
 			children = (
 				8270083427092BC6009DBE62 /* Review */,
+				829D889E274F1E3D00217890 /* LocationDetails */,
 				8270082D27092B98009DBE62 /* ReviewTableViewCell */,
 				8270082227092B50009DBE62 /* LocationDetailsTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8285B0EF27405E560072E5AA /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				8285B0F127405F210072E5AA /* ReviewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		8285B0F027405E640072E5AA /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				8285B0F5274068CE0072E5AA /* ReviewWorker.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		829D889E274F1E3D00217890 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
 				82DAFA8126D7F81100D40CF8 /* LocationDetailsViewController.swift */,
 				82DAFA8226D7F81100D40CF8 /* LocationDetails.storyboard */,
+			);
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		829D889F274F1E7A00217890 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				829D88A2274F1FA900217890 /* LocationDetailsController.swift */,
+			);
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		829D88A0274F1E8700217890 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				829D88A5274F222A00217890 /* LocationDetailsWorker.swift */,
+			);
+			path = LocationDetails;
+			sourceTree = "<group>";
+		};
+		82DAFA8026D7F81000D40CF8 /* LocationDetails */ = {
+			isa = PBXGroup;
+			children = (
+				8285B0EE27405BFC0072E5AA /* View */,
+				8285B0ED27405BF50072E5AA /* Controller */,
+				8285B0EB27405BDE0072E5AA /* Network */,
+				8285B0EA27405BD60072E5AA /* Model */,
 			);
 			path = LocationDetails;
 			sourceTree = "<group>";
@@ -844,14 +928,17 @@
 				FE6980AB26D804D10011272E /* RegisterViewController.swift in Sources */,
 				3A58727E26FB6F4100ECED4A /* CardCollectionViewCell.swift in Sources */,
 				8270082527092B50009DBE62 /* LocationDetailsTableViewCell.swift in Sources */,
+				8285B0F6274068CE0072E5AA /* ReviewWorker.swift in Sources */,
 				65C18F1C27029FF9007E240E /* Place.swift in Sources */,
 				62FBAB202736087400CA737A /* RegisterWorker.swift in Sources */,
+				8285B0F227405F210072E5AA /* ReviewController.swift in Sources */,
 				65FB99C326D5B63B00A9F670 /* ViewController.swift in Sources */,
 				89B90C0526D888080078F617 /* EventsVC.swift in Sources */,
 				627152B9270916F5006EC085 /* UIViewController+TextField.swift in Sources */,
 				62FBAB1C273607A200CA737A /* UserRegister.swift in Sources */,
 				3A58727F26FB6F4100ECED4A /* BestReviewsViewController.swift in Sources */,
 				1357495F26D73444009E6233 /* SearchVC.swift in Sources */,
+				829D88A3274F1FA900217890 /* LocationDetailsController.swift in Sources */,
 				65FB99BF26D5B63B00A9F670 /* AppDelegate.swift in Sources */,
 				65FB99C126D5B63B00A9F670 /* SceneDelegate.swift in Sources */,
 				3A58728126FB6F4100ECED4A /* MenuView.swift in Sources */,
@@ -862,6 +949,7 @@
 				650B5A4726F6723E00CEB4E2 /* TextField+Animation.swift in Sources */,
 				627EF24826D6FD380053B7F1 /* ColorsGradient.swift in Sources */,
 				657894992704B47F0010BF10 /* EmptyStateTableViewCell.swift in Sources */,
+				829D88A6274F222A00217890 /* LocationDetailsWorker.swift in Sources */,
 				627EF24726D6FD380053B7F1 /* UIButton+Gradient.swift in Sources */,
 				65B6E09B26D6C2EF00A54D6C /* ResetPasswordViewController.swift in Sources */,
 				627EF23826D6FCF50053B7F1 /* LoginVC.swift in Sources */,

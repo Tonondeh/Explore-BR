@@ -8,7 +8,7 @@
 import UIKit
 
 struct PlaceReview {
-    var reviewImage: UIImage?
+    var reviewImage: String?
     var name: String?
     var title: String?
     var review: String?

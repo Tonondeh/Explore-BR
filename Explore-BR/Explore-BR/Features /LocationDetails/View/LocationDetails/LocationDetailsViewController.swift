@@ -11,6 +11,9 @@ class LocationDetailsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    private var controller: LocationDetailsController = LocationDetailsController()
+    
     // Detalhes do local
     var placeDetail = PlaceDetail(placeIid: "1", photo:UIImage(named:"location-detail") ?? UIImage(), name: "Parque Serra do Curral", description: "Localizado em uma área aproximada de 400 mil metros quadrados, o Parque possui 10 mirantes distribuídos por seus quatro mil metros de extensão, de onde o visitante pode identificar pontos turísticos da cidade e aspectos naturais de seu entorno, como a Lagoa da Pampulha, o Parque Municipal Américo Renné Giannetti, a Avenida Afonso Pena, o Estádio Mineirão, o Museu de História Natural e o Jardim Botânico da UFMG, o Pico do Itabirito, a Serra da Piedade, o Morro do Pires, o Morro do Elefante, o Parque Estadual da Serra do Rola-Moça, entre outros.", quantityEvaluations: 1234)
     
@@ -22,22 +25,24 @@ class LocationDetailsViewController: UIViewController {
         self.addReview()
         self.configNavigationBar()
         self.configTableView()
+        self.controller.delegate(delegate: self)
+        self.controller.loadLocation()
     }
     
     private func addReview(){
         self.listReviews.append(PlaceReview())
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-1") ?? UIImage(), name: "Ederson Dias Silva", title: "O local é ótimo", review: "Ótimo local para fazer atividades físicas.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-1", name: "Ederson Dias Silva", title: "O local é ótimo", review: "Ótimo local para fazer atividades físicas.", stars:5))
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-2") ?? UIImage(), name: "Katty Loaiza", title: "Local silencioso", review: "Bom local para descansar a mente.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-2", name: "Katty Loaiza", title: "Local silencioso", review: "Bom local para descansar a mente.", stars:5))
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-3") ?? UIImage(), name: "Walter Casagrande", title: "Bom local pra levar a família", review: "Bom local pra levar a família.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-3", name: "Walter Casagrande", title: "Bom local pra levar a família", review: "Bom local pra levar a família.", stars:5))
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-1") ?? UIImage(), name: "Ederson Dias Silva", title: "O local é ótimo", review: "Ótimo local para fazer atividades físicas.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-1", name: "Ederson Dias Silva", title: "O local é ótimo", review: "Ótimo local para fazer atividades físicas.", stars:5))
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-2") ?? UIImage(), name: "Katty Loaiza", title: "Local silencioso", review: "Bom local para descansar a mente.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-2", name: "Katty Loaiza", title: "Local silencioso", review: "Bom local para descansar a mente.", stars:5))
         
-        self.listReviews.append(PlaceReview(reviewImage: UIImage(named:"location-detail-3") ?? UIImage(), name: "Walter Casagrande", title: "Bom local pra levar a família", review: "Bom local pra levar a família.", stars:5))
+        self.listReviews.append(PlaceReview(reviewImage: "location-detail-3", name: "Walter Casagrande", title: "Bom local pra levar a família", review: "Bom local pra levar a família.", stars:5))
         
     }
     
