@@ -4,7 +4,6 @@
 //
 //  Created by Lucas Munho on 13/09/21.
 //
-
 import UIKit
 
 class PlacesCollectionViewCell: UICollectionViewCell {
@@ -39,21 +38,22 @@ class PlacesCollectionViewCell: UICollectionViewCell {
     func setUpCell(data: Place){
         self.placesLabel.text = data.name
         
-        if let isPlaceButtonEnable = data.placeButtonEnable {
+        let isPlaceButtonEnable = data.placeButtonEnable
+//        {
             print("isPlaceButtonEnable", isPlaceButtonEnable)
 //            if isPlaceButtonEnable {
-//                
+//
 //                self.placesLabel.textColor = .white
 //                //                self.placesView.applyGradientInView(colors: [blueDarkButton,blueLightButton])
 //                self.placesView.backgroundColor = .blue
-//                
+//
 //            } else {
-//                
+//
 //                self.placesView.backgroundColor = .white
 //                self.placesLabel.textColor = .black
-//                
+//
 //            }
-        }
+//        }
     }
     
     override func awakeFromNib() {

@@ -173,6 +173,8 @@ extension RegisterViewController: RegisterControllerDelegate {
             msgError = "Erro ao buscar os dados. Tente novamente."
         case .errorSignin:
             msgError = "Erro ao Criar. Tente novamente."
+        case .emptyIdUSer:
+            msgError = "Erro ao Criar. Tente novamente."
         }
         
         self.alert?.showAlert(title: "Erro", message: msgError, completion: nil)
