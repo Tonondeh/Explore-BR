@@ -4,47 +4,40 @@
 //
 //  Created by Paulo Rodrigues on 13/11/21.
 //
-
 import Foundation
 import Alamofire
-import CoreLocation
+//import CoreLocation
 
 class SearchWorker {
     
     static let shared = SearchWorker()
     
-    func search(by: String, completion: @escaping(_ place: PlaceGoogleResponse?, _ error: Error?) -> Void) {
-//        let parameters = ["location": "-19.9695407,-44.0509203", "radius": "20000"]
+    var photosArray: [String] = []
+    
+    func search(by: String, completion: @escaping(_ place: PlaceGoogle?, _ error: Error?) -> Void) {
+        let key = "AIzaSyDJQUubD6DQxsmwXi-JsuisstKvLWM4VY0"
         
-        let baseUrl = "\(API.baseUrl)nearbysearch/json?location=-19.9695407,-44.0509203&radius=20000"
+        let baseUrl = "\(API.baseUrl)nearbysearch/json?location=-19.9695407,-44.0509203&radius=20000&key=\(key)"
         
-        guard let url: URL = URL(string: baseUrl) else { return }
-        
-        var urlRequest:URLRequest = URLRequest(url: url as URL)
-        
-        urlRequest.httpMethod = "GET"
-        
-        urlRequest.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        AF.request(urlRequest).responseJSON { response in
-            if response.response?.statusCode == 200 {
+        AF.request(baseUrl).responseJSON { response in
+            
+            guard let data = response.data else { return }
+            
+            if let status = response.response?.statusCode {
                 
-                if let data = response.data {
-                    
+                if status == 200 {
                     do {
-//                        let data = try JSONDecoder().decode(PlaceGoogleResponse.self, from: data)
-                        let dataJson = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                        guard let dataFormatted = dataJson as? PlaceGoogleResponse else { return }
+                        let placeModel: PlaceGoogle = try JSONDecoder().decode(PlaceGoogle.self, from: data)
+                        debugPrint("placeModel ====", placeModel)
                         
-                        completion(dataFormatted, nil)
-                        
+                        completion(placeModel, nil)
                     } catch {
-                        
-                        debugPrint(error)
+                        debugPrint("Error =>", error)
                         completion(nil, error)
-                        
                     }
-                    
+                } else {
+                    debugPrint("error with response status: \(status)")
+                    completion(nil, nil)
                 }
                 
             }
@@ -52,13 +45,14 @@ class SearchWorker {
         
     }
     
-//    func getCurrentLocation() -> NSDictionary {
-//        let location = CLLocation()
-//
-//        var locationObject: [String:Any]
-//
-////        locationObject["latitude"] = location.coordinate.latitude as Double?
-//
-//    }
+    //    func getCurrentLocation() -> NSDictionary {
+    //        let location = CLLocation()
+    //
+    //        var locationObject: [String:Any]
+    //        return locationObject as NSDictionary
+    //
+    //        locationObject["latitude"] = location.coordinate.latitude as Double?
+    //
+    //    }
     
 }
