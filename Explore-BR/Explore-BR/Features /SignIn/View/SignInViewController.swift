@@ -15,7 +15,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    var auth: Auth?
     var alert: Alert?
     
     private var controller:SignInController = SignInController()
@@ -24,7 +23,6 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         self.configUI()
         self.configTextField()
-        self.auth = Auth.auth()
         self.alert = Alert(viewController: self)
         self.controller.delegate(delegate: self)
     }
@@ -55,7 +53,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func tappedSignInButton(_ sender: UIButton) {
-            self.controller.handleLogin(email: self.emailTextField.text, password: self.passwordTextField.text)
+        self.controller.handleLogin(email: self.emailTextField.text, password: self.passwordTextField.text)
     }
     
     @IBAction func tappedForgetPasswordButton(_ sender: UIButton) {
@@ -117,6 +115,8 @@ extension SignInViewController:SignInControllerDelegate {
         case .errorServer:
             msgError = "Erro ao buscar os dados. Tente novamente."
         case .errorSignin:
+            msgError = "Erro ao logar. Tente novamente."
+        case .emptyIdUSer:
             msgError = "Erro ao logar. Tente novamente."
         }
         

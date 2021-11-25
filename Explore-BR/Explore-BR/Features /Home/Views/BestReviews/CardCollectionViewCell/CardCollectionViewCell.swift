@@ -64,8 +64,8 @@ class CardCollectionViewCell: UICollectionViewCell {
            self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.contentView.layer.cornerRadius).cgPath
        }
     
-    public func setupCell(data: BestReview) {
-        self.cardImage.image = data.image
+    public func setupCell(data: Review) {
+        self.cardImage.image = UIImage(named: data.image ?? "")
         self.cardTitleLabel.text = data.title
         self.cardLocalTypeLabel.text = data.type
         self.cardRegionLabel.text = data.region

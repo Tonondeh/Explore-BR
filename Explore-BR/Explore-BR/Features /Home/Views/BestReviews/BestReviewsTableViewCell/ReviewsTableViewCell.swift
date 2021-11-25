@@ -7,11 +7,16 @@
 
 import UIKit
 
-class BestReviewsTableViewCell: UITableViewCell {
+public enum TypeReview: String {
+    case bestReview = "Melhores Avaliados"
+    case moreLiked = "Mais Curtidos"
+}
+
+class ReviewsTableViewCell: UITableViewCell {
     @IBOutlet weak var cardHeaderLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var cardList: [BestReview] = []
+    private var cardList: [Review] = []
     private var currentNavigation: UINavigationController?
     
     static let identifier: String = "BestReviewsTableViewCell"
@@ -37,17 +42,9 @@ class BestReviewsTableViewCell: UITableViewCell {
         self.collectionView.showsHorizontalScrollIndicator = false
         self.collectionView.collectionViewLayout = layout
     }
-    
-//    public func setupCell(data: BestReview) {
-//        self.bestReviewsImage.image = data.image
-//        self.nameLabel.text = data.title
-//        self.localTypeLabel.text = data.type
-//        self.localLabel.text = data.region
-//    }
-    
 }
 
-extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.cardList.count
@@ -69,10 +66,13 @@ extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard =  UIStoryboard(name: "LocationDetails", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "LocationDetails") as? LocationDetailsViewController
+        // Necessário enviar o model para location details
+        // vc.setContentReview(self.cardList[indexPath.row])
         self.currentNavigation?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
-    public func setupCell(cardList: [BestReview]) {
+    public func setupCell(typeReview: TypeReview, cardList: [Review]) {
+        self.cardHeaderLabel.text = typeReview.rawValue
         self.cardList = cardList
     }
     
@@ -81,4 +81,3 @@ extension BestReviewsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     }
 
 }
-
