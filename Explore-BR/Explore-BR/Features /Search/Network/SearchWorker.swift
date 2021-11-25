@@ -39,7 +39,20 @@ class SearchWorker {
                     debugPrint("error with response status: \(status)")
                     completion(nil, nil)
                 }
+            }
+            
+            
+            guard let data = response.data else { return }
+            
+            
+            do {
+                let placeModel: PlacesGoogle = try JSONDecoder().decode(PlacesGoogle.self, from: data)
+                debugPrint("placeModel ====", placeModel)
                 
+                completion(placeModel, nil)
+            } catch {
+                debugPrint("Error =>", error)
+                completion(nil, error)
             }
         }
         
